@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: http://0.0.0.0:8000/sitemap.xml
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /summernote/
+
+# Allow search engines to index public pages
+Allow: /notices/
+Allow: /events/
+Allow: /faculty/
+Allow: /gallery/
+Allow: /results/
+Allow: /contact/
+Allow: /about/
+Allow: /academics/
+
+# Crawl delay for politeness
+Crawl-delay: 1

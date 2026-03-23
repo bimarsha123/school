@@ -1,0 +1,999 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us - VishwaMitra Ganesh Secondary School</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a, #0ea5e9);
+            min-height: 100vh;
+        }
+
+        /* GLASS SYSTEM */
+        .glass {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 16px;
+            box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+        }
+
+        .glass-strong {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255,255,255,0.25);
+        }
+
+        .glass-btn {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 999px;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .glass-btn:hover {
+            background: rgba(255,255,255,0.25);
+            transform: translateY(-2px);
+        }
+
+        .glow {
+            box-shadow: 0 0 40px rgba(56,189,248,0.35);
+        }
+    </style>
+
+    
+</head>
+
+<body class="text-white flex flex-col min-h-screen">
+
+<!-- FLOATING NAVBAR -->
+<header class="sticky top-4 z-50 px-4">
+    <nav class="glass glass-strong max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+        <!-- LOGO -->
+        <a href="../index.html" class="flex items-center gap-3">
+            
+            <img src="../media/site/logo_vgss.png" class="h-10">
+            
+            <span class="font-bold text-lg">
+                VishwaMitra Ganesh Secondary School
+            </span>
+        </a>
+
+        <!-- DESKTOP MENU -->
+        <div class="hidden lg:flex items-center gap-2 text-sm">
+            <a href="../index.html" class="glass-btn">Home</a>
+            <a href="index.html" class="glass-btn">About</a>
+            <a href="../academics/index.html" class="glass-btn">Academics</a>
+            <a href="../notices/index.html" class="glass-btn">Notices</a>
+            <a href="../events/index.html" class="glass-btn">Events</a>
+            <a href="../gallery/index.html" class="glass-btn">Gallery</a>
+            <a href="../contact/index.html" class="glass-btn">Contact</a>
+        </div>
+
+        <!-- ACTION -->
+        <div class="hidden lg:flex gap-3">
+            
+            <a href="../admission/index.html" class="glass-btn glow">
+                Apply
+            </a>
+            
+        </div>
+
+        <!-- MOBILE -->
+        <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div id="mobile-menu" class="hidden mt-3 glass p-4 space-y-2 max-w-7xl mx-auto">
+        <a href="../index.html" class="block glass-btn text-center">Home</a>
+        <a href="index.html" class="block glass-btn text-center">About</a>
+        <a href="../academics/index.html" class="block glass-btn text-center">Academics</a>
+        <a href="../notices/index.html" class="block glass-btn text-center">Notices</a>
+        <a href="../events/index.html" class="block glass-btn text-center">Events</a>
+        <a href="../gallery/index.html" class="block glass-btn text-center">Gallery</a>
+        <a href="../contact/index.html" class="block glass-btn text-center">Contact</a>
+    </div>
+</header>
+
+<!-- MAIN -->
+<main class="flex-grow px-4 mt-10">
+    <div class="max-w-7xl mx-auto">
+        
+
+<!-- HERO -->
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="glass glow p-10 text-white">
+
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+                About Us
+            </h1>
+
+            <p class="text-white/70 text-lg">
+                Quality Education
+            </p>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- MISSION & VISION -->
+<section class="py-10">
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-8 text-white">
+
+        <div class="glass p-8">
+            <div class="text-3xl mb-4">🎯</div>
+            <h2 class="text-2xl font-semibold mb-3">Our Mission</h2>
+            <p class="text-white/70 leading-relaxed">
+                To provide quality education that nurtures intellectual curiosity, critical thinking, 
+                and moral values in students while preparing them for the modern world.
+            </p>
+        </div>
+
+        <div class="glass p-8">
+            <div class="text-3xl mb-4">👁️</div>
+            <h2 class="text-2xl font-semibold mb-3">Our Vision</h2>
+            <p class="text-white/70 leading-relaxed">
+                To be a leading institution recognized for academic excellence, innovation, 
+                and producing responsible citizens who contribute positively to society.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- HISTORY -->
+<section class="py-16">
+    <div class="max-w-4xl mx-auto px-6">
+        <div class="glass p-10 text-white">
+
+            <h2 class="text-3xl font-bold mb-6 text-center">
+                Our History
+            </h2>
+
+            <p class="text-white/70 mb-4">
+                VishwaMitra Ganesh Secondary School was established in 1985 
+                with a vision to provide quality education to the local community.
+            </p>
+
+            <p class="text-white/70 mb-4">
+                From a small beginning, the school has grown into a respected institution serving thousands of students.
+            </p>
+
+            <p class="text-white/70">
+                Today, we continue our legacy with modern teaching methods while preserving our core values.
+            </p>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- LEADERSHIP -->
+<section class="py-12">
+    <div class="max-w-7xl mx-auto px-6 text-white">
+
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold">Our Leadership</h2>
+            <p class="text-white/70">Meet the team guiding our vision</p>
+        </div>
+
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            
+            <div class="glass p-4 text-center hover:scale-105 transition">
+
+                
+                <img src="../media/faculty/unnamed.png" class="w-full h-48 object-cover rounded-xl mb-4">
+                
+
+                <h3 class="font-semibold">Ram Bahadur Sharma</h3>
+                <p class="text-white/60 text-sm">Principal</p>
+
+            </div>
+            
+            <div class="glass p-4 text-center hover:scale-105 transition">
+
+                
+                <div class="h-48 flex items-center justify-center text-white/40">
+                    <i class="fas fa-user text-4xl"></i>
+                </div>
+                
+
+                <h3 class="font-semibold">Sita Devi Thapa</h3>
+                <p class="text-white/60 text-sm">Vice Principal</p>
+
+            </div>
+            
+
+        </div>
+        
+
+    </div>
+</section>
+
+
+<!-- WHY CHOOSE US -->
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-6 text-white">
+
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold">Why Choose Us</h2>
+            <p class="text-white/70">What makes us different</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            <div class="glass p-6 text-center">
+                <div class="text-3xl mb-3">👨‍🏫</div>
+                <h3 class="font-semibold">Qualified Teachers</h3>
+                <p class="text-white/60 text-sm">Experienced faculty</p>
+            </div>
+
+            <div class="glass p-6 text-center">
+                <div class="text-3xl mb-3">🧪</div>
+                <h3 class="font-semibold">Modern Facilities</h3>
+                <p class="text-white/60 text-sm">Well equipped labs</p>
+            </div>
+
+            <div class="glass p-6 text-center">
+                <div class="text-3xl mb-3">📚</div>
+                <h3 class="font-semibold">Holistic Education</h3>
+                <p class="text-white/60 text-sm">All-round development</p>
+            </div>
+
+            <div class="glass p-6 text-center">
+                <div class="text-3xl mb-3">🏆</div>
+                <h3 class="font-semibold">Proven Results</h3>
+                <p class="text-white/60 text-sm">Consistent success</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- STATS -->
+<section class="py-12">
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-white text-center">
+
+        <div class="glass p-6">
+            <div class="text-3xl font-bold">30+</div>
+            <p class="text-white/60">Years</p>
+        </div>
+
+        <div class="glass p-6">
+            <div class="text-3xl font-bold">8+</div>
+            <p class="text-white/60">Teachers</p>
+        </div>
+
+        <div class="glass p-6">
+            <div class="text-3xl font-bold">2000+</div>
+            <p class="text-white/60">Students</p>
+        </div>
+
+        <div class="glass p-6">
+            <div class="text-3xl font-bold">95%</div>
+            <p class="text-white/60">Pass Rate</p>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- CTA -->
+<section class="py-16">
+    <div class="max-w-4xl mx-auto px-6 text-center text-white">
+        <div class="glass glow p-10">
+
+            <h2 class="text-3xl font-bold mb-4">
+                Ready to Join?
+            </h2>
+
+            <p class="text-white/70 mb-6">
+                Give your child the best education.
+            </p>
+
+            <div class="flex justify-center gap-4 flex-wrap">
+                <a href="../contact/index.html" class="glass-btn">
+                    Contact
+                </a>
+
+                
+                <a href="../admission/index.html" class="glass-btn glow">
+                    Apply Now
+                </a>
+                
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+    </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="mt-20 px-4 pb-10">
+    <div class="glass max-w-7xl mx-auto p-10">
+
+        <div class="grid md:grid-cols-3 gap-10">
+
+            <!-- BRAND -->
+            <div>
+                <h2 class="text-xl font-bold mb-3">
+                    VishwaMitra Ganesh Secondary School
+                </h2>
+                <p class="text-white/70 text-sm">
+                    Quality Education
+                </p>
+            </div>
+
+            <!-- LINKS -->
+            <div>
+                <h3 class="font-semibold mb-3">Links</h3>
+                <div class="space-y-2 text-sm">
+                    <a href="index.html" class="block text-white/70 hover:text-white">About</a>
+                    <a href="../events/index.html" class="block text-white/70 hover:text-white">Events</a>
+                    <a href="../notices/index.html" class="block text-white/70 hover:text-white">Notices</a>
+                </div>
+            </div>
+
+            <!-- CONTACT -->
+            <div>
+                <h3 class="font-semibold mb-3">Contact</h3>
+                <div class="text-sm text-white/70 space-y-1">
+                    <p>Kathmandu
+Kathmandu</p>
+                    <p>9843698927</p>
+                    <p>school@school.com</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-10 text-center text-xs text-white/50">
+            © 2026 VishwaMitra Ganesh Secondary School
+        </div>
+    </div>
+</footer>
+
+<!-- JS -->
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
+
+
+
+
+
+<link rel="stylesheet" href="../static/debug_toolbar/css/print.css" media="print">
+<link rel="stylesheet" href="../static/debug_toolbar/css/toolbar.css">
+
+
+<script type="module" src="../static/debug_toolbar/js/toolbar.js" async></script>
+
+<div id="djDebug" class="djdt-hidden" dir="ltr"
+     
+     data-request-id="2bd5d6e6746e4dc6a4ce1493c7082ea9"
+     data-render-panel-url="/__debug__/render_panel/"
+     
+     
+     
+     data-sidebar-url="/__debug__/history_sidebar/"
+     
+     data-default-show="true"
+       data-update-on-fetch="False">
+  <div class="djdt-hidden" id="djDebugToolbar">
+    <ul id="djDebugPanelList">
+      <li><a id="djHideToolBarButton" href="index.html#" title="Hide toolbar">Hide »</a></li>
+      <li>
+        <a id="djToggleThemeButton" href="index.html#" title="Toggle Theme">
+          Toggle Theme <svg
+  aria-hidden="true"
+  class="djdt-hidden theme-auto"
+  fill="currentColor"
+  viewBox="0 0 32 32"
+  version="1.1"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M0 16q0 3.264 1.28 6.24t3.392 5.088 5.12 3.424 6.208 1.248q3.264 0 6.24-1.248t5.088-3.424 3.392-5.088 1.28-6.24-1.28-6.208-3.392-5.12-5.088-3.392-6.24-1.28q-3.264 0-6.208 1.28t-5.12 3.392-3.392 5.12-1.28 6.208zM4 16q0-3.264 1.6-6.016t4.384-4.352 6.016-1.632 6.016 1.632 4.384 4.352 1.6 6.016-1.6 6.048-4.384 4.352-6.016 1.6-6.016-1.6-4.384-4.352-1.6-6.048zM16 26.016q2.72 0 5.024-1.344t3.648-3.648 1.344-5.024-1.344-4.992-3.648-3.648-5.024-1.344v20z"
+  ></path>
+</svg>
+<svg
+  aria-hidden="true"
+  class="djdt-hidden theme-light"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    fill-rule="evenodd"
+    clip-rule="evenodd"
+    d="M12 1.25C12.4142 1.25 12.75 1.58579 12.75 2V4C12.75 4.41421 12.4142 4.75 12 4.75C11.5858 4.75 11.25 4.41421 11.25 4V2C11.25 1.58579 11.5858 1.25 12 1.25ZM3.66865 3.71609C3.94815 3.41039 4.42255 3.38915 4.72825 3.66865L6.95026 5.70024C7.25596 5.97974 7.2772 6.45413 6.9977 6.75983C6.7182 7.06553 6.2438 7.08677 5.9381 6.80727L3.71609 4.77569C3.41039 4.49619 3.38915 4.02179 3.66865 3.71609ZM20.3314 3.71609C20.6109 4.02179 20.5896 4.49619 20.2839 4.77569L18.0619 6.80727C17.7562 7.08677 17.2818 7.06553 17.0023 6.75983C16.7228 6.45413 16.744 5.97974 17.0497 5.70024L19.2718 3.66865C19.5775 3.38915 20.0518 3.41039 20.3314 3.71609ZM12 7.75C9.65279 7.75 7.75 9.65279 7.75 12C7.75 14.3472 9.65279 16.25 12 16.25C14.3472 16.25 16.25 14.3472 16.25 12C16.25 9.65279 14.3472 7.75 12 7.75ZM6.25 12C6.25 8.82436 8.82436 6.25 12 6.25C15.1756 6.25 17.75 8.82436 17.75 12C17.75 15.1756 15.1756 17.75 12 17.75C8.82436 17.75 6.25 15.1756 6.25 12ZM1.25 12C1.25 11.5858 1.58579 11.25 2 11.25H4C4.41421 11.25 4.75 11.5858 4.75 12C4.75 12.4142 4.41421 12.75 4 12.75H2C1.58579 12.75 1.25 12.4142 1.25 12ZM19.25 12C19.25 11.5858 19.5858 11.25 20 11.25H22C22.4142 11.25 22.75 11.5858 22.75 12C22.75 12.4142 22.4142 12.75 22 12.75H20C19.5858 12.75 19.25 12.4142 19.25 12ZM17.0255 17.0252C17.3184 16.7323 17.7933 16.7323 18.0862 17.0252L20.3082 19.2475C20.6011 19.5404 20.601 20.0153 20.3081 20.3082C20.0152 20.6011 19.5403 20.601 19.2475 20.3081L17.0255 18.0858C16.7326 17.7929 16.7326 17.3181 17.0255 17.0252ZM6.97467 17.0253C7.26756 17.3182 7.26756 17.7931 6.97467 18.086L4.75244 20.3082C4.45955 20.6011 3.98468 20.6011 3.69178 20.3082C3.39889 20.0153 3.39889 19.5404 3.69178 19.2476L5.91401 17.0253C6.2069 16.7324 6.68177 16.7324 6.97467 17.0253ZM12 19.25C12.4142 19.25 12.75 19.5858 12.75 20V22C12.75 22.4142 12.4142 22.75 12 22.75C11.5858 22.75 11.25 22.4142 11.25 22V20C11.25 19.5858 11.5858 19.25 12 19.25Z"
+    fill="currentColor"
+  />
+</svg>
+<svg
+  aria-hidden="true"
+  class="djdt-hidden theme-dark"
+  viewBox="0 0 24 24"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+</svg>
+
+        </a>
+      </li>
+      
+        
+
+<li id="djdt-HistoryPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtHistoryPanel" checked title="Disable for next and successive requests">
+  
+    <a href="index.html#" title="History" class="HistoryPanel">
+  
+  History
+  
+    
+      <br><small>/about/</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-VersionsPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtVersionsPanel" checked title="Disable for next and successive requests">
+  
+    <a href="index.html#" title="Versions" class="VersionsPanel">
+  
+  Versions
+  
+    
+      <br><small>Django 4.2.29</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-TimerPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtTimerPanel" checked title="Disable for next and successive requests">
+  
+    <a href="index.html#" title="Time" class="TimerPanel">
+  
+  Time
+  
+    
+      <br><small>CPU: 13.35ms (13.42ms)</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-SettingsPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtSettingsPanel" checked title="Disable for next and successive requests">
+  
+    <a href="index.html#" title="Settings from &#x27;school_website.settings.development&#x27;" class="SettingsPanel">
+  
+  Settings
+  
+    
+      
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-HeadersPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtHeadersPanel" checked title="Disable for next and successive requests">
+  
+    <a href="index.html#" title="Headers" class="HeadersPanel">
+  
+  Headers
+  
+    
+      
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-RequestPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtRequestPanel" checked title="Disable for next and successive requests">
+  
+    <a href="index.html#" title="Request" class="RequestPanel">
+  
+  Request
+  
+    
+      <br><small>AboutView</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-SQLPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtSQLPanel" checked title="Disable for next and successive requests">
+  
+    <a href="index.html#" title="SQL queries from 1 connection" class="SQLPanel">
+  
+  SQL
+  
+    
+      <br><small>4 queries in 0.67ms</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-StaticFilesPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtStaticFilesPanel" checked title="Disable for next and successive requests">
+  
+    <a href="index.html#" title="Static files (0 found, 0 used)" class="StaticFilesPanel">
+  
+  Static files
+  
+    
+      <br><small>0 files used</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-TemplatesPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtTemplatesPanel" checked title="Disable for next and successive requests">
+  
+    <a href="index.html#" title="Templates (2 rendered)" class="TemplatesPanel">
+  
+  Templates
+  
+    
+      <br><small>school/about.html</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-AlertsPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtAlertsPanel" checked title="Disable for next and successive requests">
+  
+    <a href="index.html#" title="Alerts" class="AlertsPanel">
+  
+  Alerts
+  
+    
+      
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-CachePanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtCachePanel" checked title="Disable for next and successive requests">
+  
+    <a href="index.html#" title="Cache calls from 1 backend" class="CachePanel">
+  
+  Cache
+  
+    
+      <br><small>0 calls in 0.00ms</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-SignalsPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtSignalsPanel" checked title="Disable for next and successive requests">
+  
+    <a href="index.html#" title="Signals" class="SignalsPanel">
+  
+  Signals
+  
+    
+      <br><small>95 receivers of 15 signals</small>
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-CommunityPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtCommunityPanel" checked title="Disable for next and successive requests">
+  
+    <a href="index.html#" title="Community" class="CommunityPanel">
+  
+  Community
+  
+    
+      
+    
+  
+  
+    </a>
+  
+</li>
+
+      
+        
+
+<li id="djdt-RedirectsPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtRedirectsPanel" title="Enable for next and successive requests">
+  
+    <div class="djdt-contentless djdt-disabled">
+  
+  Intercept redirects
+  
+  
+    </div>
+  
+</li>
+
+      
+        
+
+<li id="djdt-ProfilingPanel" class="djDebugPanelButton">
+  <input type="checkbox" data-cookie="djdtProfilingPanel" title="Enable for next and successive requests">
+  
+    <div class="djdt-contentless djdt-disabled">
+  
+  Profiling
+  
+  
+    </div>
+  
+</li>
+
+      
+    </ul>
+  </div>
+  <div class="djdt-hidden" id="djDebugToolbarHandle">
+    <div title="Show toolbar" id="djShowToolBarButton">
+      <span id="djShowToolBarD">D</span><span id="djShowToolBarJ">J</span>DT
+    </div>
+  </div>
+
+  
+    
+
+
+  <div id="HistoryPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>History</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="VersionsPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Versions</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="TimerPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Time</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="SettingsPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Settings from &#x27;school_website.settings.development&#x27;</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="HeadersPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Headers</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="RequestPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Request</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="SQLPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>SQL queries from 1 connection</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="StaticFilesPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Static files (0 found, 0 used)</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="TemplatesPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Templates (2 rendered)</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="AlertsPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Alerts</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="CachePanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Cache calls from 1 backend</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="SignalsPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Signals</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+  <div id="CommunityPanel" class="djdt-panelContent djdt-hidden">
+    <div class="djDebugPanelTitle">
+      <h3>Community</h3>
+      <button type="button" class="djDebugClose">×</button>
+    </div>
+    <div class="djDebugPanelContent">
+      
+        <div class="djdt-loader"></div>
+        <div class="djdt-scroll"></div>
+      
+    </div>
+  </div>
+
+
+  
+    
+
+
+
+  
+    
+
+
+
+  
+  <div id="djDebugWindow" class="djdt-panelContent djdt-hidden"></div>
+</div>
+</body>
+</html>
