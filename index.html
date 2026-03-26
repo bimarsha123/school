@@ -4,1123 +4,1153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>VishwaMitra Ganesh Secondary School</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <style>
-        body {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background: linear-gradient(135deg, #0f172a, #1e3a8a, #0ea5e9);
-            min-height: 100vh;
-        }
-
-        /* GLASS SYSTEM */
-        .glass {
-            background: rgba(255,255,255,0.08);
-            backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
-            border: 1px solid rgba(255,255,255,0.15);
-            border-radius: 16px;
-            box-shadow: 0 8px 40px rgba(0,0,0,0.3);
-        }
-
-        .glass-strong {
-            background: rgba(255,255,255,0.15);
-            backdrop-filter: blur(24px);
-            border: 1px solid rgba(255,255,255,0.25);
-        }
-
-        .glass-btn {
-            background: rgba(255,255,255,0.15);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.25);
-            border-radius: 999px;
-            padding: 10px 20px;
-            transition: all 0.3s ease;
-        }
-
-        .glass-btn:hover {
-            background: rgba(255,255,255,0.25);
-            transform: translateY(-2px);
-        }
-
-        .glow {
-            box-shadow: 0 0 40px rgba(56,189,248,0.35);
-        }
-    </style>
-
     
-</head>
-
-<body class="text-white flex flex-col min-h-screen">
-
-<!-- FLOATING NAVBAR -->
-<header class="sticky top-4 z-50 px-4">
-    <nav class="glass glass-strong max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-
-        <!-- LOGO -->
-        <a href="index.html" class="flex items-center gap-3">
-            
-            <img src="media/site/logo_vgss.png" class="h-10">
-            
-            <span class="font-bold text-lg">
-                VishwaMitra Ganesh Secondary School
-            </span>
-        </a>
-
-        <!-- DESKTOP MENU -->
-        <div class="hidden lg:flex items-center gap-2 text-sm">
-            <a href="index.html" class="glass-btn">Home</a>
-            <a href="about/index.html" class="glass-btn">About</a>
-            <a href="academics/index.html" class="glass-btn">Academics</a>
-            <a href="notices/index.html" class="glass-btn">Notices</a>
-            <a href="events/index.html" class="glass-btn">Events</a>
-            <a href="gallery/index.html" class="glass-btn">Gallery</a>
-            <a href="contact/index.html" class="glass-btn">Contact</a>
-        </div>
-
-        <!-- ACTION -->
-        <div class="hidden lg:flex gap-3">
-            
-            <a href="admission/index.html" class="glass-btn glow">
-                Apply
-            </a>
-            
-        </div>
-
-        <!-- MOBILE -->
-        <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl">
-            <i class="fas fa-bars"></i>
-        </button>
-    </nav>
-
-    <!-- MOBILE MENU -->
-    <div id="mobile-menu" class="hidden mt-3 glass p-4 space-y-2 max-w-7xl mx-auto">
-        <a href="index.html" class="block glass-btn text-center">Home</a>
-        <a href="about/index.html" class="block glass-btn text-center">About</a>
-        <a href="academics/index.html" class="block glass-btn text-center">Academics</a>
-        <a href="notices/index.html" class="block glass-btn text-center">Notices</a>
-        <a href="events/index.html" class="block glass-btn text-center">Events</a>
-        <a href="gallery/index.html" class="block glass-btn text-center">Gallery</a>
-        <a href="contact/index.html" class="block glass-btn text-center">Contact</a>
-    </div>
-</header>
-
-<!-- MAIN -->
-<main class="flex-grow px-4 mt-10">
-    <div class="max-w-7xl mx-auto">
-        
-
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="9ACEE – 9th Asian Conference on Earthquake Engineering organized by NSET Nepal, focusing on earthquake resilience and engineering innovation.">
+    <meta name="keywords" content="9ACEE, 9th ACEE, Asia Conference Earthquake Engineering, earthquake engineering conference, seismic engineering, disaster resilience Nepal, NSET, earthquake preparedness, structural engineering, seismic safety, Kathmandu conference 2026, earthquake conference Asia"/>
+    <meta name="author" content="National Society for Earthquake Technology-Nepal (NSET)"/>
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    <meta name="distribution" content="global">
+    
+    <!-- Geo-targeting -->
+    <meta name="geo.region" content="NP-BA">
+    <meta name="geo.placename" content="Kathmandu">
+    <meta name="geo.position" content="27.7172;85.3240">
+    <meta name="ICBM" content="27.7172, 85.3240">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="9ACEE - 9th Asia Conference on Earthquake Engineering | Kathmandu 2026">
+    <meta property="og:description" content="Join the 9th Asia Conference on Earthquake Engineering in Kathmandu, Nepal. Leading experts in seismic engineering and disaster resilience. 4-6 May 2026.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://9acee.nset.org.np">
+    <meta property="og:image" content="https://9acee.nset.org.np/static/images/logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:site_name" content="9ACEE - 9th Asia Conference on Earthquake Engineering">
+    <meta property="og:locale" content="en_US">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="9ACEE - 9th Asia Conference on Earthquake Engineering">
+    <meta name="twitter:description" content="Join the 9th Asia Conference on Earthquake Engineering in Kathmandu, Nepal. 4-6 May 2026.">
+    <meta name="twitter:image" content="https://9acee.nset.org.np/static/images/logo.png">
+    <meta name="twitter:site" content="@NSETNepal">
+    <meta name="twitter:creator" content="@NSETNepal">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://9acee.nset.org.np/">
+    
+    <title>9ACEE – 9th Asia Conference on Earthquake Engineering</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <link href="static/css/output.css" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="http://0.0.0.0:8000/static/images/logo.png">
+    <link rel="apple-touch-icon" href="http://0.0.0.0:8000/static/images/logo.png">
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "9th Asia Conference on Earthquake Engineering (9ACEE)",
+      "alternateName": "9ACEE",
+      "description": "Asia's premier conference on earthquake engineering, seismic safety, and disaster resilience.",
+      "startDate": "2026-05-04T09:00:00+05:45",
+      "endDate": "2026-05-06T17:00:00+05:45",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "location": {
+        "@type": "Place",
+        "name": "Kathmandu",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kathmandu",
+          "addressRegion": "Bagmati Province",
+          "addressCountry": "NP"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "27.7172",
+          "longitude": "85.3240"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "National Society for Earthquake Technology-Nepal (NSET)",
+        "url": "https://www.nset.org.np",
+        "sameAs": [
+          "https://www.facebook.com/NSET2020/",
+          "https://twitter.com/NSETNepal",
+          "https://www.linkedin.com/company/national-society-for-earthquake-technology---nepal-nset-"
+        ]
+      },
+      "url": "https://9acee.nset.org.np",
+      "image": "https://9acee.nset.org.np/static/images/logo.png",
+      "offers": {
+        "@type": "Offer",
+        "url": "https://9acee.nset.org.np/registration/",
+        "availability": "https://schema.org/InStock",
+        "validFrom": "2025-01-01"
+      }
+    }
+    </script>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RZZRBY5SG9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-RZZRBY5SG9');
+    </script>
+    
+    
 <style>
-    body {
-        background: linear-gradient(135deg, #0f172a, #1e3a8a, #0ea5e9);
-        min-height: 100vh;
-    }
+/* Slider Styles */
+.slider-container { position: relative; width: 100%; overflow: hidden; }
+.slider { position: relative; width: 100%; }
+.slide { display: none; position: relative; width: 100%; }
+.slide.active { display: block; }
+.slide img { width: 100%; height: 500px; object-fit: cover; }
+.slide-content { 
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    padding: 30px; 
+    background: linear-gradient(transparent, rgba(0,0,0,0.8)); 
+    color: white; 
+}
+.slide-content h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; }
+.slider-nav { 
+    position: absolute; 
+    bottom: 20px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    display: flex; 
+    gap: 10px; 
+    z-index: 10; 
+}
+.slider-dot { 
+    width: 12px; 
+    height: 12px; 
+    border-radius: 50%; 
+    background-color: rgba(255,255,255,0.5); 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+}
+.slider-dot.active { background-color: #fff; width: 30px; border-radius: 6px; }
+.slider-arrows { display: none; }
+@media (max-width: 768px) {
+    .slide img { height: 300px; }
+    .slide-content { padding: 16px 12px 60px 12px; }
+    .slide-content h2 { font-size: 1.1rem; }
+}
 
-    .glass {
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(16px);
-        -webkit-backdrop-filter: blur(16px);
-        border-radius: 20px;
-        border: 1px solid rgba(255,255,255,0.15);
-        box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-    }
+/* Timeline Styles */
+.timeline-section { padding: 60px 20px; background-color: #fff; }
+.timeline-container { max-width: 1400px; margin: 0 auto; position: relative; }
+.timeline-line { position: absolute; top: 30px; left: 0; right: 0; height: 4px; background: linear-gradient(to right, #0072ff 0%, #0072ff 33%, #00c853 33%, #00c853 66%, #ff9800 66%, #ff9800 100%); }
+.timeline-items { display: flex; justify-content: space-between; position: relative; flex-wrap: wrap; }
+.timeline-item { flex: 1; min-width: 140px; text-align: center; padding: 0 10px; }
+.timeline-dot { width: 24px; height: 24px; border-radius: 50%; margin: 0 auto 20px; position: relative; z-index: 2; }
+.timeline-dot.submission { background-color: #0072ff; }
+.timeline-dot.registration { background-color: #00c853; }
+.timeline-dot.conference { background-color: #ff9800; }
+.timeline-item h3 { font-size: 14px; font-weight: 600; color: #333; margin-bottom: 8px; line-height: 1.4; }
+.timeline-item p { font-size: 14px; color: #0072ff; margin: 0; font-weight: 600; }
 
-    .glass-light {
-        background: rgba(255,255,255,0.15);
-        backdrop-filter: blur(12px);
-        border-radius: 14px;
-        border: 1px solid rgba(255,255,255,0.2);
-    }
+@media (max-width: 768px) {
+    .timeline-section { padding: 40px 16px; }
+    .timeline-container { position: relative; padding-left: 32px; }
+    .timeline-line { position: absolute; left: 8px; top: 0; bottom: 0; width: 3px; height: 100%; background: linear-gradient(to bottom, #0072ff, #ff9800) !important; border-radius: 3px; }
+    .timeline-items { flex-direction: column !important; gap: 0 !important; }
+    .timeline-item { flex: unset !important; min-width: unset !important; text-align: left !important; padding: 0 0 24px 20px !important; position: relative; }
+    .timeline-item:last-child { padding-bottom: 0 !important; }
+    .timeline-dot { position: absolute !important; left: -20px !important; top: 3px !important; margin: 0 !important; width: 14px !important; height: 14px !important; border: 2px solid #fff !important; }
+}
 
-    .glow {
-        box-shadow: 0 0 30px rgba(56,189,248,0.4);
-    }
+/* Registration Buttons */
+.reg-btn { 
+    background: linear-gradient(135deg, #00c6ff, #0072ff); 
+    color: #fff; 
+    padding: 12px 24px; 
+    border-radius: 10px; 
+    font-weight: 600; 
+    transition: all 0.3s ease; 
+    text-decoration: none; 
+    display: inline-block;
+}
+.reg-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(0,0,0,0.3); }
 
-    .glass-btn {
-        background: rgba(255,255,255,0.15);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255,255,255,0.25);
-        padding: 12px 22px;
-        border-radius: 12px;
-        transition: all 0.3s ease;
-    }
+/* Organizers */
+.org-circle { 
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%; 
+    background: #fff; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    margin: 0 auto 8px; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    border: 3px solid #f0f0f0;
+}
+.org-circle:hover { transform: scale(1.08); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
+.org-circle img { max-width: 80%; max-height: 80%; object-fit: contain; }
 
-    .glass-btn:hover {
-        background: rgba(255,255,255,0.25);
-        transform: translateY(-2px);
-    }
+@media (max-width: 768px) {
+    .org-circle { width: 80px; height: 80px; }
+}
 
-    .slide {
-        display: none;
-    }
-    .slide.active {
-        display: block;
-    }
-    .slideshow-container {
-        position: relative;
-    }
+/* Keynote Speakers Grid */
+.keynote-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+@media (max-width: 1024px) {
+    .keynote-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+    .keynote-grid { grid-template-columns: 1fr; }
+}
+
+.keynote-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+.keynote-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+.keynote-card .photo {
+    height: 200px;
+    background: linear-gradient(135deg, #1565c0, #1976d2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.keynote-card .photo .initials {
+    width: 100px;
+    height: 100px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+.keynote-card .info {
+    padding: 20px;
+    text-align: center;
+}
+.keynote-card .info h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1a365d;
+    margin-bottom: 4px;
+}
+.keynote-card .info .title {
+    font-size: 0.85rem;
+    color: #0072ff;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.keynote-card .info .affiliation {
+    font-size: 0.8rem;
+    color: #666;
+    margin-bottom: 12px;
+}
+.keynote-card .info .links {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+.keynote-card .info .links a {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    background: #f0f7ff;
+    color: #0072ff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+.keynote-card .info .links a:hover {
+    background: #0072ff;
+    color: white;
+}
+
+/* Invited Speakers Carousel */
+.invited-carousel-container {
+    overflow: hidden;
+    position: relative;
+}
+.invited-carousel {
+    display: flex;
+    gap: 20px;
+    animation: scroll-left 40s linear infinite;
+}
+.invited-carousel:hover {
+    animation-play-state: paused;
+}
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+.invited-speaker-card {
+    flex-shrink: 0;
+    width: 180px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+.invited-speaker-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+.invited-speaker-card .photo {
+    height: 140px;
+    background: linear-gradient(135deg, #00c853, #69f0ae);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.invited-speaker-card .photo .initials {
+    width: 70px;
+    height: 70px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.invited-speaker-card .info {
+    padding: 12px;
+    text-align: center;
+}
+.invited-speaker-card .info h4 {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #1a365d;
+    margin-bottom: 2px;
+}
+.invited-speaker-card .info p {
+    font-size: 0.7rem;
+    color: #666;
+}
+
+/* Logo Carousel */
+.logo-carousel-container {
+    overflow: hidden;
+    background: #f8fafc;
+    padding: 20px 0;
+}
+.logo-carousel {
+    display: flex;
+    gap: 40px;
+    animation: scroll-left 30s linear infinite;
+}
+.logo-carousel:hover {
+    animation-play-state: paused;
+}
+.logo-item {
+    flex-shrink: 0;
+    width: 150px;
+    height: 80px;
+    background: white;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    font-weight: bold;
+    color: #1a365d;
+}
 </style>
 
-<!-- HERO -->
-<section class="py-20">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-10 items-center glass p-10 glow">
-
-            <div class="text-white">
-                <p class="text-sm uppercase tracking-widest mb-4 opacity-80">
-                    Quality Education
-                </p>
-
-                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                    Technical School
-                </h1>
-
-                <p class="text-white/80 mb-8">
-                    Technical Education
-                </p>
-
-                <div class="flex gap-4 flex-wrap">
-                    <a href="about/index.html" class="glass-btn text-white">
-                        About
-                    </a>
-
-                    
-                    <a href="admission/index.html" class="glass-btn text-white">
-                        Apply Now
-                    </a>
-                    
-                </div>
-            </div>
-
-            <div class="glass-light p-4 relative">
-    
-        <div class="slideshow-container relative">
-            
-                <div class="slide active">
-                    
-                        <img src="media/sliders/unnamed_ofrBN6t.webp" class="rounded-xl w-full h-[320px] object-cover">
-                    
-                </div>
-            
-                <div class="slide ">
-                    
-                        <img src="media/sliders/unnamed_2.webp" class="rounded-xl w-full h-[320px] object-cover">
-                    
-                </div>
-            
-            
-            <!-- Navigation Buttons -->
-            
-                <button class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all" onclick="changeSlide(-1)">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                    </svg>
-                </button>
-                <button class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white rounded-full p-2 transition-all" onclick="changeSlide(1)">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                    </svg>
-                </button>
-                
-                <!-- Dots/Indicators -->
-                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-                    
-                        <button class="w-2 h-2 rounded-full transition-all bg-white w-4" onclick="currentSlide(0)"></button>
-                    
-                        <button class="w-2 h-2 rounded-full transition-all bg-white/50 hover:bg-white/70" onclick="currentSlide(1)"></button>
-                    
-                </div>
-            
-        </div>
-    
-</div>
-
-<script>
-    let currentIndex = 0;
-    const slides = document.querySelectorAll('.slide');
-    const totalSlides = slides.length;
-    let autoSlideInterval;
-
-    function showSlide(index) {
-        if (index >= totalSlides) currentIndex = 0;
-        if (index < 0) currentIndex = totalSlides - 1;
-        
-        slides.forEach((slide, i) => {
-            slide.classList.remove('active');
-            if (i === currentIndex) {
-                slide.classList.add('active');
-            }
-        });
-        
-        // Update dots
-        const dots = document.querySelectorAll('.absolute.bottom-4 .rounded-full');
-        dots.forEach((dot, i) => {
-            if (i === currentIndex) {
-                dot.classList.add('bg-white', 'w-4');
-                dot.classList.remove('bg-white/50', 'w-2');
-            } else {
-                dot.classList.remove('bg-white', 'w-4');
-                dot.classList.add('bg-white/50', 'w-2');
-            }
-        });
-    }
-
-    function changeSlide(direction) {
-        currentIndex += direction;
-        showSlide(currentIndex);
-        resetAutoSlide();
-    }
-
-    function currentSlide(index) {
-        currentIndex = index;
-        showSlide(currentIndex);
-        resetAutoSlide();
-    }
-
-    function startAutoSlide() {
-        autoSlideInterval = setInterval(() => {
-            currentIndex++;
-            showSlide(currentIndex);
-        }, 5000); // Change slide every 5 seconds
-    }
-
-    function resetAutoSlide() {
-        clearInterval(autoSlideInterval);
-        startAutoSlide();
-    }
-
-    // Start auto-sliding if there's more than one slide
-    if (totalSlides > 1) {
-        startAutoSlide();
-        
-        // Pause auto-slide on hover
-        const container = document.querySelector('.slideshow-container');
-        container.addEventListener('mouseenter', () => {
-            clearInterval(autoSlideInterval);
-        });
-        container.addEventListener('mouseleave', () => {
-            startAutoSlide();
-        });
-    }
-</script>
-
-        </div>
-    </div>
-</section>
-
-<!-- STATS -->
-<section class="py-10">
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-6 text-white">
-
-        <div class="glass p-6 text-center">
-            <h2 class="text-3xl font-bold">30+</h2>
-            <p class="text-white/70 text-sm">Years</p>
-        </div>
-
-        <div class="glass p-6 text-center">
-            <h2 class="text-3xl font-bold">50+</h2>
-            <p class="text-white/70 text-sm">Teachers</p>
-        </div>
-
-        <div class="glass p-6 text-center">
-            <h2 class="text-3xl font-bold">2000+</h2>
-            <p class="text-white/70 text-sm">Students</p>
-        </div>
-
-        <div class="glass p-6 text-center">
-            <h2 class="text-3xl font-bold">95%</h2>
-            <p class="text-white/70 text-sm">Pass Rate</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- MAIN -->
-<section class="py-16">
-    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-3 gap-8 text-white">
-
-        <!-- LEFT -->
-        <div class="lg:col-span-2 space-y-8">
-
-            <!-- NOTICES -->
-            <div class="glass p-6">
-                <h2 class="text-xl font-semibold mb-4">Latest Notices</h2>
-
-                <div class="space-y-4">
-                    
-                    <a href="notices/holiday-holi-2080/index.html" class="block glass-light p-4 hover:bg-white/20 transition">
-                        <h3 class="font-semibold">Holiday Notice - Holi Festival</h3>
-                        <p class="text-sm text-white/60">February 20, 2024</p>
-                    </a>
-                    
-                    <a href="notices/annual-exam-schedule-2080/index.html" class="block glass-light p-4 hover:bg-white/20 transition">
-                        <h3 class="font-semibold">Annual Examination Schedule 2080</h3>
-                        <p class="text-sm text-white/60">February 01, 2024</p>
-                    </a>
-                    
-                    <a href="notices/ptm-magh-2080/index.html" class="block glass-light p-4 hover:bg-white/20 transition">
-                        <h3 class="font-semibold">Parent-Teacher Meeting</h3>
-                        <p class="text-sm text-white/60">January 25, 2024</p>
-                    </a>
-                    
-                    <a href="notices/sports-week-2080/index.html" class="block glass-light p-4 hover:bg-white/20 transition">
-                        <h3 class="font-semibold">Annual Sports Week Announcement</h3>
-                        <p class="text-sm text-white/60">January 05, 2024</p>
-                    </a>
-                    
-                </div>
-            </div>
-
-            <!-- EVENTS -->
-            <div class="glass p-6">
-                <h2 class="text-xl font-semibold mb-4">Upcoming Events</h2>
-
-                <div class="grid md:grid-cols-2 gap-4">
-                    
-                    <p>No events</p>
-                    
-                </div>
-            </div>
-
-            <!-- GALLERY -->
-            <div class="glass p-6">
-                <h2 class="text-xl font-semibold mb-4">Gallery</h2>
-
-                <div class="grid grid-cols-3 gap-4">
-                    
-                    <a href="gallery/annual-day/index.html" class="glass-light p-2">
-                        <img src="media/gallery/covers/IMG_0042.jpeg" class="rounded-lg h-28 w-full object-cover">
-                    </a>
-                    
-                </div>
-            </div>
-
-        </div>
-
-        <!-- SIDEBAR -->
-        <div class="space-y-6">
-
-            
-            <div class="glass p-6">
-                <h3 class="text-xl font-semibold mb-2">Admissions Open</h3>
-                <p class="text-white/70 mb-4">
-                    Apply now
-                </p>
-
-                <a href="admission/index.html" class="glass-btn w-full text-center text-white">
-                    Apply
+</head>
+<body class="bg-gray-50 font-sans pb-20 lg:pb-0">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-conference-blue rounded-lg flex items-center justify-center">
+                        <span class="text-white font-bold text-lg">9A</span>
+                    </div>
+                    <div>
+                        <span class="text-xl font-bold text-conference-dark">9ACEE</span>
+                        <span class="block text-xs text-gray-500">9<sup>th</sup> Asia Conference on Earthquake Engineering</span>
+                        <span class="block text-xs font-bold" style="color: #8B0000;">4 - 6 May 2026</span>
+                    </div>
                 </a>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-6">
+                    <a href="index.html" class="nav-link nav-link-active">Home</a>
+                    <a href="registration/index.html" class="nav-link ">Registration</a>
+                    <a href="abstract-submission/index.html" class="nav-link ">Abstract</a>
+                    <a href="schedule/index.html" class="nav-link ">Schedule</a>
+                    <a href="downloads/index.html" class="nav-link ">Downloads</a>
+                    <a href="photos/index.html" class="nav-link ">Photos</a>
+                    <a href="registration/index.html" class="btn-primary">Register Now</a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg hover:bg-gray-100">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Dropdown -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t">
+            <div class="px-4 py-4 space-y-3">
+                <a href="index.html" class="block py-2 text-gray-700 hover:text-conference-blue">Home</a>
+                <a href="registration/index.html" class="block py-2 text-gray-700 hover:text-conference-blue">Registration</a>
+                <a href="abstract-submission/index.html" class="block py-2 text-gray-700 hover:text-conference-blue">Abstract Submission</a>
+                <a href="schedule/index.html" class="block py-2 text-gray-700 hover:text-conference-blue">Schedule</a>
+                <a href="downloads/index.html" class="block py-2 text-gray-700 hover:text-conference-blue">Downloads</a>
+                <a href="photos/index.html" class="block py-2 text-gray-700 hover:text-conference-blue">Photos</a>
+                <a href="registration/index.html" class="block btn-primary text-center mt-4">Register Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        
+<!-- Hero Slider -->
+<div class="slider-container">
+    <div class="slider" id="slider">
+        <div class="slide active">
+            <img src="https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?w=1600" alt="Boudhanath Stupa">
+            <div class="slide-content">
+                <h2>Boudhanath Stupa, UNESCO World Heritage Site</h2>
+                <p>Kathmandu, Nepal – Host city of 9ACEE</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1600" alt="Conference Meeting">
+            <div class="slide-content">
+                <h2>9ACEE Joint Meeting of Organizing, Advisory, and Technical Committee</h2>
+                <p>Led by NDRRMA</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?w=1600" alt="Pashupatinath Temple">
+            <div class="slide-content">
+                <h2>Sacred Hindu Temple of Lord Shiva</h2>
+                <p>Kathmandu, Nepal's cultural and historical capital</p>
+            </div>
+        </div>
+    </div>
+    <div class="slider-nav" id="slider-nav">
+        <div class="slider-dot active" data-index="0"></div>
+        <div class="slider-dot" data-index="1"></div>
+        <div class="slider-dot" data-index="2"></div>
+    </div>
+</div>
+
+<!-- Registration Buttons -->
+<div style="background: linear-gradient(135deg, #1e3c72, #2a5298); padding: 20px;">
+    <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSee6gHYV0AtwkEAcRZ0-snvKXUaVRoNWZDy7FFKyVRga3Q23g/viewform" target="_blank" class="reg-btn">
+            Full-Registration Form
+        </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScPZK5oerPBvMU8s7x_aeNdoAtXIyDX0E9fx6kdQKS9KeRHnA/viewform" target="_blank" class="reg-btn">
+            Extended Abstract Submission
+        </a>
+    </div>
+</div>
+
+<!-- Conference Theme Banner -->
+<div class="bg-conference-blue text-white text-center py-6">
+    <h2 class="text-2xl md:text-3xl font-bold mb-2">Risk to Resilience: Linking Science to the People</h2>
+    <p class="text-lg opacity-90">4<sup>th</sup> – 6<sup>th</sup> May 2026 | Kathmandu, Nepal</p>
+</div>
+
+<!-- Organizers Section -->
+<div class="py-12 bg-gradient-to-b from-gray-50 to-white">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-center text-2xl font-bold text-conference-dark mb-8">Conference Organizers & Sponsors</h2>
+        <div class="flex flex-wrap justify-center items-start gap-6">
+            <!-- NDRRMA -->
+            <div class="text-center">
+                <p class="text-xs font-semibold text-conference-blue mb-2 uppercase tracking-wide">Organizer</p>
+                <a href="https://ndrrma.gov.np/" target="_blank">
+                    <div class="org-circle">
+                        <div class="w-12 h-12 bg-conference-blue rounded-lg flex items-center justify-center text-white font-bold text-lg">NDRRMA</div>
+                    </div>
+                </a>
+                <p class="font-semibold text-conference-dark text-sm">NDRRMA</p>
             </div>
             
-
+            <!-- NAST -->
+            <div class="text-center">
+                <p class="text-xs font-semibold text-green-600 mb-2 uppercase tracking-wide">Co-Organizer</p>
+                <a href="https://nast.gov.np/" target="_blank">
+                    <div class="org-circle">
+                        <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">NAST</div>
+                    </div>
+                </a>
+                <p class="font-semibold text-conference-dark text-sm">NAST</p>
+            </div>
             
+            <!-- ACEE -->
+            <div class="text-center">
+                <p class="text-xs font-semibold text-conference-gold mb-2 uppercase tracking-wide">Co-Organizer</p>
+                <a href="https://www.acee-conf.org/" target="_blank">
+                    <div class="org-circle">
+                        <div class="w-12 h-12 bg-conference-gold rounded-lg flex items-center justify-center text-white font-bold text-lg">ACEE</div>
+                    </div>
+                </a>
+                <p class="font-semibold text-conference-dark text-sm">ACEE</p>
+            </div>
+            
+            <!-- NSET -->
+            <div class="text-center">
+                <p class="text-xs font-semibold text-purple-600 mb-2 uppercase tracking-wide">Host</p>
+                <a href="https://www.nset.org.np/" target="_blank">
+                    <div class="org-circle">
+                        <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">NSET</div>
+                    </div>
+                </a>
+                <p class="font-semibold text-conference-dark text-sm">NSET</p>
+            </div>
+            
+            <!-- CSI -->
+            <div class="text-center">
+                <p class="text-xs font-semibold text-red-600 mb-2 uppercase tracking-wide">Title Sponsor</p>
+                <a href="https://www.csiamerica.com/" target="_blank">
+                    <div class="org-circle">
+                        <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold text-sm">CSI</div>
+                    </div>
+                </a>
+                <p class="font-semibold text-conference-dark text-sm">Computers & Structures</p>
+            </div>
+            
+            <!-- CSI Bangkok -->
+            <div class="text-center">
+                <p class="text-xs font-semibold text-teal-600 mb-2 uppercase tracking-wide">Title Sponsor</p>
+                <a href="https://csibangkok.com/" target="_blank">
+                    <div class="org-circle">
+                        <div class="w-12 h-12 bg-teal-500 rounded-lg flex items-center justify-center text-white font-bold text-xs">CSI-BKK</div>
+                    </div>
+                </a>
+                <p class="font-semibold text-conference-dark text-sm">CSI-Bangkok</p>
+            </div>
+        </div>
+    </div>
+</div>
 
-            <!-- CONTACT -->
-            <div class="glass p-6">
-                <h3 class="text-lg font-semibold mb-4">Contact</h3>
-
-                <div class="text-sm text-white/70 space-y-2">
-                    <p>Kathmandu
-Kathmandu</p>
-                    <p>9843698927</p>
-                    <p>school@school.com</p>
+<!-- Keynote Speakers Section - 6 in Grid -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-center text-3xl font-bold text-conference-dark mb-2">Keynote Speakers</h2>
+        <p class="text-center text-gray-600 mb-10">World-renowned experts sharing insights on earthquake engineering</p>
+        
+        <div class="keynote-grid">
+            <!-- Speaker 1: Dr. Kimiro Meguro -->
+            <div class="keynote-card">
+                <div class="photo">
+                    <div class="initials">KM</div>
+                </div>
+                <div class="info">
+                    <h3>Dr. Kimiro Meguro</h3>
+                    <p class="title">Professor</p>
+                    <p class="affiliation">The University of Tokyo, Japan</p>
+                    <div class="links">
+                        <a href="index.html#">Bio</a>
+                        <a href="index.html#">Abstract</a>
+                    </div>
                 </div>
             </div>
-
+            
+            <!-- Speaker 2: Prof. CVR Murty -->
+            <div class="keynote-card">
+                <div class="photo" style="background: linear-gradient(135deg, #00c853, #69f0ae);">
+                    <div class="initials">CM</div>
+                </div>
+                <div class="info">
+                    <h3>Prof. CVR Murty</h3>
+                    <p class="title">Professor, Civil Engineering</p>
+                    <p class="affiliation">IIT Madras, India</p>
+                    <div class="links">
+                        <a href="index.html#">Bio</a>
+                        <a href="index.html#">Abstract</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Speaker 3: Prof. Pennung Warnitchai -->
+            <div class="keynote-card">
+                <div class="photo" style="background: linear-gradient(135deg, #7b1fa2, #ba68c8);">
+                    <div class="initials">PW</div>
+                </div>
+                <div class="info">
+                    <h3>Prof. Pennung Warnitchai</h3>
+                    <p class="title">Chair, Structural Engineering</p>
+                    <p class="affiliation">Asian Institute of Technology</p>
+                    <div class="links">
+                        <a href="index.html#">Bio</a>
+                        <a href="index.html#">Abstract</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Speaker 4: Dr. Susan Hough -->
+            <div class="keynote-card">
+                <div class="photo" style="background: linear-gradient(135deg, #c62828, #ef5350);">
+                    <div class="initials">SH</div>
+                </div>
+                <div class="info">
+                    <h3>Dr. Susan Hough</h3>
+                    <p class="title">Seismologist, USGS</p>
+                    <p class="affiliation">Pasadena, CA, USA</p>
+                    <div class="links">
+                        <a href="index.html#">Bio</a>
+                        <a href="index.html#">Abstract</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Speaker 5: Dr. R.K. Pandey -->
+            <div class="keynote-card">
+                <div class="photo" style="background: linear-gradient(135deg, #00897b, #4db6ac);">
+                    <div class="initials">RP</div>
+                </div>
+                <div class="info">
+                    <h3>Dr. R.K. Pandey</h3>
+                    <p class="title">Professor</p>
+                    <p class="affiliation">Tribhuvan University, Nepal</p>
+                    <div class="links">
+                        <a href="index.html#">Bio</a>
+                        <a href="index.html#">Abstract</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Speaker 6: Dr. James L. Lin -->
+            <div class="keynote-card">
+                <div class="photo" style="background: linear-gradient(135deg, #f57c00, #ffb74d);">
+                    <div class="initials">JL</div>
+                </div>
+                <div class="info">
+                    <h3>Dr. James L. Lin</h3>
+                    <p class="title">Professor</p>
+                    <p class="affiliation">National Taiwan University</p>
+                    <div class="links">
+                        <a href="index.html#">Bio</a>
+                        <a href="index.html#">Abstract</a>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </div>
 </section>
 
-<!-- CTA -->
-<section class="py-20">
-    <div class="max-w-4xl mx-auto text-center glass p-10 text-white glow">
-        <h2 class="text-3xl font-bold mb-4">Join Our School</h2>
-        <p class="text-white/70 mb-6">Give your child the best education</p>
-
-        <div class="flex justify-center gap-4 flex-wrap">
-            <a href="contact/index.html" class="glass-btn text-white">
-                Contact
-            </a>
-
-            <a href="about/index.html" class="glass-btn text-white">
-                Learn More
-            </a>
+<!-- Invited Speakers Carousel -->
+<section class="py-12 bg-gradient-to-r from-gray-50 to-blue-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-center text-3xl font-bold text-conference-dark mb-2">Invited Speakers</h2>
+        <p class="text-center text-gray-600 mb-8">Distinguished experts from around the world</p>
+        
+        <div class="invited-carousel-container">
+            <div class="invited-carousel" id="invitedCarousel">
+                <!-- Set 1 -->
+                <div class="invited-speaker-card">
+                    <div class="photo"><div class="initials">YT</div></div>
+                    <div class="info">
+                        <h4>Dr. Y. Tanaka</h4>
+                        <p>Kyoto University, Japan</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #e91e63, #f48fb1);"><div class="initials">SK</div></div>
+                    <div class="info">
+                        <h4>Dr. S. Khan</h4>
+                        <p>IIT Delhi, India</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #3f51b5, #7986cb);"><div class="initials">MC</div></div>
+                    <div class="info">
+                        <h4>Dr. M. Chen</h4>
+                        <p>Tsinghua University, China</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #ff5722, #ff8a65);"><div class="initials">BP</div></div>
+                    <div class="info">
+                        <h4>Dr. B. Park</h4>
+                        <p>Seoul National Univ., Korea</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #4caf50, #81c784);"><div class="initials">NS</div></div>
+                    <div class="info">
+                        <h4>Dr. N. Singh</h4>
+                        <p>IIT Roorkee, India</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #2196f3, #64b5f6);"><div class="initials">TH</div></div>
+                    <div class="info">
+                        <h4>Dr. T. Hara</h4>
+                        <p>University of Tokyo, Japan</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #9c27b0, #ba68c8);"><div class="initials">AW</div></div>
+                    <div class="info">
+                        <h4>Dr. A. Wong</h4>
+                        <p>NUS, Singapore</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #00bcd4, #4dd0e1);"><div class="initials">RL</div></div>
+                    <div class="info">
+                        <h4>Dr. R. Lee</h4>
+                        <p>KAIST, Korea</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo"><div class="initials">MK</div></div>
+                    <div class="info">
+                        <h4>Dr. M. Kumar</h4>
+                        <p>IIT Bombay, India</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #e91e63, #f48fb1);"><div class="initials">JW</div></div>
+                    <div class="info">
+                        <h4>Dr. J. Wang</h4>
+                        <p>Tongji University, China</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #3f51b5, #7986cb);"><div class="initials">SM</div></div>
+                    <div class="info">
+                        <h4>Dr. S. Mishra</h4>
+                        <p>IIT Kanpur, India</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #ff5722, #ff8a65);"><div class="initials">KH</div></div>
+                    <div class="info">
+                        <h4>Dr. K. Hayashi</h4>
+                        <p>Kyushu University, Japan</p>
+                    </div>
+                </div>
+                <!-- Duplicate set for seamless scroll -->
+                <div class="invited-speaker-card">
+                    <div class="photo"><div class="initials">YT</div></div>
+                    <div class="info">
+                        <h4>Dr. Y. Tanaka</h4>
+                        <p>Kyoto University, Japan</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #e91e63, #f48fb1);"><div class="initials">SK</div></div>
+                    <div class="info">
+                        <h4>Dr. S. Khan</h4>
+                        <p>IIT Delhi, India</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #3f51b5, #7986cb);"><div class="initials">MC</div></div>
+                    <div class="info">
+                        <h4>Dr. M. Chen</h4>
+                        <p>Tsinghua University, China</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #ff5722, #ff8a65);"><div class="initials">BP</div></div>
+                    <div class="info">
+                        <h4>Dr. B. Park</h4>
+                        <p>Seoul National Univ., Korea</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #4caf50, #81c784);"><div class="initials">NS</div></div>
+                    <div class="info">
+                        <h4>Dr. N. Singh</h4>
+                        <p>IIT Roorkee, India</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #2196f3, #64b5f6);"><div class="initials">TH</div></div>
+                    <div class="info">
+                        <h4>Dr. T. Hara</h4>
+                        <p>University of Tokyo, Japan</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #9c27b0, #ba68c8);"><div class="initials">AW</div></div>
+                    <div class="info">
+                        <h4>Dr. A. Wong</h4>
+                        <p>NUS, Singapore</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #00bcd4, #4dd0e1);"><div class="initials">RL</div></div>
+                    <div class="info">
+                        <h4>Dr. R. Lee</h4>
+                        <p>KAIST, Korea</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo"><div class="initials">MK</div></div>
+                    <div class="info">
+                        <h4>Dr. M. Kumar</h4>
+                        <p>IIT Bombay, India</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #e91e63, #f48fb1);"><div class="initials">JW</div></div>
+                    <div class="info">
+                        <h4>Dr. J. Wang</h4>
+                        <p>Tongji University, China</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #3f51b5, #7986cb);"><div class="initials">SM</div></div>
+                    <div class="info">
+                        <h4>Dr. S. Mishra</h4>
+                        <p>IIT Kanpur, India</p>
+                    </div>
+                </div>
+                <div class="invited-speaker-card">
+                    <div class="photo" style="background: linear-gradient(135deg, #ff5722, #ff8a65);"><div class="initials">KH</div></div>
+                    <div class="info">
+                        <h4>Dr. K. Hayashi</h4>
+                        <p>Kyushu University, Japan</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-
-    </div>
-</main>
-
-<!-- FOOTER -->
-<footer class="mt-20 px-4 pb-10">
-    <div class="glass max-w-7xl mx-auto p-10">
-
-        <div class="grid md:grid-cols-3 gap-10">
-
-            <!-- BRAND -->
-            <div>
-                <h2 class="text-xl font-bold mb-3">
-                    VishwaMitra Ganesh Secondary School
-                </h2>
-                <p class="text-white/70 text-sm">
-                    Quality Education
+<!-- About Section -->
+<section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/3">
+                <div class="w-48 h-48 mx-auto bg-conference-blue rounded-2xl flex items-center justify-center shadow-xl">
+                    <span class="text-white text-6xl font-bold">9A</span>
+                </div>
+            </div>
+            <div class="md:w-2/3">
+                <h2 class="text-3xl font-bold text-conference-dark mb-4">About 9ACEE</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    The Asia Conference on Earthquake Engineering (ACEE) was initiated to create a dedicated platform in Asia for dialogue and cooperation among earthquake engineering professionals. Since its inception, ACEE has served as a meeting point for advancing research, sharing lessons from damaging earthquakes, and translating new knowledge into safer buildings, infrastructure, and communities.
                 </p>
+                <a href="schedule/index.html" class="btn-primary">Learn More</a>
             </div>
-
-            <!-- LINKS -->
-            <div>
-                <h3 class="font-semibold mb-3">Links</h3>
-                <div class="space-y-2 text-sm">
-                    <a href="about/index.html" class="block text-white/70 hover:text-white">About</a>
-                    <a href="events/index.html" class="block text-white/70 hover:text-white">Events</a>
-                    <a href="notices/index.html" class="block text-white/70 hover:text-white">Notices</a>
-                </div>
-            </div>
-
-            <!-- CONTACT -->
-            <div>
-                <h3 class="font-semibold mb-3">Contact</h3>
-                <div class="text-sm text-white/70 space-y-1">
-                    <p>Kathmandu
-Kathmandu</p>
-                    <p>9843698927</p>
-                    <p>school@school.com</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="mt-10 text-center text-xs text-white/50">
-            © 2026 VishwaMitra Ganesh Secondary School
         </div>
     </div>
-</footer>
+</section>
 
-<!-- JS -->
+<!-- Timeline Section -->
+<section class="timeline-section">
+    <div class="max-w-7xl mx-auto px-4">
+        <h2 class="text-center text-3xl font-bold text-conference-dark mb-12">Important Dates</h2>
+        <div class="timeline-container">
+            <div class="timeline-line"></div>
+            <div class="timeline-items">
+                <div class="timeline-item">
+                    <div class="timeline-dot submission"></div>
+                    <h3>Abstract submission</h3>
+                    <p>28 February 2026</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot submission"></div>
+                    <h3>Review of abstracts & notification</h3>
+                    <p>15 March 2026</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot registration"></div>
+                    <h3>Second circular with Registration</h3>
+                    <p>20 March 2026</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot registration"></div>
+                    <h3>Submission of extended abstract <span class="text-red-600">(Extended)</span></h3>
+                    <p>07 April 2026</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot conference"></div>
+                    <h3>Review and Finalization</h3>
+                    <p>20 April 2026</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot conference"></div>
+                    <h3>Third/Final circular</h3>
+                    <p>25 April 2026</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot conference"></div>
+                    <h3>Presentation files deadline</h3>
+                    <p>30 April 2026</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Conference Prospectus Section -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-2/3">
+                <h2 class="text-3xl font-bold text-conference-dark mb-4">Conference Prospectus</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Download the 9ACEE Conference Prospectus to learn more about the conference themes, 
+                    venue details, sponsorship opportunities, and important information for participants.
+                </p>
+                <a href="downloads/index.html" class="btn-primary">Download Prospectus</a>
+            </div>
+            <div class="md:w-1/3">
+                <div class="w-40 h-40 mx-auto bg-conference-gold rounded-2xl flex items-center justify-center shadow-xl">
+                    <span class="text-white text-4xl font-bold">9A</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partner & Sponsor Logos Carousel -->
+<section class="py-8 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 mb-4">
+        <h2 class="text-center text-xl font-bold text-conference-dark">Our Partners & Sponsors</h2>
+    </div>
+    <div class="logo-carousel-container">
+        <div class="logo-carousel">
+            <div class="logo-item">NDRRMA</div>
+            <div class="logo-item">NAST</div>
+            <div class="logo-item">ACEE</div>
+            <div class="logo-item">NSET</div>
+            <div class="logo-item">CSI America</div>
+            <div class="logo-item">CSI Bangkok</div>
+            <div class="logo-item">USGS</div>
+            <div class="logo-item">UNDP</div>
+            <div class="logo-item">World Bank</div>
+            <div class="logo-item">JICA</div>
+            <!-- Duplicate for seamless scroll -->
+            <div class="logo-item">NDRRMA</div>
+            <div class="logo-item">NAST</div>
+            <div class="logo-item">ACEE</div>
+            <div class="logo-item">NSET</div>
+            <div class="logo-item">CSI America</div>
+            <div class="logo-item">CSI Bangkok</div>
+            <div class="logo-item">USGS</div>
+            <div class="logo-item">UNDP</div>
+            <div class="logo-item">World Bank</div>
+            <div class="logo-item">JICA</div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-16 bg-conference-dark text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">Ready to Join Us?</h2>
+        <p class="text-lg opacity-90 mb-8">Register now to be part of the premier earthquake engineering conference in Asia</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="registration/index.html" class="btn-secondary">Register Now</a>
+            <a href="abstract-submission/index.html" class="btn-outline border-white text-white hover:bg-white hover:text-conference-dark">Submit Abstract</a>
+        </div>
+    </div>
+</section>
+
+    </main>
+
+    <!-- Footer (Hidden on mobile) -->
+    <footer class="hidden lg:block" style="background: linear-gradient(135deg, #DC143C 0%, #003893 100%); color: #fff; padding: 50px 20px 20px; font-size: 14px;">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Logo Section -->
+                <div>
+                    <a href="https://www.nset.org.np" target="_blank">
+                        <img src="http://0.0.0.0:8000/static/images/NSET_Color_Logo.png" alt="NSET Logo" class="footer-logo h-20 mb-4" style="filter: brightness(1.1);">
+                    </a>
+                    <p style="opacity: 0.9; line-height: 1.6;">
+                        National Society for Earthquake Technology-Nepal (NSET), organizing the 9th Asia Conference on Earthquake Engineering.
+                    </p>
+                    <!-- Social Icons -->
+                    <div class="flex gap-3 mt-4">
+                        <a href="https://www.facebook.com/NSET2020/" target="_blank" class="w-10 h-10 border border-white/50 rounded flex items-center justify-center hover:bg-white/20 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="https://x.com/NSETNepal" target="_blank" class="w-10 h-10 border border-white/50 rounded flex items-center justify-center hover:bg-white/20 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/national-society-for-earthquake-technology---nepal-nset-" target="_blank" class="w-10 h-10 border border-white/50 rounded flex items-center justify-center hover:bg-white/20 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/@NSETInfoChannel" target="_blank" class="w-10 h-10 border border-white/50 rounded flex items-center justify-center hover:bg-white/20 transition-all">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="white"/></svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="registration/index.html" class="opacity-90 hover:opacity-100">Registration</a></li>
+                        <li><a href="abstract-submission/index.html" class="opacity-90 hover:opacity-100">Abstract Submission</a></li>
+                        <li><a href="schedule/index.html" class="opacity-90 hover:opacity-100">Schedule</a></li>
+                        <li><a href="downloads/index.html" class="opacity-90 hover:opacity-100">Downloads</a></li>
+                        <li><a href="photos/index.html" class="opacity-90 hover:opacity-100">Photo Gallery</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <div class="space-y-3 opacity-90">
+                        <p class="flex items-start gap-2">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Kathmandu, Nepal
+                        </p>
+                        <a href="mailto:9ACEE@nset.org.np" class="flex items-center gap-2 hover:opacity-100">
+                            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            9ACEE@nset.org.np
+                        </a>
+                        <a href="https://www.nset.org.np" target="_blank" class="flex items-center gap-2 hover:opacity-100">
+                            <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                            </svg>
+                            www.nset.org.np
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/25 mt-8 pt-8 text-center opacity-90">
+                <p>© 2026 9th Asian Conference on Earthquake Engineering. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="lg:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+        <div class="grid grid-cols-5 gap-1">
+            <!-- Home -->
+            <a href="index.html" class="flex flex-col items-center py-2 px-1 text-conference-blue hover:text-conference-blue transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                </svg>
+                <span class="text-xs font-medium mt-1">Home</span>
+            </a>
+            
+            <!-- Registration -->
+            <a href="registration/index.html" class="flex flex-col items-center py-2 px-1 text-gray-600 hover:text-conference-blue transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
+                </svg>
+                <span class="text-xs font-medium mt-1">Register</span>
+            </a>
+            
+            <!-- Schedule -->
+            <a href="schedule/index.html" class="flex flex-col items-center py-2 px-1 text-gray-600 hover:text-conference-blue transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <span class="text-xs font-medium mt-1">Schedule</span>
+            </a>
+            
+            <!-- Downloads -->
+            <a href="downloads/index.html" class="flex flex-col items-center py-2 px-1 text-gray-600 hover:text-conference-blue transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+                <span class="text-xs font-medium mt-1">Downloads</span>
+            </a>
+            
+            <!-- Photos -->
+            <a href="photos/index.html" class="flex flex-col items-center py-2 px-1 text-gray-600 hover:text-conference-blue transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <span class="text-xs font-medium mt-1">Photos</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    
+    
 <script>
-    const btn = document.getElementById('mobile-menu-btn');
-    const menu = document.getElementById('mobile-menu');
+// Hero Slider
+const slides = document.querySelectorAll('.slide');
+const dots = document.querySelectorAll('.slider-dot');
+let currentSlide = 0;
+let slideInterval;
 
-    btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
+function showSlide(n) {
+    slides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    currentSlide = (n + slides.length) % slides.length;
+    slides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+}
+
+function nextSlide() { showSlide(currentSlide + 1); }
+function startSlideShow() { slideInterval = setInterval(nextSlide, 5000); }
+function stopSlideShow() { clearInterval(slideInterval); }
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        showSlide(index);
+        stopSlideShow();
+        startSlideShow();
     });
+});
+
+startSlideShow();
 </script>
 
-
-
-
-
-<link rel="stylesheet" href="static/debug_toolbar/css/print.css" media="print">
-<link rel="stylesheet" href="static/debug_toolbar/css/toolbar.css">
-
-
-<script type="module" src="static/debug_toolbar/js/toolbar.js" async></script>
-
-<div id="djDebug" class="djdt-hidden" dir="ltr"
-     
-     data-request-id="3e9f679dcd1f4553af27d77652ebba7b"
-     data-render-panel-url="/__debug__/render_panel/"
-     
-     
-     
-     data-sidebar-url="/__debug__/history_sidebar/"
-     
-     data-default-show="true"
-       data-update-on-fetch="False">
-  <div class="djdt-hidden" id="djDebugToolbar">
-    <ul id="djDebugPanelList">
-      <li><a id="djHideToolBarButton" href="index.html#" title="Hide toolbar">Hide »</a></li>
-      <li>
-        <a id="djToggleThemeButton" href="index.html#" title="Toggle Theme">
-          Toggle Theme <svg
-  aria-hidden="true"
-  class="djdt-hidden theme-auto"
-  fill="currentColor"
-  viewBox="0 0 32 32"
-  version="1.1"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M0 16q0 3.264 1.28 6.24t3.392 5.088 5.12 3.424 6.208 1.248q3.264 0 6.24-1.248t5.088-3.424 3.392-5.088 1.28-6.24-1.28-6.208-3.392-5.12-5.088-3.392-6.24-1.28q-3.264 0-6.208 1.28t-5.12 3.392-3.392 5.12-1.28 6.208zM4 16q0-3.264 1.6-6.016t4.384-4.352 6.016-1.632 6.016 1.632 4.384 4.352 1.6 6.016-1.6 6.048-4.384 4.352-6.016 1.6-6.016-1.6-4.384-4.352-1.6-6.048zM16 26.016q2.72 0 5.024-1.344t3.648-3.648 1.344-5.024-1.344-4.992-3.648-3.648-5.024-1.344v20z"
-  ></path>
-</svg>
-<svg
-  aria-hidden="true"
-  class="djdt-hidden theme-light"
-  viewBox="0 0 24 24"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    fill-rule="evenodd"
-    clip-rule="evenodd"
-    d="M12 1.25C12.4142 1.25 12.75 1.58579 12.75 2V4C12.75 4.41421 12.4142 4.75 12 4.75C11.5858 4.75 11.25 4.41421 11.25 4V2C11.25 1.58579 11.5858 1.25 12 1.25ZM3.66865 3.71609C3.94815 3.41039 4.42255 3.38915 4.72825 3.66865L6.95026 5.70024C7.25596 5.97974 7.2772 6.45413 6.9977 6.75983C6.7182 7.06553 6.2438 7.08677 5.9381 6.80727L3.71609 4.77569C3.41039 4.49619 3.38915 4.02179 3.66865 3.71609ZM20.3314 3.71609C20.6109 4.02179 20.5896 4.49619 20.2839 4.77569L18.0619 6.80727C17.7562 7.08677 17.2818 7.06553 17.0023 6.75983C16.7228 6.45413 16.744 5.97974 17.0497 5.70024L19.2718 3.66865C19.5775 3.38915 20.0518 3.41039 20.3314 3.71609ZM12 7.75C9.65279 7.75 7.75 9.65279 7.75 12C7.75 14.3472 9.65279 16.25 12 16.25C14.3472 16.25 16.25 14.3472 16.25 12C16.25 9.65279 14.3472 7.75 12 7.75ZM6.25 12C6.25 8.82436 8.82436 6.25 12 6.25C15.1756 6.25 17.75 8.82436 17.75 12C17.75 15.1756 15.1756 17.75 12 17.75C8.82436 17.75 6.25 15.1756 6.25 12ZM1.25 12C1.25 11.5858 1.58579 11.25 2 11.25H4C4.41421 11.25 4.75 11.5858 4.75 12C4.75 12.4142 4.41421 12.75 4 12.75H2C1.58579 12.75 1.25 12.4142 1.25 12ZM19.25 12C19.25 11.5858 19.5858 11.25 20 11.25H22C22.4142 11.25 22.75 11.5858 22.75 12C22.75 12.4142 22.4142 12.75 22 12.75H20C19.5858 12.75 19.25 12.4142 19.25 12ZM17.0255 17.0252C17.3184 16.7323 17.7933 16.7323 18.0862 17.0252L20.3082 19.2475C20.6011 19.5404 20.601 20.0153 20.3081 20.3082C20.0152 20.6011 19.5403 20.601 19.2475 20.3081L17.0255 18.0858C16.7326 17.7929 16.7326 17.3181 17.0255 17.0252ZM6.97467 17.0253C7.26756 17.3182 7.26756 17.7931 6.97467 18.086L4.75244 20.3082C4.45955 20.6011 3.98468 20.6011 3.69178 20.3082C3.39889 20.0153 3.39889 19.5404 3.69178 19.2476L5.91401 17.0253C6.2069 16.7324 6.68177 16.7324 6.97467 17.0253ZM12 19.25C12.4142 19.25 12.75 19.5858 12.75 20V22C12.75 22.4142 12.4142 22.75 12 22.75C11.5858 22.75 11.25 22.4142 11.25 22V20C11.25 19.5858 11.5858 19.25 12 19.25Z"
-    fill="currentColor"
-  />
-</svg>
-<svg
-  aria-hidden="true"
-  class="djdt-hidden theme-dark"
-  viewBox="0 0 24 24"
-  fill="none"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <path
-    d="M3.32031 11.6835C3.32031 16.6541 7.34975 20.6835 12.3203 20.6835C16.1075 20.6835 19.3483 18.3443 20.6768 15.032C19.6402 15.4486 18.5059 15.6834 17.3203 15.6834C12.3497 15.6834 8.32031 11.654 8.32031 6.68342C8.32031 5.50338 8.55165 4.36259 8.96453 3.32996C5.65605 4.66028 3.32031 7.89912 3.32031 11.6835Z"
-    stroke="currentColor"
-    stroke-width="2"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  />
-</svg>
-
-        </a>
-      </li>
-      
-        
-
-<li id="djdt-HistoryPanel" class="djDebugPanelButton">
-  <input type="checkbox" data-cookie="djdtHistoryPanel" checked title="Disable for next and successive requests">
-  
-    <a href="index.html#" title="History" class="HistoryPanel">
-  
-  History
-  
-    
-      <br><small>/</small>
-    
-  
-  
-    </a>
-  
-</li>
-
-      
-        
-
-<li id="djdt-VersionsPanel" class="djDebugPanelButton">
-  <input type="checkbox" data-cookie="djdtVersionsPanel" checked title="Disable for next and successive requests">
-  
-    <a href="index.html#" title="Versions" class="VersionsPanel">
-  
-  Versions
-  
-    
-      <br><small>Django 4.2.29</small>
-    
-  
-  
-    </a>
-  
-</li>
-
-      
-        
-
-<li id="djdt-TimerPanel" class="djDebugPanelButton">
-  <input type="checkbox" data-cookie="djdtTimerPanel" checked title="Disable for next and successive requests">
-  
-    <a href="index.html#" title="Time" class="TimerPanel">
-  
-  Time
-  
-    
-      <br><small>CPU: 47.12ms (49.03ms)</small>
-    
-  
-  
-    </a>
-  
-</li>
-
-      
-        
-
-<li id="djdt-SettingsPanel" class="djDebugPanelButton">
-  <input type="checkbox" data-cookie="djdtSettingsPanel" checked title="Disable for next and successive requests">
-  
-    <a href="index.html#" title="Settings from &#x27;school_website.settings.development&#x27;" class="SettingsPanel">
-  
-  Settings
-  
-    
-      
-    
-  
-  
-    </a>
-  
-</li>
-
-      
-        
-
-<li id="djdt-HeadersPanel" class="djDebugPanelButton">
-  <input type="checkbox" data-cookie="djdtHeadersPanel" checked title="Disable for next and successive requests">
-  
-    <a href="index.html#" title="Headers" class="HeadersPanel">
-  
-  Headers
-  
-    
-      
-    
-  
-  
-    </a>
-  
-</li>
-
-      
-        
-
-<li id="djdt-RequestPanel" class="djDebugPanelButton">
-  <input type="checkbox" data-cookie="djdtRequestPanel" checked title="Disable for next and successive requests">
-  
-    <a href="index.html#" title="Request" class="RequestPanel">
-  
-  Request
-  
-    
-      <br><small>HomeView</small>
-    
-  
-  
-    </a>
-  
-</li>
-
-      
-        
-
-<li id="djdt-SQLPanel" class="djDebugPanelButton">
-  <input type="checkbox" data-cookie="djdtSQLPanel" checked title="Disable for next and successive requests">
-  
-    <a href="index.html#" title="SQL queries from 1 connection" class="SQLPanel">
-  
-  SQL
-  
-    
-      <br><small>7 queries in 2.44ms</small>
-    
-  
-  
-    </a>
-  
-</li>
-
-      
-        
-
-<li id="djdt-StaticFilesPanel" class="djDebugPanelButton">
-  <input type="checkbox" data-cookie="djdtStaticFilesPanel" checked title="Disable for next and successive requests">
-  
-    <a href="index.html#" title="Static files (0 found, 0 used)" class="StaticFilesPanel">
-  
-  Static files
-  
-    
-      <br><small>0 files used</small>
-    
-  
-  
-    </a>
-  
-</li>
-
-      
-        
-
-<li id="djdt-TemplatesPanel" class="djDebugPanelButton">
-  <input type="checkbox" data-cookie="djdtTemplatesPanel" checked title="Disable for next and successive requests">
-  
-    <a href="index.html#" title="Templates (2 rendered)" class="TemplatesPanel">
-  
-  Templates
-  
-    
-      <br><small>school/home.html</small>
-    
-  
-  
-    </a>
-  
-</li>
-
-      
-        
-
-<li id="djdt-AlertsPanel" class="djDebugPanelButton">
-  <input type="checkbox" data-cookie="djdtAlertsPanel" checked title="Disable for next and successive requests">
-  
-    <a href="index.html#" title="Alerts" class="AlertsPanel">
-  
-  Alerts
-  
-    
-      
-    
-  
-  
-    </a>
-  
-</li>
-
-      
-        
-
-<li id="djdt-CachePanel" class="djDebugPanelButton">
-  <input type="checkbox" data-cookie="djdtCachePanel" checked title="Disable for next and successive requests">
-  
-    <a href="index.html#" title="Cache calls from 1 backend" class="CachePanel">
-  
-  Cache
-  
-    
-      <br><small>0 calls in 0.00ms</small>
-    
-  
-  
-    </a>
-  
-</li>
-
-      
-        
-
-<li id="djdt-SignalsPanel" class="djDebugPanelButton">
-  <input type="checkbox" data-cookie="djdtSignalsPanel" checked title="Disable for next and successive requests">
-  
-    <a href="index.html#" title="Signals" class="SignalsPanel">
-  
-  Signals
-  
-    
-      <br><small>95 receivers of 15 signals</small>
-    
-  
-  
-    </a>
-  
-</li>
-
-      
-        
-
-<li id="djdt-CommunityPanel" class="djDebugPanelButton">
-  <input type="checkbox" data-cookie="djdtCommunityPanel" checked title="Disable for next and successive requests">
-  
-    <a href="index.html#" title="Community" class="CommunityPanel">
-  
-  Community
-  
-    
-      
-    
-  
-  
-    </a>
-  
-</li>
-
-      
-        
-
-<li id="djdt-RedirectsPanel" class="djDebugPanelButton">
-  <input type="checkbox" data-cookie="djdtRedirectsPanel" title="Enable for next and successive requests">
-  
-    <div class="djdt-contentless djdt-disabled">
-  
-  Intercept redirects
-  
-  
-    </div>
-  
-</li>
-
-      
-        
-
-<li id="djdt-ProfilingPanel" class="djDebugPanelButton">
-  <input type="checkbox" data-cookie="djdtProfilingPanel" title="Enable for next and successive requests">
-  
-    <div class="djdt-contentless djdt-disabled">
-  
-  Profiling
-  
-  
-    </div>
-  
-</li>
-
-      
-    </ul>
-  </div>
-  <div class="djdt-hidden" id="djDebugToolbarHandle">
-    <div title="Show toolbar" id="djShowToolBarButton">
-      <span id="djShowToolBarD">D</span><span id="djShowToolBarJ">J</span>DT
-    </div>
-  </div>
-
-  
-    
-
-
-  <div id="HistoryPanel" class="djdt-panelContent djdt-hidden">
-    <div class="djDebugPanelTitle">
-      <h3>History</h3>
-      <button type="button" class="djDebugClose">×</button>
-    </div>
-    <div class="djDebugPanelContent">
-      
-        <div class="djdt-loader"></div>
-        <div class="djdt-scroll"></div>
-      
-    </div>
-  </div>
-
-
-  
-    
-
-
-  <div id="VersionsPanel" class="djdt-panelContent djdt-hidden">
-    <div class="djDebugPanelTitle">
-      <h3>Versions</h3>
-      <button type="button" class="djDebugClose">×</button>
-    </div>
-    <div class="djDebugPanelContent">
-      
-        <div class="djdt-loader"></div>
-        <div class="djdt-scroll"></div>
-      
-    </div>
-  </div>
-
-
-  
-    
-
-
-  <div id="TimerPanel" class="djdt-panelContent djdt-hidden">
-    <div class="djDebugPanelTitle">
-      <h3>Time</h3>
-      <button type="button" class="djDebugClose">×</button>
-    </div>
-    <div class="djDebugPanelContent">
-      
-        <div class="djdt-loader"></div>
-        <div class="djdt-scroll"></div>
-      
-    </div>
-  </div>
-
-
-  
-    
-
-
-  <div id="SettingsPanel" class="djdt-panelContent djdt-hidden">
-    <div class="djDebugPanelTitle">
-      <h3>Settings from &#x27;school_website.settings.development&#x27;</h3>
-      <button type="button" class="djDebugClose">×</button>
-    </div>
-    <div class="djDebugPanelContent">
-      
-        <div class="djdt-loader"></div>
-        <div class="djdt-scroll"></div>
-      
-    </div>
-  </div>
-
-
-  
-    
-
-
-  <div id="HeadersPanel" class="djdt-panelContent djdt-hidden">
-    <div class="djDebugPanelTitle">
-      <h3>Headers</h3>
-      <button type="button" class="djDebugClose">×</button>
-    </div>
-    <div class="djDebugPanelContent">
-      
-        <div class="djdt-loader"></div>
-        <div class="djdt-scroll"></div>
-      
-    </div>
-  </div>
-
-
-  
-    
-
-
-  <div id="RequestPanel" class="djdt-panelContent djdt-hidden">
-    <div class="djDebugPanelTitle">
-      <h3>Request</h3>
-      <button type="button" class="djDebugClose">×</button>
-    </div>
-    <div class="djDebugPanelContent">
-      
-        <div class="djdt-loader"></div>
-        <div class="djdt-scroll"></div>
-      
-    </div>
-  </div>
-
-
-  
-    
-
-
-  <div id="SQLPanel" class="djdt-panelContent djdt-hidden">
-    <div class="djDebugPanelTitle">
-      <h3>SQL queries from 1 connection</h3>
-      <button type="button" class="djDebugClose">×</button>
-    </div>
-    <div class="djDebugPanelContent">
-      
-        <div class="djdt-loader"></div>
-        <div class="djdt-scroll"></div>
-      
-    </div>
-  </div>
-
-
-  
-    
-
-
-  <div id="StaticFilesPanel" class="djdt-panelContent djdt-hidden">
-    <div class="djDebugPanelTitle">
-      <h3>Static files (0 found, 0 used)</h3>
-      <button type="button" class="djDebugClose">×</button>
-    </div>
-    <div class="djDebugPanelContent">
-      
-        <div class="djdt-loader"></div>
-        <div class="djdt-scroll"></div>
-      
-    </div>
-  </div>
-
-
-  
-    
-
-
-  <div id="TemplatesPanel" class="djdt-panelContent djdt-hidden">
-    <div class="djDebugPanelTitle">
-      <h3>Templates (2 rendered)</h3>
-      <button type="button" class="djDebugClose">×</button>
-    </div>
-    <div class="djDebugPanelContent">
-      
-        <div class="djdt-loader"></div>
-        <div class="djdt-scroll"></div>
-      
-    </div>
-  </div>
-
-
-  
-    
-
-
-  <div id="AlertsPanel" class="djdt-panelContent djdt-hidden">
-    <div class="djDebugPanelTitle">
-      <h3>Alerts</h3>
-      <button type="button" class="djDebugClose">×</button>
-    </div>
-    <div class="djDebugPanelContent">
-      
-        <div class="djdt-loader"></div>
-        <div class="djdt-scroll"></div>
-      
-    </div>
-  </div>
-
-
-  
-    
-
-
-  <div id="CachePanel" class="djdt-panelContent djdt-hidden">
-    <div class="djDebugPanelTitle">
-      <h3>Cache calls from 1 backend</h3>
-      <button type="button" class="djDebugClose">×</button>
-    </div>
-    <div class="djDebugPanelContent">
-      
-        <div class="djdt-loader"></div>
-        <div class="djdt-scroll"></div>
-      
-    </div>
-  </div>
-
-
-  
-    
-
-
-  <div id="SignalsPanel" class="djdt-panelContent djdt-hidden">
-    <div class="djDebugPanelTitle">
-      <h3>Signals</h3>
-      <button type="button" class="djDebugClose">×</button>
-    </div>
-    <div class="djDebugPanelContent">
-      
-        <div class="djdt-loader"></div>
-        <div class="djdt-scroll"></div>
-      
-    </div>
-  </div>
-
-
-  
-    
-
-
-  <div id="CommunityPanel" class="djdt-panelContent djdt-hidden">
-    <div class="djDebugPanelTitle">
-      <h3>Community</h3>
-      <button type="button" class="djDebugClose">×</button>
-    </div>
-    <div class="djDebugPanelContent">
-      
-        <div class="djdt-loader"></div>
-        <div class="djdt-scroll"></div>
-      
-    </div>
-  </div>
-
-
-  
-    
-
-
-
-  
-    
-
-
-
-  
-  <div id="djDebugWindow" class="djdt-panelContent djdt-hidden"></div>
-</div>
 </body>
 </html>
