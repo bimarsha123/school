@@ -53,8 +53,8 @@
     <link href="static/css/output.css" rel="stylesheet">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="http://0.0.0.0:8000/static/images/logo.png">
-    <link rel="apple-touch-icon" href="http://0.0.0.0:8000/static/images/logo.png">
+    <link rel="icon" type="image/png" href="static/images/logo.png">
+    <link rel="apple-touch-icon" href="static/images/logo.png">
     
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -205,9 +205,10 @@
     box-shadow: 0 4px 15px rgba(0,0,0,0.15); 
     transition: transform 0.3s ease, box-shadow 0.3s ease; 
     border: 3px solid #f0f0f0;
+    overflow: hidden; /* Ensures image doesn't spill out */
 }
 .org-circle:hover { transform: scale(1.08); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
-.org-circle img { max-width: 80%; max-height: 80%; object-fit: contain; }
+.org-circle img { max-width: 85%; max-height: 85%; object-fit: contain; }
 
 @media (max-width: 768px) {
     .org-circle { width: 80px; height: 80px; }
@@ -237,13 +238,32 @@
     transform: translateY(-5px);
     box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
+
+/* Updated Photo Container: Square aspect ratio to fit portraits better */
 .keynote-card .photo {
-    height: 200px;
+    aspect-ratio: 1 / 1; 
+    height: auto;
     background: linear-gradient(135deg, #1565c0, #1976d2);
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden; /* Ensures image doesn't spill out */
 }
+
+/* New Image Styling: Ensures full coverage without cropping heads */
+.keynote-card .photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center; /* Prioritizes the top (face) of the image */
+    transition: transform 0.3s ease;
+}
+
+/* Subtle zoom on hover */
+.keynote-card:hover .photo img {
+    transform: scale(1.05);
+}
+
 .keynote-card .photo .initials {
     width: 100px;
     height: 100px;
@@ -385,8 +405,12 @@
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    font-weight: bold;
-    color: #1a365d;
+    padding: 10px;
+}
+.logo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 </style>
 
@@ -399,7 +423,8 @@
                 <!-- Logo -->
                 <a href="index.html" class="flex items-center space-x-3">
                     <div class="w-12 h-12 bg-conference-blue rounded-lg flex items-center justify-center">
-                        <span class="text-white font-bold text-lg">9A</span>
+                <img src="static/images/9ACEE_logo.png" alt="ACEE">
+
                     </div>
                     <div>
                         <span class="text-xl font-bold text-conference-dark">9ACEE</span>
@@ -449,21 +474,21 @@
 <div class="slider-container">
     <div class="slider" id="slider">
         <div class="slide active">
-            <img src="https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?w=1600" alt="Boudhanath Stupa">
+            <img src="static/images/Bouddha%20Stupa.jpg" alt="Boudhanath Stupa">
             <div class="slide-content">
                 <h2>Boudhanath Stupa, UNESCO World Heritage Site</h2>
                 <p>Kathmandu, Nepal – Host city of 9ACEE</p>
             </div>
         </div>
         <div class="slide">
-            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1600" alt="Conference Meeting">
+            <img src="static/images/meeting.JPEG" alt="Conference Meeting">
             <div class="slide-content">
                 <h2>9ACEE Joint Meeting of Organizing, Advisory, and Technical Committee</h2>
                 <p>Led by NDRRMA</p>
             </div>
         </div>
         <div class="slide">
-            <img src="https://images.unsplash.com/photo-1580619305218-8423a7ef79b4?w=1600" alt="Pashupatinath Temple">
+            <img src="static/images/Pashupatinath-Temple.png" alt="Pashupatinath Temple">
             <div class="slide-content">
                 <h2>Sacred Hindu Temple of Lord Shiva</h2>
                 <p>Kathmandu, Nepal's cultural and historical capital</p>
@@ -500,12 +525,13 @@
     <div class="max-w-7xl mx-auto px-4">
         <h2 class="text-center text-2xl font-bold text-conference-dark mb-8">Conference Organizers & Sponsors</h2>
         <div class="flex flex-wrap justify-center items-start gap-6">
+            
             <!-- NDRRMA -->
             <div class="text-center">
                 <p class="text-xs font-semibold text-conference-blue mb-2 uppercase tracking-wide">Organizer</p>
                 <a href="https://ndrrma.gov.np/" target="_blank">
                     <div class="org-circle">
-                        <div class="w-12 h-12 bg-conference-blue rounded-lg flex items-center justify-center text-white font-bold text-lg">NDRRMA</div>
+                        <img src="static/images/NRDDMA_logo_KP_1__1_-removebg-preview.png" alt="NDRRMA Logo">
                     </div>
                 </a>
                 <p class="font-semibold text-conference-dark text-sm">NDRRMA</p>
@@ -516,7 +542,7 @@
                 <p class="text-xs font-semibold text-green-600 mb-2 uppercase tracking-wide">Co-Organizer</p>
                 <a href="https://nast.gov.np/" target="_blank">
                     <div class="org-circle">
-                        <div class="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">NAST</div>
+                        <img src="static/images/Nepal_Academy_of_Science_and_Technology_Logo.svg.png" alt="NAST Logo">
                     </div>
                 </a>
                 <p class="font-semibold text-conference-dark text-sm">NAST</p>
@@ -527,7 +553,7 @@
                 <p class="text-xs font-semibold text-conference-gold mb-2 uppercase tracking-wide">Co-Organizer</p>
                 <a href="https://www.acee-conf.org/" target="_blank">
                     <div class="org-circle">
-                        <div class="w-12 h-12 bg-conference-gold rounded-lg flex items-center justify-center text-white font-bold text-lg">ACEE</div>
+                        <img src="static/images/acee-removebg.png" alt="ACEE Logo">
                     </div>
                 </a>
                 <p class="font-semibold text-conference-dark text-sm">ACEE</p>
@@ -538,7 +564,7 @@
                 <p class="text-xs font-semibold text-purple-600 mb-2 uppercase tracking-wide">Host</p>
                 <a href="https://www.nset.org.np/" target="_blank">
                     <div class="org-circle">
-                        <div class="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">NSET</div>
+                        <img src="static/images/NSET_Color.png" alt="NSET Logo">
                     </div>
                 </a>
                 <p class="font-semibold text-conference-dark text-sm">NSET</p>
@@ -549,7 +575,7 @@
                 <p class="text-xs font-semibold text-red-600 mb-2 uppercase tracking-wide">Title Sponsor</p>
                 <a href="https://www.csiamerica.com/" target="_blank">
                     <div class="org-circle">
-                        <div class="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center text-white font-bold text-sm">CSI</div>
+                        <img src="static/images/csi1new-removebg-preview.png" alt="CSI Logo">
                     </div>
                 </a>
                 <p class="font-semibold text-conference-dark text-sm">Computers & Structures</p>
@@ -560,7 +586,7 @@
                 <p class="text-xs font-semibold text-teal-600 mb-2 uppercase tracking-wide">Title Sponsor</p>
                 <a href="https://csibangkok.com/" target="_blank">
                     <div class="org-circle">
-                        <div class="w-12 h-12 bg-teal-500 rounded-lg flex items-center justify-center text-white font-bold text-xs">CSI-BKK</div>
+                        <img src="static/images/csi2-removebg-preview.png" alt="CSI Bangkok Logo">
                     </div>
                 </a>
                 <p class="font-semibold text-conference-dark text-sm">CSI-Bangkok</p>
@@ -579,7 +605,7 @@
             <!-- Speaker 1: Dr. Kimiro Meguro -->
             <div class="keynote-card">
                 <div class="photo">
-                    <div class="initials">KM</div>
+                    <img src="static/images/kimiro.png" alt="Dr. Kimiro Meguro">
                 </div>
                 <div class="info">
                     <h3>Dr. Kimiro Meguro</h3>
@@ -594,8 +620,8 @@
             
             <!-- Speaker 2: Prof. CVR Murty -->
             <div class="keynote-card">
-                <div class="photo" style="background: linear-gradient(135deg, #00c853, #69f0ae);">
-                    <div class="initials">CM</div>
+                <div class="photo">
+                    <img src="static/images/CVR.png" alt="Prof. CVR Murty">
                 </div>
                 <div class="info">
                     <h3>Prof. CVR Murty</h3>
@@ -610,8 +636,8 @@
             
             <!-- Speaker 3: Prof. Pennung Warnitchai -->
             <div class="keynote-card">
-                <div class="photo" style="background: linear-gradient(135deg, #7b1fa2, #ba68c8);">
-                    <div class="initials">PW</div>
+                <div class="photo">
+                    <img src="static/images/Picture1.jpg" alt="Prof. Pennung Warnitchai">
                 </div>
                 <div class="info">
                     <h3>Prof. Pennung Warnitchai</h3>
@@ -626,8 +652,8 @@
             
             <!-- Speaker 4: Dr. Susan Hough -->
             <div class="keynote-card">
-                <div class="photo" style="background: linear-gradient(135deg, #c62828, #ef5350);">
-                    <div class="initials">SH</div>
+                <div class="photo">
+                    <img src="static/images/Susan.jpg" alt="Dr. Susan Hough">
                 </div>
                 <div class="info">
                     <h3>Dr. Susan Hough</h3>
@@ -640,7 +666,7 @@
                 </div>
             </div>
             
-            <!-- Speaker 5: Dr. R.K. Pandey -->
+            <!-- Speaker 5: Dr. R.K. Pandey (Placeholder) -->
             <div class="keynote-card">
                 <div class="photo" style="background: linear-gradient(135deg, #00897b, #4db6ac);">
                     <div class="initials">RP</div>
@@ -656,7 +682,7 @@
                 </div>
             </div>
             
-            <!-- Speaker 6: Dr. James L. Lin -->
+            <!-- Speaker 6: Dr. James L. Lin (Placeholder) -->
             <div class="keynote-card">
                 <div class="photo" style="background: linear-gradient(135deg, #f57c00, #ffb74d);">
                     <div class="initials">JL</div>
@@ -674,7 +700,123 @@
         </div>
     </div>
 </section>
+<!-- Partner & Sponsor Logos Carousel -->
+<section class="py-8 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4 mb-4">
+        <h2 class="text-center text-xl font-bold text-conference-dark">Our Partners & Sponsors</h2>
+    </div>
+    <div class="logo-carousel-container">
+        <div class="logo-carousel">
+            <!-- Logos with images -->
+            <div class="logo-item">
+                <img src="static/images/NRDDMA_logo_KP_1__1_-removebg-preview.png" alt="NDRRMA">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/Nepal_Academy_of_Science_and_Technology_Logo.svg.png" alt="NAST">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/acee-removebg.png" alt="ACEE">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/NSET_Color.png" alt="NSET">
 
+
+            </div>
+            <div class="logo-item">
+                <img src="static/images/csi1new-removebg-preview.png" alt="CSI America">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/csi2-removebg-preview.png" alt="CSI Bangkok">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/adpc.png" alt="ADPC">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/ADRRN.png" alt="ADRRN">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/AIT_logo-1.png-removebg-preview.png" alt="AIT">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/dim.png" alt="DMI">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/images.jpeg" alt="DPNet">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/ess.png" alt="ESS">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/ippan_logo_only.png" alt="IPPAN">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/nea.png" alt="NEA">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/sona.png" alt="SONA">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/soten.png" alt="SOTEN">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/UESC-logo4.png" alt="UESC">
+            </div>
+
+            <!-- Duplicate for seamless scroll -->
+            <div class="logo-item">
+                <img src="static/images/NRDDMA_logo_KP_1__1_-removebg-preview.png" alt="NDRRMA">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/Nepal_Academy_of_Science_and_Technology_Logo.svg.png" alt="NAST">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/acee-removebg.png" alt="ACEE">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/NSET_Color.png" alt="NSET">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/csi1new-removebg-preview.png" alt="CSI America">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/csi2-removebg-preview.png" alt="CSI Bangkok">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/adpc.png" alt="ADPC">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/ADRRN.png" alt="ADRRN">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/AIT_logo-1.png-removebg-preview.png" alt="AIT">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/dim.png" alt="DMI">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/images.jpeg" alt="DPNet">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/ess.png" alt="ESS">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/ippan_logo_only.png" alt="IPPAN">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/nea.png" alt="NEA">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/sona.png" alt="SONA">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/soten.png" alt="SOTEN">
+            </div>
+            <div class="logo-item">
+                <img src="static/images/UESC-logo4.png" alt="UESC">
+            </div>
+        </div>
+    </div>
+</section>
 <!-- Invited Speakers Carousel -->
 <section class="py-12 bg-gradient-to-r from-gray-50 to-blue-50">
     <div class="max-w-7xl mx-auto px-4">
@@ -864,7 +1006,8 @@
         <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-1/3">
                 <div class="w-48 h-48 mx-auto bg-conference-blue rounded-2xl flex items-center justify-center shadow-xl">
-                    <span class="text-white text-6xl font-bold">9A</span>
+                        <img src="static/images/acee-removebg.png" alt="ACEE Logo">
+
                 </div>
             </div>
             <div class="md:w-2/3">
@@ -939,44 +1082,15 @@
             </div>
             <div class="md:w-1/3">
                 <div class="w-40 h-40 mx-auto bg-conference-gold rounded-2xl flex items-center justify-center shadow-xl">
-                    <span class="text-white text-4xl font-bold">9A</span>
+                        <img src="static/images/acee-removebg.png" alt="ACEE Logo">
+
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Partner & Sponsor Logos Carousel -->
-<section class="py-8 bg-gray-100">
-    <div class="max-w-7xl mx-auto px-4 mb-4">
-        <h2 class="text-center text-xl font-bold text-conference-dark">Our Partners & Sponsors</h2>
-    </div>
-    <div class="logo-carousel-container">
-        <div class="logo-carousel">
-            <div class="logo-item">NDRRMA</div>
-            <div class="logo-item">NAST</div>
-            <div class="logo-item">ACEE</div>
-            <div class="logo-item">NSET</div>
-            <div class="logo-item">CSI America</div>
-            <div class="logo-item">CSI Bangkok</div>
-            <div class="logo-item">USGS</div>
-            <div class="logo-item">UNDP</div>
-            <div class="logo-item">World Bank</div>
-            <div class="logo-item">JICA</div>
-            <!-- Duplicate for seamless scroll -->
-            <div class="logo-item">NDRRMA</div>
-            <div class="logo-item">NAST</div>
-            <div class="logo-item">ACEE</div>
-            <div class="logo-item">NSET</div>
-            <div class="logo-item">CSI America</div>
-            <div class="logo-item">CSI Bangkok</div>
-            <div class="logo-item">USGS</div>
-            <div class="logo-item">UNDP</div>
-            <div class="logo-item">World Bank</div>
-            <div class="logo-item">JICA</div>
-        </div>
-    </div>
-</section>
+
 
 <!-- CTA Section -->
 <section class="py-16 bg-conference-dark text-white">
@@ -999,7 +1113,7 @@
                 <!-- Logo Section -->
                 <div>
                     <a href="https://www.nset.org.np" target="_blank">
-                        <img src="http://0.0.0.0:8000/static/images/NSET_Color_Logo.png" alt="NSET Logo" class="footer-logo h-20 mb-4" style="filter: brightness(1.1);">
+                        <img src="static/images/NSET_Color.png" alt="NSET Logo" class="footer-logo h-20 mb-4" style="filter: brightness(1.1);">
                     </a>
                     <p style="opacity: 0.9; line-height: 1.6;">
                         National Society for Earthquake Technology-Nepal (NSET), organizing the 9th Asia Conference on Earthquake Engineering.
