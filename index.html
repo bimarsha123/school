@@ -115,6 +115,650 @@
     
     
 <style>
+        /* Main container - exactly half screen */
+    .timeline-horizontal {
+
+        margin: 0 auto;
+        padding: 1.5rem;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+        border-radius: 2rem;
+        box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Decorative background */
+    .timeline-horizontal::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 80%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(59,130,246,0.03) 0%, transparent 70%);
+        pointer-events: none;
+    }
+    
+    /* Title styling */
+    .timeline-horizontal__title {
+        text-align: center;
+        font-size: 1.75rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+        background: linear-gradient(135deg, #0f2b5e 0%, #1e4a7a 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -0.02em;
+        position: relative;
+    }
+    
+    .timeline-horizontal__title::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 3px;
+        background: linear-gradient(90deg, #3b82f6, #60a5fa);
+        border-radius: 3px;
+    }
+    
+    /* Row containers */
+    .timeline-row {
+        display: flex;
+        gap: 0.8rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+    }
+    
+    .timeline-row:last-child {
+        margin-bottom: 0;
+    }
+    
+    /* Row with 4 cards - each takes 1/4 width */
+    .row-4 .timeline-card {
+        flex: 1;
+        min-width: 0;
+    }
+    
+    /* Row with 3 cards - each takes 1/3 width */
+    .row-3 {
+        justify-content: center;
+    }
+    
+    .row-3 .timeline-card {
+        flex: 1;
+        min-width: 0;
+        max-width: calc(33.333% - 0.53rem);
+    }
+    
+    /* Compact card design */
+    .timeline-card {
+        background: white;
+        border-radius: 0.75rem;
+        padding: 0.875rem 0.625rem;
+        position: relative;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid rgba(59, 130, 246, 0.12);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+        cursor: pointer;
+        overflow: hidden;
+    }
+    
+    .timeline-card::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #3b82f6, #60a5fa, #3b82f6);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+        transform-origin: left;
+    }
+    
+    .timeline-card:hover::before {
+        transform: scaleX(1);
+    }
+    
+    .timeline-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.12);
+        border-color: rgba(59, 130, 246, 0.25);
+    }
+    
+    /* Highlight card for extended deadline */
+    .timeline-card.highlight {
+        background: linear-gradient(135deg, #fff9f0 0%, #ffffff 100%);
+        border-color: rgba(245, 158, 11, 0.3);
+        position: relative;
+    }
+    
+    .timeline-card.highlight::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, transparent 50%, rgba(245, 158, 11, 0.1) 50%);
+        border-radius: 0 0.75rem 0 0;
+        pointer-events: none;
+    }
+    
+    /* Icon styling - Font Awesome */
+    .timeline-card__icon {
+        text-align: center;
+        margin-bottom: 0.6rem;
+        font-size: 1.5rem;
+        transition: all 0.3s ease;
+    }
+    
+    .timeline-card__icon i {
+        background: linear-gradient(135deg, #3b82f6, #1e40af);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s ease;
+    }
+    
+    .timeline-card:hover .timeline-card__icon i {
+        transform: scale(1.1);
+        background: linear-gradient(135deg, #2563eb, #1e3a8a);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    /* Different icon colors for different event types */
+    .timeline-card .submission ~ .timeline-card__content .timeline-card__icon i,
+    .timeline-card:has(.submission) .timeline-card__icon i {
+        background: linear-gradient(135deg, #f59e0b, #d97706);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .timeline-card:has(.registration) .timeline-card__icon i {
+        background: linear-gradient(135deg, #10b981, #059669);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .timeline-card:has(.conference) .timeline-card__icon i {
+        background: linear-gradient(135deg, #3b82f6, #1e40af);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    /* Dot indicator - minimalist version */
+    .timeline-card__dot {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+    }
+    
+    .timeline-card:hover .timeline-card__dot {
+        transform: scale(1.2);
+        box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+    }
+    
+    .timeline-card__dot.submission {
+        background: #f59e0b;
+        box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.3);
+    }
+    
+    .timeline-card__dot.registration {
+        background: #10b981;
+        box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.3);
+    }
+    
+    .timeline-card__dot.conference {
+        background: #3b82f6;
+        box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.3);
+    }
+    
+    /* Content styling - compact */
+    .timeline-card__content {
+        text-align: center;
+    }
+    
+    .timeline-card__content h3 {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #1e293b;
+        margin-bottom: 0.5rem;
+        line-height: 1.3;
+        letter-spacing: -0.2px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        min-height: 2rem;
+    }
+    
+    .timeline-card__date {
+        font-size: 0.9rem;
+        font-weight: 800;
+        background: linear-gradient(135deg, #3b82f6, #1e40af);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        display: inline-block;
+        letter-spacing: -0.3px;
+    }
+    
+    /* Extended badge - compact */
+    .extended-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #ef4444, #dc2626);
+        color: white;
+        font-size: 0.6rem;
+        font-weight: 700;
+        padding: 0.15rem 0.4rem;
+        border-radius: 12px;
+        margin-left: 0.3rem;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
+        vertical-align: middle;
+        animation: subtlePulse 1.5s ease-in-out infinite;
+    }
+    
+    @keyframes subtlePulse {
+        0%, 100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+        50% {
+            opacity: 0.85;
+            transform: scale(0.98);
+        }
+    }
+    
+    /* Connection line between cards - creative touch */
+    .timeline-row::before {
+        content: '';
+        position: absolute;
+        top: 2rem;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, 
+            transparent 0%,
+            #f59e0b 12.5%,
+            #f59e0b 25%,
+            #10b981 25%,
+            #10b981 50%,
+            #3b82f6 50%,
+            #3b82f6 100%);
+        opacity: 0.25;
+        pointer-events: none;
+        z-index: 0;
+    }
+    
+    .row-3::before {
+        background: linear-gradient(90deg, 
+            transparent 0%,
+            #3b82f6 16.66%,
+            #3b82f6 33.33%,
+            #3b82f6 66.66%,
+            #3b82f6 83.33%,
+            transparent 100%);
+    }
+    
+    /* Animation */
+    .timeline-card {
+        animation: slideUp 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1) backwards;
+    }
+    
+    .row-4 .timeline-card:nth-child(1) { animation-delay: 0.05s; }
+    .row-4 .timeline-card:nth-child(2) { animation-delay: 0.1s; }
+    .row-4 .timeline-card:nth-child(3) { animation-delay: 0.15s; }
+    .row-4 .timeline-card:nth-child(4) { animation-delay: 0.2s; }
+    .row-3 .timeline-card:nth-child(1) { animation-delay: 0.25s; }
+    .row-3 .timeline-card:nth-child(2) { animation-delay: 0.3s; }
+    .row-3 .timeline-card:nth-child(3) { animation-delay: 0.35s; }
+    
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(15px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Responsive - maintain half screen but adjust internally */
+    @media (max-width: 1100px) {
+        .timeline-horizontal {
+            width: 70%;
+        }
+    }
+    
+    @media (max-width: 900px) {
+        .timeline-horizontal {
+            width: 85%;
+        }
+        
+        .timeline-card__content h3 {
+            font-size: 0.7rem;
+        }
+        
+        .timeline-card__date {
+            font-size: 0.8rem;
+        }
+        
+        .timeline-card__icon {
+            font-size: 1.25rem;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .timeline-horizontal {
+            width: 95%;
+            padding: 1rem;
+        }
+        
+        .timeline-horizontal__title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Stack vertically on mobile */
+        .timeline-row {
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        
+        .row-4 .timeline-card,
+        .row-3 .timeline-card {
+            max-width: 100%;
+            width: 100%;
+        }
+        
+        .timeline-row::before {
+            display: none;
+        }
+        
+        .timeline-card__content h3 {
+            font-size: 0.85rem;
+        }
+        
+        .timeline-card__icon {
+            font-size: 1.35rem;
+        }
+    }
+    
+    /* Hover tooltip effect for dates */
+    .timeline-card {
+        position: relative;
+    }
+    
+    .timeline-card::after {
+        content: attr(data-tooltip);
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-5px);
+        background: #1e293b;
+        color: white;
+        font-size: 0.7rem;
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.375rem;
+        white-space: nowrap;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.2s ease;
+        z-index: 10;
+        font-weight: 500;
+    }
+    
+    .timeline-card:hover::after {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-8px);
+    }
+    
+    /* Add tooltip data */
+    .timeline-card:nth-child(1) { --tooltip: "📄 Submit your abstract by Feb 28"; }
+    .timeline-card:nth-child(2) { --tooltip: "🔍 Review results will be sent"; }
+    .timeline-card:nth-child(3) { --tooltip: "📢 Registration portal opens"; }
+    .timeline-card:nth-child(4) { --tooltip: "⭐ Extended deadline! Last chance"; }
+    .row-3 .timeline-card:nth-child(1) { --tooltip: "✓ Final review completed"; }
+    .row-3 .timeline-card:nth-child(2) { --tooltip: "📄 Final program available for download"; }
+    .row-3 .timeline-card:nth-child(3) { --tooltip: "💻 Upload your presentation files"; }
+    
+    .timeline-card::after {
+        content: var(--tooltip);
+    }
+
+        /* Base card styling with enhanced shadow and gradient border */
+    .intro-card {
+        background: linear-gradient(135deg, #ffffff 0%, #fefefe 100%);
+        padding: 2rem;
+        border-radius: 2rem;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(59, 130, 246, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .intro-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(59, 130, 246, 0.2);
+    }
+
+    /* Inner flex container */
+    .intro-card__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    /* Logo wrapper with subtle animation */
+    .intro-card__logo-wrapper {
+        flex-shrink: 0;
+    }
+
+    .intro-card__logo-container {
+        width: 160px;
+        height: 160px;
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        border-radius: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .intro-card__logo-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+        transition: left 0.6s ease;
+    }
+
+    .intro-card__logo-container:hover::before {
+        left: 100%;
+    }
+
+    .intro-card__logo {
+        width: 85%;
+        height: 85%;
+        object-fit: contain;
+        filter: brightness(0) invert(1);
+        transition: transform 0.3s ease;
+    }
+
+    .intro-card__logo-container:hover .intro-card__logo {
+        transform: scale(1.05);
+    }
+
+    /* Content area */
+    .intro-card__content {
+        text-align: center;
+        flex: 1;
+    }
+
+    /* Title styling with gradient text */
+    .intro-card__title {
+        font-size: 2.25rem;
+        font-weight: 800;
+        margin-bottom: 1.25rem;
+        background: linear-gradient(135deg, #0f2b5e 0%, #1e4a7a 50%, #2c5f8a 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        letter-spacing: -0.02em;
+        position: relative;
+        display: inline-block;
+    }
+
+    .intro-card__title::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px;
+        height: 3px;
+        background: linear-gradient(90deg, #3b82f6, #1e3a8a);
+        border-radius: 3px;
+    }
+
+    /* Description text with improved readability */
+    .intro-card__description {
+        color: #4b5563;
+        line-height: 1.7;
+        font-size: 1rem;
+        margin-bottom: 1.75rem;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        font-weight: 400;
+    }
+
+    /* Modern button styling */
+    .intro-card__btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        color: white;
+        padding: 0.875rem 2rem;
+        border-radius: 9999px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        letter-spacing: 0.01em;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .intro-card__btn::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        transition: width 0.5s ease, height 0.5s ease;
+    }
+
+    .intro-card__btn:hover::before {
+        width: 300px;
+        height: 300px;
+    }
+
+    .intro-card__btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        background: linear-gradient(135deg, #2e4a8a 0%, #4c8ef5 100%);
+    }
+
+    .intro-card__btn:active {
+        transform: translateY(0);
+    }
+
+    /* Add arrow icon after button text */
+    .intro-card__btn::after {
+        content: '→';
+        margin-left: 0.5rem;
+        transition: transform 0.3s ease;
+        display: inline-block;
+    }
+
+    .intro-card__btn:hover::after {
+        transform: translateX(4px);
+    }
+
+    /* Responsive styling for larger screens */
+    @media (min-width: 768px) {
+        .intro-card {
+            padding: 2.5rem;
+        }
+        
+        .intro-card__inner {
+            flex-direction: row;
+            gap: 3rem;
+        }
+        
+        .intro-card__content {
+            text-align: left;
+        }
+        
+        .intro-card__title::after {
+            left: 0;
+            transform: translateX(0);
+        }
+        
+        .intro-card__description {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    /* Optional: subtle background pattern */
+    .intro-card {
+        position: relative;
+        background: linear-gradient(135deg, #ffffff 0%, #fafcff 100%);
+    }
+
+    .intro-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.03) 0%, transparent 50%);
+        pointer-events: none;
+        border-radius: 2rem;
+    }
 /* Slider Styles */
 .slider-container { position: relative; width: 100%; overflow: hidden; }
 .slider { position: relative; width: 100%; }
@@ -452,6 +1096,8 @@
                 </button>
             </div>
         </div>
+
+
         
         <!-- Mobile Navigation Dropdown -->
         <div id="mobile-menu" class="lg:hidden hidden bg-white border-t">
@@ -468,6 +1114,10 @@
     </nav>
 
     <!-- Main Content -->
+             <div class="bg-conference-blue text-white text-center py-6">
+    <h2 class="text-2xl md:text-3xl font-bold mb-2">Risk to Resilience: Linking Science to the People</h2>
+    <p class="text-lg opacity-90">4<sup>th</sup> – 6<sup>th</sup> May 2026 | Kathmandu, Nepal</p>
+</div>
     <main>
         
 <!-- Hero Slider -->
@@ -515,10 +1165,7 @@
 </div>
 
 <!-- Conference Theme Banner -->
-<div class="bg-conference-blue text-white text-center py-6">
-    <h2 class="text-2xl md:text-3xl font-bold mb-2">Risk to Resilience: Linking Science to the People</h2>
-    <p class="text-lg opacity-90">4<sup>th</sup> – 6<sup>th</sup> May 2026 | Kathmandu, Nepal</p>
-</div>
+
 
 <!-- Organizers Section -->
 <div class="py-12 bg-gradient-to-b from-gray-50 to-white">
@@ -595,51 +1242,175 @@
     </div>
 </div>
 <!-- Timeline Section -->
-<section class="timeline-section">
+<!-- Combined Timeline and Introduction Section -->
+
+
+
+<section class="py-16 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4">
-        <h2 class="text-center text-3xl font-bold text-conference-dark mb-12">Important Dates</h2>
-        <div class="timeline-container">
-            <div class="timeline-line"></div>
-            <div class="timeline-items">
-                <div class="timeline-item">
-                    <div class="timeline-dot submission"></div>
-                    <h3>Abstract submission</h3>
-                    <p>28 February 2026</p>
+        <!-- Grid container for side-by-side layout -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            
+            <!-- Left Column: Timeline -->
+            <!-- <div>
+                <h2 class="text-center text-3xl font-bold text-conference-dark mb-12">Important Dates</h2>
+                <div class="timeline-container">
+                    <div class="timeline-line"></div>
+                    <div class="timeline-items">
+                        <div class="timeline-item">
+                            <div class="timeline-dot submission"></div>
+                            <h3>Abstract submission</h3>
+                            <p>28 February 2026</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot submission"></div>
+                            <h3>Review of abstracts & notification</h3>
+                            <p>15 March 2026</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot registration"></div>
+                            <h3>Second circular with Registration</h3>
+                            <p>20 March 2026</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot registration"></div>
+                            <h3>Submission of extended abstract <span class="text-red-600">(Extended)</span></h3>
+                            <p>07 April 2026</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot conference"></div>
+                            <h3>Review and Finalization</h3>
+                            <p>20 April 2026</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot conference"></div>
+                            <h3>Third/Final circular</h3>
+                            <p>25 April 2026</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot conference"></div>
+                            <h3>Presentation files deadline</h3>
+                            <p>30 April 2026</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot submission"></div>
-                    <h3>Review of abstracts & notification</h3>
-                    <p>15 March 2026</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot registration"></div>
-                    <h3>Second circular with Registration</h3>
-                    <p>20 March 2026</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot registration"></div>
-                    <h3>Submission of extended abstract <span class="text-red-600">(Extended)</span></h3>
-                    <p>07 April 2026</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot conference"></div>
-                    <h3>Review and Finalization</h3>
-                    <p>20 April 2026</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot conference"></div>
-                    <h3>Third/Final circular</h3>
-                    <p>25 April 2026</p>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot conference"></div>
-                    <h3>Presentation files deadline</h3>
-                    <p>30 April 2026</p>
-                </div>
+            </div> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<div class="timeline-horizontal">
+    <h2 class="timeline-horizontal__title">Important Dates</h2>
+    
+    <!-- Row 1: 4 Cards -->
+    <div class="timeline-row row-4">
+        <div class="timeline-card">
+            <div class="timeline-card__icon">
+                <i class="fas fa-file-alt"></i>
+            </div>
+            <div class="timeline-card__dot submission"></div>
+            <div class="timeline-card__content">
+                <h3>Abstract submission</h3>
+                <div class="timeline-card__date">28 Feb 2026</div>
+            </div>
+        </div>
+        
+        <div class="timeline-card">
+            <div class="timeline-card__icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="timeline-card__dot submission"></div>
+            <div class="timeline-card__content">
+                <h3>Review & notification</h3>
+                <div class="timeline-card__date">15 Mar 2026</div>
+            </div>
+        </div>
+        
+        <div class="timeline-card">
+            <div class="timeline-card__icon">
+                <i class="fas fa-bullhorn"></i>
+            </div>
+            <div class="timeline-card__dot registration"></div>
+            <div class="timeline-card__content">
+                <h3>Second circular w/ Registration</h3>
+                <div class="timeline-card__date">20 Mar 2026</div>
+            </div>
+        </div>
+        
+        <div class="timeline-card highlight">
+            <div class="timeline-card__icon">
+                <i class="fas fa-star-of-life"></i>
+            </div>
+            <div class="timeline-card__dot registration"></div>
+            <div class="timeline-card__content">
+                <h3>Extended abstract <span class="extended-badge">Extended!</span></h3>
+                <div class="timeline-card__date">07 Apr 2026</div>
             </div>
         </div>
     </div>
+    
+    <!-- Row 2: 3 Cards -->
+    <div class="timeline-row row-3">
+        <div class="timeline-card">
+            <div class="timeline-card__icon">
+                <i class="fas fa-check-double"></i>
+            </div>
+            <div class="timeline-card__dot conference"></div>
+            <div class="timeline-card__content">
+                <h3>Review & Finalization</h3>
+                <div class="timeline-card__date">20 Apr 2026</div>
+            </div>
+        </div>
+        
+        <div class="timeline-card">
+            <div class="timeline-card__icon">
+                <i class="fas fa-envelope-open-text"></i>
+            </div>
+            <div class="timeline-card__dot conference"></div>
+            <div class="timeline-card__content">
+                <h3>Final circular</h3>
+                <div class="timeline-card__date">25 Apr 2026</div>
+            </div>
+        </div>
+        
+        <div class="timeline-card">
+            <div class="timeline-card__icon">
+                <i class="fas fa-chalkboard-user"></i>
+            </div>
+            <div class="timeline-card__dot conference"></div>
+            <div class="timeline-card__content">
+                <h3>Presentation deadline</h3>
+                <div class="timeline-card__date">30 Apr 2026</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+</style>
+            <!-- Right Column: Introduction -->
+<div class="intro-card">
+    <div class="intro-card__inner">
+        <div class="intro-card__logo-wrapper">
+            <div class="intro-card__logo-container">
+                <img src="static/images/acee-removebg.png" alt="ACEE Logo" class="intro-card__logo">
+            </div>
+        </div>
+        <div class="intro-card__content">
+            <h2 class="intro-card__title">Introduction</h2>
+            <p class="intro-card__description">
+                The Asia Conference on Earthquake Engineering (ACEE) was initiated to create a dedicated platform in Asia for dialogue and cooperation among earthquake engineering professionals. Since its inception, ACEE has served as a meeting point for advancing research, sharing lessons from damaging earthquakes, and translating new knowledge into safer buildings, infrastructure, and communities.
+            </p>
+            <a href="schedule/index.html" class="intro-card__btn">Learn More</a>
+        </div>
+    </div>
+</div>
+
+
+
+        </div>
+    </div>
 </section>
+
+
 <!-- Keynote Speakers Section - 6 in Grid -->
 <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4">
@@ -1046,12 +1817,12 @@
 </section>
 
 <!-- About Section -->
-<section class="py-16 bg-white">
+<!-- <section class="py-16 bg-white">
     <div class="max-w-7xl mx-auto px-4">
         <div class="flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-1/3">
                 <div class="w-48 h-48 mx-auto bg-conference-blue rounded-2xl flex items-center justify-center shadow-xl">
-                        <img src="static/images/acee-removebg.png" alt="ACEE Logo">
+                        <img src="/static/images/acee-removebg.png" alt="ACEE Logo">
 
                 </div>
             </div>
@@ -1060,11 +1831,11 @@
                 <p class="text-gray-600 leading-relaxed mb-6">
                     The Asia Conference on Earthquake Engineering (ACEE) was initiated to create a dedicated platform in Asia for dialogue and cooperation among earthquake engineering professionals. Since its inception, ACEE has served as a meeting point for advancing research, sharing lessons from damaging earthquakes, and translating new knowledge into safer buildings, infrastructure, and communities.
                 </p>
-                <a href="schedule/index.html" class="btn-primary">Learn More</a>
+                <a href="/schedule/" class="btn-primary">Learn More</a>
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 
 
