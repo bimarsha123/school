@@ -1,15 +1,3 @@
-{# 
-  Downloads - 9ACEE
-  Redesigned following Uncodixify principles:
-  - No gradients
-  - No rounded corners > 8px
-  - No circular icons
-  - No hover transforms (scale, translate)
-  - Simple borders, solid backgrounds
-  - Clean tables without gradient headers
-  - Normal cards with subtle hover states
-#}
-
 
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
@@ -54,7 +42,7 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://9acee.nset.org.np/">
     
-    <title>Downloads - 9ACEE</title>
+    <title>Organization & Committees - 9ACEE</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -168,410 +156,6 @@
     </script>
     
     
-<style>
-  /* ============================================ */
-  /* Uncodixify overrides - keep it normal */
-  /* ============================================ */
-  
-  /* Simple page header - no gradient */
-  .downloads-header {
-    padding: 2rem 1.5rem;
-    background: #f8f9fa;
-    border-bottom: 1px solid #e5e7eb;
-  }
-  
-  .downloads-header h1 {
-    font-size: 1.875rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-  }
-  
-  .downloads-header p {
-    font-size: 1rem;
-    color: #6b7280;
-  }
-  
-  /* Simple notice bar - no rounded-full */
-  .notice-bar {
-    background: #eff6ff;
-    border-bottom: 1px solid #e5e7eb;
-    padding: 0.75rem 1.5rem;
-  }
-  
-  .notice-content {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-  
-  .notice-icon {
-    width: 32px;
-    height: 32px;
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  
-  .notice-icon svg {
-    width: 16px;
-    height: 16px;
-    color: #1f2937;
-  }
-  
-  .notice-text p:first-child {
-    font-weight: 600;
-    font-size: 0.875rem;
-    color: #1f2937;
-  }
-  
-  .notice-text p:last-child {
-    font-size: 0.75rem;
-    color: #6b7280;
-  }
-  
-  /* Section styling */
-  .downloads-section {
-    padding: 2rem 1.5rem;
-    border-bottom: 1px solid #e5e7eb;
-  }
-  
-  .downloads-section:last-child {
-    border-bottom: none;
-  }
-  
-  .section-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #e5e7eb;
-  }
-  
-  .section-title-with-icon {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #e5e7eb;
-  }
-  
-  .section-title-with-icon svg {
-    width: 24px;
-    height: 24px;
-    color: #6b7280;
-  }
-  
-  /* Simple card - no rounded-xl, no shadow-xl, no scale transforms */
-  .download-card {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1rem;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    background: white;
-    text-decoration: none;
-    transition: background 0.15s ease;
-  }
-  
-  .download-card:hover {
-    background: #fafafa;
-  }
-  
-  .card-icon {
-    width: 64px;
-    height: 64px;
-    background: #f3f4f6;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  
-  .card-icon svg {
-    width: 32px;
-    height: 32px;
-    color: #4b5563;
-  }
-  
-  .card-content {
-    flex: 1;
-  }
-  
-  .card-content h3 {
-    font-weight: 600;
-    font-size: 1rem;
-    color: #1f2937;
-    margin-bottom: 0.25rem;
-  }
-  
-  .card-content p {
-    font-size: 0.75rem;
-    color: #6b7280;
-    margin-bottom: 0.25rem;
-  }
-  
-  .card-badge {
-    display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 500;
-    padding: 0.125rem 0.5rem;
-    border-radius: 6px;
-  }
-  
-  .badge-required {
-    background: #fee2e2;
-    color: #991b1b;
-    border: 1px solid #fecaca;
-  }
-  
-  .badge-guidelines {
-    background: #f0fdf4;
-    color: #166534;
-    border: 1px solid #dcfce7;
-  }
-  
-  .badge-coming {
-    background: #f3f4f6;
-    color: #4b5563;
-    border: 1px solid #e5e7eb;
-  }
-  
-  .card-arrow {
-    color: #9ca3af;
-    flex-shrink: 0;
-    align-self: center;
-  }
-  
-  .card-arrow svg {
-    width: 16px;
-    height: 16px;
-  }
-  
-  /* Simple grid */
-  .grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  
-  .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
-  
-  /* Simple table - no gradient header, no hover transforms */
-  .table-wrapper {
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    overflow-x: auto;
-  }
-  
-  .time-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.875rem;
-  }
-  
-  .time-table th {
-    background: #f9fafb;
-    padding: 0.75rem 1rem;
-    text-align: left;
-    font-weight: 600;
-    color: #1f2937;
-    border-bottom: 1px solid #e5e7eb;
-  }
-  
-  .time-table th:not(:first-child) {
-    text-align: center;
-  }
-  
-  .time-table td {
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid #e5e7eb;
-    color: #374151;
-  }
-  
-  .time-table tr:last-child td {
-    border-bottom: none;
-  }
-  
-  .time-table tr:hover {
-    background: #fafafa;
-  }
-  
-  .time-table td:not(:first-child) {
-    text-align: center;
-  }
-  
-  /* Simple badge for time allocation */
-  .time-badge {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 500;
-  }
-  
-  .time-badge-blue {
-    background: #eff6ff;
-    color: #1e40af;
-    border: 1px solid #bfdbfe;
-  }
-  
-  .time-badge-amber {
-    background: #fffbeb;
-    color: #b45309;
-    border: 1px solid #fde68a;
-  }
-  
-  .time-badge-green {
-    background: #f0fdf4;
-    color: #166534;
-    border: 1px solid #bbf7d0;
-  }
-  
-  .time-badge-gray {
-    background: #f3f4f6;
-    color: #374151;
-    border: 1px solid #e5e7eb;
-  }
-  
-  /* Simple info box - no rounded-lg, no border-left */
-  .info-box {
-    background: #fefce8;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    padding: 1rem;
-    margin-top: 1rem;
-  }
-  
-  .info-box p {
-    font-size: 0.75rem;
-    color: #854d0e;
-  }
-  
-  .info-box strong {
-    font-weight: 600;
-  }
-  
-  /* Simple prospectus card */
-  .prospectus-card {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1.5rem;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    background: white;
-    transition: background 0.15s ease;
-  }
-  
-  .prospectus-card:hover {
-    background: #fafafa;
-  }
-  
-  .prospectus-icon {
-    width: 80px;
-    height: 96px;
-    background: #f3f4f6;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  
-  .prospectus-icon svg {
-    width: 40px;
-    height: 40px;
-    color: #4b5563;
-  }
-  
-  .prospectus-content {
-    flex: 1;
-  }
-  
-  .prospectus-content h3 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-  }
-  
-  .prospectus-content p {
-    font-size: 0.875rem;
-    color: #6b7280;
-    margin-bottom: 0.75rem;
-    line-height: 1.4;
-  }
-  
-  .prospectus-link {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #1f2937;
-    text-decoration: none;
-  }
-  
-  .prospectus-link:hover {
-    text-decoration: underline;
-  }
-  
-  /* Utility */
-  .max-w-container {
-    max-width: 1024px;
-    margin: 0 auto;
-  }
-  
-  @media (max-width: 768px) {
-    .downloads-header {
-      padding: 1.5rem 1rem;
-    }
-    
-    .downloads-header h1 {
-      font-size: 1.5rem;
-    }
-    
-    .downloads-section {
-      padding: 1.5rem 1rem;
-    }
-    
-    .section-title,
-    .section-title-with-icon {
-      font-size: 1.25rem;
-    }
-    
-    .grid-2,
-    .grid-3 {
-      grid-template-columns: 1fr;
-    }
-    
-    .prospectus-card {
-      flex-direction: column;
-      text-align: center;
-      gap: 1rem;
-    }
-    
-    .notice-content {
-      align-items: flex-start;
-    }
-  }
-</style>
-
 </head>
 <body class="bg-gray-50 font-sans pb-20 lg:pb-0">
 
@@ -631,12 +215,12 @@
                 <!-- Desktop Navigation -->
                 <div class="hidden lg:flex items-center space-x-6">
                     <a href="../index.html" class="nav-link ">Home</a>
-                    <a href="../organization/index.html" class="nav-link ">Organization</a>
+                    <a href="index.html" class="nav-link ">Organization</a>
                     <a href="../venue/index.html" class="nav-link ">Venue</a>
                     <a href="../speakers/index.html" class="nav-link ">Speaker</a>
                     <a href="../abstract-submission/index.html" class="nav-link ">Abstract</a>
                     <a href="../schedule/index.html" class="nav-link ">Schedule</a>
-                    <a href="index.html" class="nav-link nav-link-active">Downloads</a>
+                    <a href="../downloads/index.html" class="nav-link ">Downloads</a>
                     <a href="../photos/index.html" class="nav-link ">Photos</a>
                     <a href="../registration/index.html" class="btn-primary">Register Now</a>
                 </div>
@@ -659,7 +243,7 @@
                 <a href="../registration/index.html" class="block py-2 text-gray-700 hover:text-conference-blue">Registration</a>
                 <a href="../abstract-submission/index.html" class="block py-2 text-gray-700 hover:text-conference-blue">Abstract Submission</a>
                 <a href="../schedule/index.html" class="block py-2 text-gray-700 hover:text-conference-blue">Schedule</a>
-                <a href="index.html" class="block py-2 text-gray-700 hover:text-conference-blue">Downloads</a>
+                <a href="../downloads/index.html" class="block py-2 text-gray-700 hover:text-conference-blue">Downloads</a>
                 <a href="../photos/index.html" class="block py-2 text-gray-700 hover:text-conference-blue">Photos</a>
                 <a href="../registration/index.html" class="block btn-primary text-center mt-4">Register Now</a>
             </div>
@@ -671,283 +255,290 @@
     <main>
         
 <main>
-  <!-- Simple page header - no gradient -->
-  <div class="downloads-header">
-    <div class="max-w-container">
-      <h1>Downloads</h1>
-      <p>Access conference materials, templates, and documents</p>
+  <!-- Simple header - no gradient -->
+  <div class="org-header">
+    <div class="max-w-7xl mx-auto">
+      <h1>Organization</h1>
+      <p>9th Asian Conference on Earthquake Engineering · Kathmandu, Nepal</p>
     </div>
   </div>
   
-  <!-- Simple notice - no rounded-full -->
-  <div class="notice-bar">
-    <div class="max-w-container">
-      <div class="notice-content">
-        <div class="notice-icon">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-          </svg>
-        </div>
-        <div class="notice-text">
-          <p>Website Update — 26 March 2026</p>
-          <p>New templates and guidelines added. More content coming soon!</p>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Paper & Presentation Templates -->
-  <section class="downloads-section">
-    <div class="max-w-container">
-      <div class="section-title-with-icon">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-        </svg>
-        <span>Paper & Presentation Templates</span>
+  <section class="org-section">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="section-title">About the Organization</h2>
+      
+      <div class="org-description">
+        <p>The conference is organized by <strong>National Disaster Risk Reduction and Management Authority (NDRRMA)</strong> in collaboration with <strong>Nepal Academy of Science and Technology (NAST)</strong>, <strong>Asia Conference on Earthquake Engineering (ACEE)</strong>, and <strong>National Society for Earthquake Technology (NSET)</strong>.</p>
       </div>
       
-      <div class="grid-2">
-        <!-- Extended Abstract Template -->
-        <a href="https://nset1-my.sharepoint.com/:w:/g/personal/stamang_nset_org_np/IQC9T65qOnHcSI9hdLw_QxbMARA-Vf2XtU69t1BRT30RE9k?e=ZzArBd" target="_blank" class="download-card">
-          <div class="card-icon">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-            </svg>
-          </div>
-          <div class="card-content">
-            <h3>Extended Abstract Template</h3>
-            <p>Official template for extended abstracts (DOCX)</p>
-            <span class="card-badge badge-required">⚠️ Required format</span>
-          </div>
-          <div class="card-arrow">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-            </svg>
-          </div>
-        </a>
-        
-        <!-- Oral Presentation Template -->
-        <a href="https://nset1-my.sharepoint.com/:p:/g/personal/stamang_nset_org_np/IQCEauGT8ackTpwt3-2WyoFBAVcB0NV0TGHWZhv9wONmHuE?e=eH0R1L" target="_blank" class="download-card">
-          <div class="card-icon">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path>
-            </svg>
-          </div>
-          <div class="card-content">
-            <h3>Oral Presentation Template</h3>
-            <p>PowerPoint template for presentations</p>
-            <span class="card-badge badge-guidelines">✓ Guidelines included</span>
-          </div>
-          <div class="card-arrow">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-            </svg>
-          </div>
-        </a>
-        
-        <!-- Poster Template (Coming Soon) -->
-        <div class="download-card" style="cursor: default;">
-          <div class="card-icon">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-            </svg>
-          </div>
-          <div class="card-content">
-            <h3>Poster Presentation Template</h3>
-            <p>Template for poster sessions</p>
-            <span class="card-badge badge-coming">Coming Soon</span>
-          </div>
-        </div>
-        
-        <!-- Author Guidelines (Coming Soon) -->
-        <div class="download-card" style="cursor: default;">
-          <div class="card-icon">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-            </svg>
-          </div>
-          <div class="card-content">
-            <h3>Author Guidelines</h3>
-            <p>Detailed guidelines for authors (PDF)</p>
-            <span class="card-badge badge-coming">Coming Soon</span>
-          </div>
-        </div>
+      <h3 class="section-subtitle">Host Institution</h3>
+      <div class="org-description">
+        <p>NSET, in close collaboration with national and public, academic and corporate private sector business entities, serves as the host organization for 9ACEE.</p>
       </div>
     </div>
   </section>
   
-  <!-- Presentation Time Allocation -->
-  <section class="downloads-section">
-    <div class="max-w-container">
-      <div class="section-title-with-icon">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-        </svg>
-        <span>Presentation Time Allocation</span>
-      </div>
+  <!-- 9ACEE Organizing Committee -->
+  <section class="org-section">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="section-title">9ACEE Organizing Committee</h2>
       
       <div class="table-wrapper">
-        <table class="time-table">
+        <table class="org-table">
           <thead>
             <tr>
-              <th>Presentation Type</th>
-              <th>Time Duration</th>
-              <th>Q&A Session</th>
+              <th>#</th>
+              <th>Member</th>
+              <th>Affiliation</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>
-                <div>
-                  <strong>Keynote Speakers</strong>
-                  <div style="font-size: 0.7rem; color: #6b7280;">Plenary sessions</div>
-                </div>
-              </td>
-              <td><span class="time-badge time-badge-blue">30 Minutes</span></td>
-              <td style="color: #9ca3af;">To be announced</td>
+              <td>1</td>
+              <td><strong>Er. Dinesh Prasad Bhatta</strong> <span class="role-badge">Chair</span></td>
+              <td>Chief Executive, National Disaster Risk Reduction & Management Authority (NDRRMA)</td>
             </tr>
             <tr>
-              <td>
-                <div>
-                  <strong>Invited Speakers</strong>
-                  <div style="font-size: 0.7rem; color: #6b7280;">Special sessions</div>
-                </div>
-              </td>
-              <td><span class="time-badge time-badge-amber">20 Minutes</span></td>
-              <td style="color: #9ca3af;">To be announced</td>
+              <td>2</td>
+              <td><strong>Dr. Rabindra Dhakal</strong> <span class="role-badge">Co-Chair</span></td>
+              <td>Secretary, Nepal Academy of Science and Technology (NAST)</td>
             </tr>
             <tr>
-              <td>
-                <div>
-                  <strong>Oral Presentation (Regular)</strong>
-                  <div style="font-size: 0.7rem; color: #6b7280;">Technical sessions</div>
-                </div>
-              </td>
-              <td><span class="time-badge time-badge-green">15 Minutes</span></td>
-              <td><span class="time-badge time-badge-gray">2 Minutes</span></td>
+              <td>3</td>
+              <td><strong>Prof. Dr. Amod Mani Dixit</strong> <span class="role-badge">Convener</span></td>
+              <td>President, National Society for Earthquake Technology Nepal (NSET)</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td><strong>Er. Surya Narayan Shrestha</strong> <span class="role-badge">Deputy Convener</span></td>
+              <td>Executive Director, National Society for Earthquake Technology Nepal (NSET)</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td><strong>Dr. Ramesh Guragain</strong> <span class="role-badge">Deputy Convener</span></td>
+              <td>Senior Earthquake Engineer, National Society for Earthquake Technology Nepal (NSET)</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td><strong>Mr. Amrit Shrestha</strong></td>
+              <td>Joint Secretary, National Disaster Risk Reduction & Management Authority (NDRRMA)</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td><strong>Dr. Basanta Raj Adhikari</strong></td>
+              <td>President, Disaster Preparedness Network Nepal (DPNet)</td>
+            </tr>
+            <tr>
+              <td>8</td>
+              <td><strong>Er. Bharat Prasad Banjara</strong></td>
+              <td>Joint Secretary, The Society of Consulting Architectural & Engineering Firms (SCAEF), Nepal</td>
+            </tr>
+            <tr>
+              <td>9</td>
+              <td><strong>Mr. Bhaskar Khatiwada</strong></td>
+              <td>President, Nepal Geological Society (NGS)</td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td><strong>Dr. Ganesh Kumar Jimee</strong></td>
+              <td>President, Earthquake Safety Solution (ESS)</td>
+            </tr>
+            <tr>
+              <td>11</td>
+              <td><strong>Dr. Ganga Lal Tuladhar</strong></td>
+              <td>Former Member of Federal Parliament</td>
+            </tr>
+            <tr>
+              <td>12</td>
+              <td><strong>Er. Dr. Hare Ram Shrestha</strong></td>
+              <td>President, Society of Transport Engineers Nepal (SOTEN)</td>
+            </tr>
+            <tr>
+              <td>13</td>
+              <td><strong>Dr. Hari Ram Parajuli</strong></td>
+              <td>Associate Professor, Institute of Engineering (IOE)</td>
+            </tr>
+            <tr>
+              <td>14</td>
+              <td><strong>Assoc. Prof. Dr. Indra Prasad Acharya</strong></td>
+              <td>President, Nepal Geotechnical Society (NGS)</td>
+            </tr>
+            <tr>
+              <td>15</td>
+              <td><strong>Ar. Ishwor Lal Joshi</strong></td>
+              <td>President, Society of Nepalese Architects (SONA)</td>
+            </tr>
+            <tr>
+              <td>16</td>
+              <td><strong>Mr. Khadga Bahadur Sen Oli</strong></td>
+              <td>Managing Director, Earthquake Safety Solution (ESS)</td>
+            </tr>
+            <tr>
+              <td>17</td>
+              <td><strong>Dr. Kishor Timsina</strong></td>
+              <td>Assistant Professor, Madan Bhandari University of Science and Technology, Nepal</td>
+            </tr>
+            <tr>
+              <td>18</td>
+              <td><strong>Er. Krishna Singh Basnet</strong></td>
+              <td>President, Structural Engineers' Association, Nepal (SEANep)</td>
+            </tr>
+            <tr>
+              <td>19</td>
+              <td><strong>Dr. Lok Bijay Adhikari</strong></td>
+              <td>Senior Seismologist, Department of Mines and Geology (DMG)</td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td><strong>Prof. Prachanda Man Pradhan</strong></td>
+              <td>Professor, Department of Civil Engineering, Kathmandu University</td>
+            </tr>
+            <tr>
+              <td>21</td>
+              <td><strong>Dr. Prakash Pokhrel</strong></td>
+              <td>Geologist, National Disaster Risk Reduction & Management Authority (NDRRMA)</td>
+            </tr>
+            <tr>
+              <td>22</td>
+              <td><strong>Er. Subash Chandra Baral</strong></td>
+              <td>President, Nepal Engineers Association (NEA)</td>
+            </tr>
+            <tr>
+              <td>23</td>
+              <td><strong>Dr. Subeg Man Bijukchhe</strong></td>
+              <td>Vice Principal, Khwopa Engineering College</td>
+            </tr>
+            <tr>
+              <td>24</td>
+              <td><strong>Er. Sujan Maka</strong></td>
+              <td>Principal, Khwopa Engineering College</td>
+            </tr>
+            <tr>
+              <td>25</td>
+              <td><strong>Dr. Sujan Tripathi</strong></td>
+              <td>MSc Coordinator of Civil Engineering, Institute of Engineering (IOE)</td>
+            </tr>
+            <tr>
+              <td>26</td>
+              <td><strong>Mr. Suresh Sunar</strong></td>
+              <td>Under Secretary, National Disaster Risk Reduction & Management Authority (NDRRMA)</td>
+            </tr>
+            <tr>
+              <td>27</td>
+              <td><strong>Mr. Sushil Kumar Shrestha</strong></td>
+              <td>Senior Divisional Engineer, National Disaster Risk Reduction & Management Authority (NDRRMA)</td>
             </tr>
           </tbody>
         </table>
       </div>
+    </div>
+  </section>
+  
+  <!-- 9ACEE Advisory Committee -->
+  <section class="org-section">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="section-title">9ACEE Advisory Committee</h2>
       
-      <div class="info-box">
-        <p><strong>Important:</strong> All presenters must submit their presentation files by <strong>30 April 2026</strong>. Please adhere to the time allocations strictly to ensure smooth session flow.</p>
+      <div class="table-wrapper">
+        <table class="org-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Member</th>
+              <th>Affiliation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td><strong>Prof. Gokarna Bahadur Motra</strong></td><td>Professor, Institute of Engineering (IOE)</td></tr>
+            <tr><td>2</td><td><strong>Prof. Dr. Bim Prasad Shrestha</strong></td><td>Professor, Kathmandu University</td></tr>
+            <tr><td>3</td><td><strong>Prof. Binay Kumar Mishra</strong></td><td>Professor, Pokhara University</td></tr>
+            <tr><td>4</td><td><strong>Er. Sushil Gyewali</strong></td><td>CEO, Investment Board Nepal</td></tr>
+            <tr><td>5</td><td><strong>Prof. Prem Nath Maskey</strong></td><td>Professor, Institute of Engineering (IOE)</td></tr>
+            <tr><td>6</td><td><strong>Prof. Kimiro Meguro</strong></td><td>ICUS, IIS, The University of Tokyo</td></tr>
+            <tr><td>7</td><td><strong>Prof. Netra Prakash Bhandary</strong></td><td>Professor, Ehime University</td></tr>
+            <tr><td>8</td><td><strong>Dr. Rodolfo Jr Mendoza</strong></td><td>Department of Civil Engineering, De La Salle University-Manila, Philippines</td></tr>
+            <tr><td>9</td><td><strong>Prof. Fumio Yamazaki</strong></td><td>Fellow, Ohsaki Research Institute, Inc.; Professor Emeritus, Chiba University</td></tr>
+            <tr><td>10</td><td><strong>Prof. Andres Winston Oreta</strong></td><td>Professor in Civil Engineering, De La Salle University, Manila, Philippines</td></tr>
+            <tr><td>11</td><td><strong>Prof. Keh-Chyuan Tsai</strong></td><td>Professor of Civil Engineering, National Taiwan University, Taipei</td></tr>
+            <tr><td>12</td><td><strong>Dr. Prof. Naveed Anwar</strong></td><td>CEO, CSi Bangkok; Adjunct Faculty in Structural Engineering at AIT, Thailand</td></tr>
+            <tr><td>13</td><td><strong>Prof. Pennung Warnitchai</strong></td><td>Chair of Structural Engineering program, Asian Institute of Technology</td></tr>
+            <tr><td>14</td><td><strong>Engr. Ernesto Q. Malicad, Jr.</strong></td><td>Secretary, Association of Structural Engineers of the Philippines, Inc. (ASEP)</td></tr>
+            <tr><td>15</td><td><strong>Prof. Rannie S Ison</strong></td><td>President / Principal Civil/Structural Engineer at R.S. ISON & ASSOCIATES; Professor, University of the Philippines</td></tr>
+            <tr><td>16</td><td><strong>Prof. Hiroaki Yamanaka</strong></td><td>JAEE President, Tokyo Tech, Japan</td></tr>
+            <tr><td>17</td><td><strong>Prof. Junji Kiyono</strong></td><td>Former JAEE President, Emeritus Professor, Kyoto University</td></tr>
+            <tr><td>18</td><td><strong>Prof. Dr. Lei Wang</strong></td><td>Professor, International Research Center of Big Data for Sustainable Development Goals</td></tr>
+            <tr><td>19</td><td><strong>Prof. Vijaya Anand Misra</strong></td><td>Professor (retd.), School of Planning and Architecture (SPA)</td></tr>
+            <tr><td>20</td><td><strong>Prof. M.L. Sharma</strong></td><td>Professor, HAG, Department of Earthquake Engineering, IIT Roorkee, India</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
   
-  <!-- Conference Agenda -->
-  <section class="downloads-section">
-    <div class="max-w-container">
-      <div class="section-title-with-icon">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-        </svg>
-        <span>Conference Agenda</span>
-      </div>
+  <!-- 9ACEE Technical Committee -->
+  <section class="org-section">
+    <div class="max-w-7xl mx-auto">
+      <h2 class="section-title">9ACEE Technical Committee</h2>
       
-      <div class="grid-3">
-        <div class="download-card" style="cursor: default;">
-          <div class="card-icon" style="width: 56px; height: 56px;">
-            <span style="font-weight: 600; color: #4b5563;">D1</span>
-          </div>
-          <div class="card-content">
-            <h3>Day 1 Agenda</h3>
-            <p>4 May 2026</p>
-            <span class="card-badge badge-coming">Coming Soon</span>
-          </div>
-        </div>
-        
-        <div class="download-card" style="cursor: default;">
-          <div class="card-icon" style="width: 56px; height: 56px;">
-            <span style="font-weight: 600; color: #4b5563;">D2</span>
-          </div>
-          <div class="card-content">
-            <h3>Day 2 Agenda</h3>
-            <p>5 May 2026</p>
-            <span class="card-badge badge-coming">Coming Soon</span>
-          </div>
-        </div>
-        
-        <div class="download-card" style="cursor: default;">
-          <div class="card-icon" style="width: 56px; height: 56px;">
-            <span style="font-weight: 600; color: #4b5563;">D3</span>
-          </div>
-          <div class="card-content">
-            <h3>Day 3 Agenda</h3>
-            <p>6 May 2026</p>
-            <span class="card-badge badge-coming">Coming Soon</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Conference Prospectus -->
-  <section class="downloads-section">
-    <div class="max-w-container">
-      <div class="section-title-with-icon">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-        </svg>
-        <span>Conference Prospectus</span>
-      </div>
-      
-      <div class="prospectus-card">
-        <div class="prospectus-icon">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-          </svg>
-        </div>
-        <div class="prospectus-content">
-          <h3>9ACEE Conference Prospectus</h3>
-          <p>Download the complete conference prospectus with detailed information about themes, venue, sponsorship opportunities, and registration details.</p>
-          <a href="index.html#" class="prospectus-link">Download PDF →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Previous Conferences -->
-  <section class="downloads-section">
-    <div class="max-w-container">
-      <div class="section-title-with-icon">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-        </svg>
-        <span>Previous ACEE Conferences</span>
-      </div>
-      
-      <div class="grid-2">
-        <div class="download-card" style="cursor: default;">
-          <div class="card-icon" style="width: 56px; height: 56px;">
-            <span style="font-weight: 600; color: #4b5563;">8A</span>
-          </div>
-          <div class="card-content">
-            <h3>8ACEE Proceedings</h3>
-            <p>8th Asian Conference - Korea</p>
-          </div>
-          <div class="card-arrow">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-            </svg>
-          </div>
-        </div>
-        
-        <div class="download-card" style="cursor: default;">
-          <div class="card-icon" style="width: 56px; height: 56px;">
-            <span style="font-weight: 600; color: #4b5563;">7A</span>
-          </div>
-          <div class="card-content">
-            <h3>7ACEE Proceedings</h3>
-            <p>7th Asian Conference - Thailand</p>
-          </div>
-          <div class="card-arrow">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-            </svg>
-          </div>
-        </div>
+      <div class="table-wrapper">
+        <table class="org-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Member</th>
+              <th>Affiliation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>1</td><td><strong>Dr. Ramesh Guragain</strong> <span class="role-badge">Deputy Convener</span></td><td>Senior Earthquake Engineer, National Society for Earthquake Technology Nepal (NSET)</td></tr>
+            <tr><td>2</td><td><strong>Ar. Ishwar Lal Joshi</strong></td><td>President, Society of Nepalese Architects (SONA)</td></tr>
+            <tr><td>3</td><td><strong>Assoc. Prof. Dr. Bhesh Raj Thapa</strong></td><td>Principal, Universal Engineering and Science College (UESC)</td></tr>
+            <tr><td>4</td><td><strong>Assoc. Prof. Dr. Indra Prasad Acharya</strong></td><td>President, Nepal Geotechnical Society (NGS)</td></tr>
+            <tr><td>5</td><td><strong>Assoc. Prof. Dr. Mandip Subedi</strong></td><td>IPP, Nepal Geotechnical Society (NGS)</td></tr>
+            <tr><td>6</td><td><strong>Dr. Ganesh Kumar Jimee</strong></td><td>DRM Expert, President, Earthquake Safety Solutions (ESS)</td></tr>
+            <tr><td>7</td><td><strong>Dr. Gopi Krishna Basyal</strong></td><td>Director, National Society for Earthquake Technology Nepal (NSET)</td></tr>
+            <tr><td>8</td><td><strong>Dr. Lok Bijay Adhikari</strong></td><td>Senior Seismologist, Department of Mines and Geology (DMG), Nepal</td></tr>
+            <tr><td>9</td><td><strong>Dr. Narayan Marasini</strong></td><td>DED, National Society for Earthquake Technology Nepal (NSET)</td></tr>
+            <tr><td>10</td><td><strong>Dr. Basanta Raj Adhikari</strong></td><td>President, Disaster Preparedness Network Nepal (DPNet)</td></tr>
+            <tr><td>11</td><td><strong>Dr. Shrijana Dhakal</strong></td><td>Director, Universal Engineering and Science College ICAS</td></tr>
+            <tr><td>12</td><td><strong>Dr. Suresh Chaudhary</strong></td><td>Manager, National Society for Earthquake Technology Nepal (NSET)</td></tr>
+            <tr><td>13</td><td><strong>Er. Bipul Mainali</strong></td><td>Universal Engineering and Science College (UESC)</td></tr>
+            <tr><td>14</td><td><strong>Er. Hare Ram Shrestha</strong></td><td>President, Society of Transport Engineers Nepal (SOTEN)</td></tr>
+            <tr><td>15</td><td><strong>Er. Hima Shrestha</strong></td><td>National Society for Earthquake Technology Nepal (NSET)</td></tr>
+            <tr><td>16</td><td><strong>Er. Khadga Bahadur Sen Oli</strong></td><td>MD, Earthquake Safety Solutions (ESS)</td></tr>
+            <tr><td>17</td><td><strong>Er. Kirty Tiwari</strong></td><td>Manager, National Society for Earthquake Technology Nepal (NSET)</td></tr>
+            <tr><td>18</td><td><strong>Dr. Prasant Rawal</strong></td><td>Senior Structural Engineer, National Society for Earthquake Technology Nepal (NSET)</td></tr>
+            <tr><td>19</td><td><strong>Er. Prayash Malla</strong></td><td>Senior Structural Engineer, National Society for Earthquake Technology Nepal (NSET)</td></tr>
+            <tr><td>20</td><td><strong>Er. Rajani Prajapati</strong></td><td>Senior Structural Engineer, National Society for Earthquake Technology Nepal (NSET)</td></tr>
+            <tr><td>21</td><td><strong>Er. Rabin Chaulagain</strong></td><td>Senior Structural Engineer, Member (Executive Committee), SEANep</td></tr>
+            <tr><td>22</td><td><strong>Er. Thakur Prasad Sharma</strong></td><td>President, SCAEF</td></tr>
+            <tr><td>23</td><td><strong>Er. Vibek Manandhar</strong></td><td>Senior Structural Engineer</td></tr>
+            <tr><td>24</td><td><strong>Er. Binaya Kumar Lamichhane</strong></td><td>Lecturer, Universal UESC/ICAS</td></tr>
+            <tr><td>25</td><td><strong>Mr. Amrit Shrestha</strong></td><td>Joint Secretary, National Disaster Risk Reduction & Management Authority (NDRRMA)</td></tr>
+            <tr><td>26</td><td><strong>Mr. Bhaskar Khatiwada</strong></td><td>President, Nepal Geological Society</td></tr>
+            <tr><td>27</td><td><strong>Mr. Rajendra Sharma</strong></td><td>National Disaster Risk Reduction & Management Authority (NDRRMA)</td></tr>
+            <tr><td>28</td><td><strong>Mr. Leela Khatiwada</strong></td><td>Deputy Director General, Department of Urban Development and Building Construction (DUDBC)</td></tr>
+            <tr><td>29</td><td><strong>Er. Deepak Shrestha</strong></td><td>Earthquake Safety Solutions (ESS)</td></tr>
+            <tr><td>30</td><td><strong>Mr. Ek Raj Adhikari</strong></td><td>Deputy Director General, Department of Urban Development and Building Construction (DUDBC)</td></tr>
+            <tr><td>31</td><td><strong>Dr. Subodh Dhakal</strong></td><td>Associate Professor and Head of Department, Department of Geology, Tri-Chandra Campus</td></tr>
+            <tr><td>32</td><td><strong>Prof. Prachand Man Pradhan</strong></td><td>Professor, Kathmandu University</td></tr>
+            <tr><td>33</td><td><strong>Dr. Kishor Timsina</strong></td><td>Assistant Professor, Madan Bhandari University of Science and Technology, Nepal</td></tr>
+            <tr><td>34</td><td><strong>Dr. Bharat Pradhan</strong></td><td>Joint Secretary, Structural Engineers' Association, Nepal (SEANep)</td></tr>
+            <tr><td>35</td><td><strong>Dr. Sujan Tripathi</strong></td><td>Coordinator, MSc in Earthquake Engineering, Institute of Engineering (IOE), Thapathali Campus</td></tr>
+            <tr><td>36</td><td><strong>Dr. Manjip Shakya</strong></td><td>Head of Department, Post Graduate Department of Earthquake Engineering, Khwopa Engineering College</td></tr>
+            <tr><td>37</td><td><strong>Dr. Subeg Man Bijukchhen</strong></td><td>Associate Professor, Khwopa Engineering College</td></tr>
+            <tr><td>38</td><td><strong>Mr. Kshitiz Charan Shrestha</strong></td><td>Program Coordinator, Structural Engineer, Institute of Engineering, Pulchowk Campus</td></tr>
+            <tr><td>39</td><td><strong>Mr. Kshitiz Paudel</strong></td><td>Technical Lead, National Disaster Management Network of Nepal (DiMaNN)</td></tr>
+            <tr><td>40</td><td><strong>Dr. Prakash Pokhrel</strong></td><td>Geologist, National Disaster Risk Reduction & Management Authority (NDRRMA)</td></tr>
+            <tr><td>41</td><td><strong>Dr. Sweata Sijapati</strong></td><td>National Coordinator - Nepal, GeoHazards International</td></tr>
+            <tr><td>42</td><td><strong>Mr. Neeraj Bhandari</strong></td><td>Structural Engineer / Assistant Professor, Universal Engineering and Science College</td></tr>
+            <tr><td>43</td><td><strong>Er. Dev Maharjan</strong></td><td>Structural Engineer, Earthquake Safety Solutions (ESS)</td></tr>
+            <tr><td>44</td><td><strong>Mr. Sushil Shrestha</strong></td><td>Senior Divisional Engineer, National Disaster Risk Reduction & Management Authority (NDRRMA)</td></tr>
+            <tr><td>45</td><td><strong>Dr. Shiba Subedi</strong></td><td>Seismologist, Nepal Academy of Science and Technology (NAST)</td></tr>
+            <tr><td>46</td><td><strong>Dr. Deepak Chamlagain</strong></td><td>Associate Professor, Department of Geology, Tri-Chandra M. Campus, Tribhuvan University</td></tr>
+            <tr><td>47</td><td><strong>Dr. Dilli Ram Thapa</strong></td><td>Senior Scientific Officer (Earth Science and Seismology), Nepal Academy of Science and Technology (NAST)</td></tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
@@ -991,7 +582,7 @@
                         <li><a href="../registration/index.html" class="opacity-90 hover:opacity-100">Registration</a></li>
                         <li><a href="../abstract-submission/index.html" class="opacity-90 hover:opacity-100">Abstract Submission</a></li>
                         <li><a href="../schedule/index.html" class="opacity-90 hover:opacity-100">Schedule</a></li>
-                        <li><a href="index.html" class="opacity-90 hover:opacity-100">Downloads</a></li>
+                        <li><a href="../downloads/index.html" class="opacity-90 hover:opacity-100">Downloads</a></li>
                         <li><a href="../photos/index.html" class="opacity-90 hover:opacity-100">Photo Gallery</a></li>
                     </ul>
                 </div>
@@ -1057,7 +648,7 @@
             </a>
             
             <!-- Downloads -->
-            <a href="index.html" class="flex flex-col items-center py-2 px-1 text-conference-blue hover:text-conference-blue transition-colors">
+            <a href="../downloads/index.html" class="flex flex-col items-center py-2 px-1 text-gray-600 hover:text-conference-blue transition-colors">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                 </svg>

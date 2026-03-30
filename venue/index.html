@@ -1,15 +1,3 @@
-{# 
-  Downloads - 9ACEE
-  Redesigned following Uncodixify principles:
-  - No gradients
-  - No rounded corners > 8px
-  - No circular icons
-  - No hover transforms (scale, translate)
-  - Simple borders, solid backgrounds
-  - Clean tables without gradient headers
-  - Normal cards with subtle hover states
-#}
-
 
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
@@ -54,7 +42,7 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://9acee.nset.org.np/">
     
-    <title>Downloads - 9ACEE</title>
+    <title>Venue & Travel - 9th Asia Conference on Earthquake Engineering</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -168,410 +156,6 @@
     </script>
     
     
-<style>
-  /* ============================================ */
-  /* Uncodixify overrides - keep it normal */
-  /* ============================================ */
-  
-  /* Simple page header - no gradient */
-  .downloads-header {
-    padding: 2rem 1.5rem;
-    background: #f8f9fa;
-    border-bottom: 1px solid #e5e7eb;
-  }
-  
-  .downloads-header h1 {
-    font-size: 1.875rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-  }
-  
-  .downloads-header p {
-    font-size: 1rem;
-    color: #6b7280;
-  }
-  
-  /* Simple notice bar - no rounded-full */
-  .notice-bar {
-    background: #eff6ff;
-    border-bottom: 1px solid #e5e7eb;
-    padding: 0.75rem 1.5rem;
-  }
-  
-  .notice-content {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-  }
-  
-  .notice-icon {
-    width: 32px;
-    height: 32px;
-    background: white;
-    border: 1px solid #e5e7eb;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  
-  .notice-icon svg {
-    width: 16px;
-    height: 16px;
-    color: #1f2937;
-  }
-  
-  .notice-text p:first-child {
-    font-weight: 600;
-    font-size: 0.875rem;
-    color: #1f2937;
-  }
-  
-  .notice-text p:last-child {
-    font-size: 0.75rem;
-    color: #6b7280;
-  }
-  
-  /* Section styling */
-  .downloads-section {
-    padding: 2rem 1.5rem;
-    border-bottom: 1px solid #e5e7eb;
-  }
-  
-  .downloads-section:last-child {
-    border-bottom: none;
-  }
-  
-  .section-title {
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #e5e7eb;
-  }
-  
-  .section-title-with-icon {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 1.5rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid #e5e7eb;
-  }
-  
-  .section-title-with-icon svg {
-    width: 24px;
-    height: 24px;
-    color: #6b7280;
-  }
-  
-  /* Simple card - no rounded-xl, no shadow-xl, no scale transforms */
-  .download-card {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1rem;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    background: white;
-    text-decoration: none;
-    transition: background 0.15s ease;
-  }
-  
-  .download-card:hover {
-    background: #fafafa;
-  }
-  
-  .card-icon {
-    width: 64px;
-    height: 64px;
-    background: #f3f4f6;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  
-  .card-icon svg {
-    width: 32px;
-    height: 32px;
-    color: #4b5563;
-  }
-  
-  .card-content {
-    flex: 1;
-  }
-  
-  .card-content h3 {
-    font-weight: 600;
-    font-size: 1rem;
-    color: #1f2937;
-    margin-bottom: 0.25rem;
-  }
-  
-  .card-content p {
-    font-size: 0.75rem;
-    color: #6b7280;
-    margin-bottom: 0.25rem;
-  }
-  
-  .card-badge {
-    display: inline-block;
-    font-size: 0.7rem;
-    font-weight: 500;
-    padding: 0.125rem 0.5rem;
-    border-radius: 6px;
-  }
-  
-  .badge-required {
-    background: #fee2e2;
-    color: #991b1b;
-    border: 1px solid #fecaca;
-  }
-  
-  .badge-guidelines {
-    background: #f0fdf4;
-    color: #166534;
-    border: 1px solid #dcfce7;
-  }
-  
-  .badge-coming {
-    background: #f3f4f6;
-    color: #4b5563;
-    border: 1px solid #e5e7eb;
-  }
-  
-  .card-arrow {
-    color: #9ca3af;
-    flex-shrink: 0;
-    align-self: center;
-  }
-  
-  .card-arrow svg {
-    width: 16px;
-    height: 16px;
-  }
-  
-  /* Simple grid */
-  .grid-2 {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  
-  .grid-3 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
-  
-  /* Simple table - no gradient header, no hover transforms */
-  .table-wrapper {
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    overflow-x: auto;
-  }
-  
-  .time-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 0.875rem;
-  }
-  
-  .time-table th {
-    background: #f9fafb;
-    padding: 0.75rem 1rem;
-    text-align: left;
-    font-weight: 600;
-    color: #1f2937;
-    border-bottom: 1px solid #e5e7eb;
-  }
-  
-  .time-table th:not(:first-child) {
-    text-align: center;
-  }
-  
-  .time-table td {
-    padding: 0.75rem 1rem;
-    border-bottom: 1px solid #e5e7eb;
-    color: #374151;
-  }
-  
-  .time-table tr:last-child td {
-    border-bottom: none;
-  }
-  
-  .time-table tr:hover {
-    background: #fafafa;
-  }
-  
-  .time-table td:not(:first-child) {
-    text-align: center;
-  }
-  
-  /* Simple badge for time allocation */
-  .time-badge {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    font-weight: 500;
-  }
-  
-  .time-badge-blue {
-    background: #eff6ff;
-    color: #1e40af;
-    border: 1px solid #bfdbfe;
-  }
-  
-  .time-badge-amber {
-    background: #fffbeb;
-    color: #b45309;
-    border: 1px solid #fde68a;
-  }
-  
-  .time-badge-green {
-    background: #f0fdf4;
-    color: #166534;
-    border: 1px solid #bbf7d0;
-  }
-  
-  .time-badge-gray {
-    background: #f3f4f6;
-    color: #374151;
-    border: 1px solid #e5e7eb;
-  }
-  
-  /* Simple info box - no rounded-lg, no border-left */
-  .info-box {
-    background: #fefce8;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    padding: 1rem;
-    margin-top: 1rem;
-  }
-  
-  .info-box p {
-    font-size: 0.75rem;
-    color: #854d0e;
-  }
-  
-  .info-box strong {
-    font-weight: 600;
-  }
-  
-  /* Simple prospectus card */
-  .prospectus-card {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    padding: 1.5rem;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    background: white;
-    transition: background 0.15s ease;
-  }
-  
-  .prospectus-card:hover {
-    background: #fafafa;
-  }
-  
-  .prospectus-icon {
-    width: 80px;
-    height: 96px;
-    background: #f3f4f6;
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-  
-  .prospectus-icon svg {
-    width: 40px;
-    height: 40px;
-    color: #4b5563;
-  }
-  
-  .prospectus-content {
-    flex: 1;
-  }
-  
-  .prospectus-content h3 {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: #1f2937;
-    margin-bottom: 0.5rem;
-  }
-  
-  .prospectus-content p {
-    font-size: 0.875rem;
-    color: #6b7280;
-    margin-bottom: 0.75rem;
-    line-height: 1.4;
-  }
-  
-  .prospectus-link {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #1f2937;
-    text-decoration: none;
-  }
-  
-  .prospectus-link:hover {
-    text-decoration: underline;
-  }
-  
-  /* Utility */
-  .max-w-container {
-    max-width: 1024px;
-    margin: 0 auto;
-  }
-  
-  @media (max-width: 768px) {
-    .downloads-header {
-      padding: 1.5rem 1rem;
-    }
-    
-    .downloads-header h1 {
-      font-size: 1.5rem;
-    }
-    
-    .downloads-section {
-      padding: 1.5rem 1rem;
-    }
-    
-    .section-title,
-    .section-title-with-icon {
-      font-size: 1.25rem;
-    }
-    
-    .grid-2,
-    .grid-3 {
-      grid-template-columns: 1fr;
-    }
-    
-    .prospectus-card {
-      flex-direction: column;
-      text-align: center;
-      gap: 1rem;
-    }
-    
-    .notice-content {
-      align-items: flex-start;
-    }
-  }
-</style>
-
 </head>
 <body class="bg-gray-50 font-sans pb-20 lg:pb-0">
 
@@ -632,11 +216,11 @@
                 <div class="hidden lg:flex items-center space-x-6">
                     <a href="../index.html" class="nav-link ">Home</a>
                     <a href="../organization/index.html" class="nav-link ">Organization</a>
-                    <a href="../venue/index.html" class="nav-link ">Venue</a>
+                    <a href="index.html" class="nav-link nav-link-active">Venue</a>
                     <a href="../speakers/index.html" class="nav-link ">Speaker</a>
                     <a href="../abstract-submission/index.html" class="nav-link ">Abstract</a>
                     <a href="../schedule/index.html" class="nav-link ">Schedule</a>
-                    <a href="index.html" class="nav-link nav-link-active">Downloads</a>
+                    <a href="../downloads/index.html" class="nav-link ">Downloads</a>
                     <a href="../photos/index.html" class="nav-link ">Photos</a>
                     <a href="../registration/index.html" class="btn-primary">Register Now</a>
                 </div>
@@ -659,7 +243,7 @@
                 <a href="../registration/index.html" class="block py-2 text-gray-700 hover:text-conference-blue">Registration</a>
                 <a href="../abstract-submission/index.html" class="block py-2 text-gray-700 hover:text-conference-blue">Abstract Submission</a>
                 <a href="../schedule/index.html" class="block py-2 text-gray-700 hover:text-conference-blue">Schedule</a>
-                <a href="index.html" class="block py-2 text-gray-700 hover:text-conference-blue">Downloads</a>
+                <a href="../downloads/index.html" class="block py-2 text-gray-700 hover:text-conference-blue">Downloads</a>
                 <a href="../photos/index.html" class="block py-2 text-gray-700 hover:text-conference-blue">Photos</a>
                 <a href="../registration/index.html" class="block btn-primary text-center mt-4">Register Now</a>
             </div>
@@ -670,288 +254,317 @@
 
     <main>
         
-<main>
-  <!-- Simple page header - no gradient -->
-  <div class="downloads-header">
-    <div class="max-w-container">
-      <h1>Downloads</h1>
-      <p>Access conference materials, templates, and documents</p>
+
+<style>
+    /* Normal, functional styling — no “AI aesthetic” */
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    .venue-page {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 2rem 1.5rem 3rem;
+    }
+
+    .venue-page h1 {
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin: 0 0 1rem 0;
+        letter-spacing: -0.01em;
+        color: #111827;
+    }
+
+    .venue-subhead {
+        font-size: 1rem;
+        color: #4b5563;
+        border-left: 3px solid #1e293b;
+        padding-left: 1rem;
+        margin: 1rem 0 2rem 0;
+        font-weight: normal;
+    }
+
+    .venue-section {
+        margin-bottom: 2.5rem;
+    }
+
+    .venue-section h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 0 0 1.25rem 0;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #e2e8f0;
+        color: #111827;
+    }
+
+    .card {
+        background: #fff;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 1.5rem;
+    }
+
+    .card h3 {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin: 0 0 0.75rem 0;
+        color: #0f172a;
+    }
+
+    .card h4 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 1rem 0 0.5rem 0;
+        color: #1e293b;
+    }
+
+    .card p, .info-row {
+        font-size: 0.95rem;
+        color: #334155;
+        line-height: 1.5;
+        margin-bottom: 0.75rem;
+    }
+
+    .info-note {
+        background: #f8fafc;
+        padding: 1rem;
+        border-radius: 6px;
+        margin: 1rem 0 0 0;
+        border: 1px solid #eef2f6;
+    }
+
+    .btn-primary {
+        display: inline-block;
+        background: #1e293b;
+        color: #fff;
+        padding: 0.5rem 1.25rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-top: 1rem;
+        transition: background 0.15s ease;
+    }
+
+    .btn-primary:hover {
+        background: #0f172a;
+    }
+
+    .hotel-img-link {
+        display: block;
+        margin: 1rem 0;
+        border-radius: 6px;
+        border: 1px solid #e2e8f0;
+        overflow: hidden;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .hotel-img-link img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4/3;
+        object-fit: cover;
+    }
+
+    .link-list {
+        list-style: none;
+        padding-left: 0;
+        margin: 0.5rem 0 0 0;
+    }
+
+    .link-list li {
+        margin-bottom: 0.5rem;
+    }
+
+    .link-list a {
+        color: #2563eb;
+        text-decoration: none;
+    }
+
+    .link-list a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 640px) {
+        .venue-page {
+            padding: 1.25rem 1rem 2rem;
+        }
+        .card {
+            padding: 1rem;
+        }
+        .hotel-img-link {
+            max-width: 100%;
+        }
+        .btn-primary {
+            display: inline-block;
+            width: auto;
+        }
+        .venue-page h1 {
+            font-size: 1.5rem;
+        }
+        .venue-section h2 {
+            font-size: 1.3rem;
+        }
+    }
+</style>
+
+<div class="venue-page">
+    <h1>Venue &amp; Travel Information</h1>
+    <div class="venue-subhead">
+        9th Asia Conference on Earthquake Engineering &nbsp;|&nbsp; 4 – 6 May 2026 &nbsp;|&nbsp;
+        Risk to Resilience: Linking Science to the People
     </div>
-  </div>
-  
-  <!-- Simple notice - no rounded-full -->
-  <div class="notice-bar">
-    <div class="max-w-container">
-      <div class="notice-content">
-        <div class="notice-icon">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-          </svg>
+
+    <!-- CONFERENCE VENUE -->
+    <section class="venue-section">
+        <h2>Conference Venue</h2>
+        <div class="card flex flex-col">
+            <h3>The Soaltee Kathmandu, Autograph Collection</h3>
+            <p class="info-row">
+                <strong>Location:</strong> P72R+6CR, Tahachal Marg, Kathmandu 44600
+            </p>
+        <div class="card flex flex-row">
+
+            <a href="https://soaltee.com/branches/the-soaltee-kathmandu"
+               target="_blank" rel="noopener noreferrer"
+               class="hotel-img-link">
+                <img src="../static/images/hotel-exterior-crowne.jpg"
+                     alt="The Soaltee Kathmandu - Conference Venue Hotel">
+                     
+            </a>
+            <a href="https://soaltee.com/branches/the-soaltee-kathmandu"
+               target="_blank" rel="noopener noreferrer"
+               class="hotel-img-link">
+                <img src="https://www.soalteehotel.com/uploads/images/20241007050557_67036c352d4a51.55038912.jpg"
+                     alt="The Soaltee Kathmandu - Conference Venue Hotel">
+                     
+            </a>
+            <a href="https://soaltee.com/branches/the-soaltee-kathmandu"
+               target="_blank" rel="noopener noreferrer"
+               class="hotel-img-link">
+                <img src="https://www.soalteehotel.com/uploads/images/20250115105121_67879329ecc905.93783695.jpg"
+                     alt="The Soaltee Kathmandu - Conference Venue Hotel">
+                     
+            </a>
+            </div>
         </div>
-        <div class="notice-text">
-          <p>Website Update — 26 March 2026</p>
-          <p>New templates and guidelines added. More content coming soon!</p>
+    </section>
+
+    <!-- FIELD EXCURSION -->
+    <section class="venue-section">
+        <h2>Field Excursion</h2>
+        <div class="card">
+            <h3>Bhaktapur Durbar Square</h3>
+            <p class="info-row"><strong>Location:</strong> Bhaktapur District, Nepal</p>
+            <p>
+                Bhaktapur Durbar Square, one of the UNESCO World Heritage Sites, is in the historic Newar city of
+                Bhaktapur, also known as Khwopa. The city is celebrated for its rich art, culture, and traditional
+                architecture. Founded in the 12th century during the early Malla period, Bhaktapur flourished under
+                Malla rulers who constructed magnificent temples, palaces, and nurtured a vibrant pottery tradition.
+            </p>
+            <p>
+                Today, Bhaktapur continues to function as a living museum, renowned for its exceptional craftsmanship,
+                distinctive cuisine, and well-preserved cultural identity. Although the 2015 Gorkha earthquake caused
+                significant damage to several heritage monuments, reconstruction and restoration efforts are still
+                visible during field visits.
+            </p>
+            <div class="info-note">
+                <p>
+                    <strong>More details:</strong>
+                    <a href="http://0.0.0.0:8000/static/pdfs/Field_Excursion_Bhaktapur_Information.pdf"
+                       target="_blank" rel="noopener noreferrer">
+                        Field Excursion_Bhaktapur Information.pdf
+                    </a>
+                </p>
+            </div>
         </div>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Paper & Presentation Templates -->
-  <section class="downloads-section">
-    <div class="max-w-container">
-      <div class="section-title-with-icon">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-        </svg>
-        <span>Paper & Presentation Templates</span>
-      </div>
-      
-      <div class="grid-2">
-        <!-- Extended Abstract Template -->
-        <a href="https://nset1-my.sharepoint.com/:w:/g/personal/stamang_nset_org_np/IQC9T65qOnHcSI9hdLw_QxbMARA-Vf2XtU69t1BRT30RE9k?e=ZzArBd" target="_blank" class="download-card">
-          <div class="card-icon">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-            </svg>
-          </div>
-          <div class="card-content">
-            <h3>Extended Abstract Template</h3>
-            <p>Official template for extended abstracts (DOCX)</p>
-            <span class="card-badge badge-required">⚠️ Required format</span>
-          </div>
-          <div class="card-arrow">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-            </svg>
-          </div>
-        </a>
-        
-        <!-- Oral Presentation Template -->
-        <a href="https://nset1-my.sharepoint.com/:p:/g/personal/stamang_nset_org_np/IQCEauGT8ackTpwt3-2WyoFBAVcB0NV0TGHWZhv9wONmHuE?e=eH0R1L" target="_blank" class="download-card">
-          <div class="card-icon">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"></path>
-            </svg>
-          </div>
-          <div class="card-content">
-            <h3>Oral Presentation Template</h3>
-            <p>PowerPoint template for presentations</p>
-            <span class="card-badge badge-guidelines">✓ Guidelines included</span>
-          </div>
-          <div class="card-arrow">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-            </svg>
-          </div>
-        </a>
-        
-        <!-- Poster Template (Coming Soon) -->
-        <div class="download-card" style="cursor: default;">
-          <div class="card-icon">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-            </svg>
-          </div>
-          <div class="card-content">
-            <h3>Poster Presentation Template</h3>
-            <p>Template for poster sessions</p>
-            <span class="card-badge badge-coming">Coming Soon</span>
-          </div>
+    </section>
+
+    <!-- ACCOMMODATION -->
+    <section class="venue-section">
+        <h2>Accommodation</h2>
+        <div class="card">
+            <h3>The Soaltee Kathmandu, Autograph Collection (Conference Venue)</h3>
+            <p>
+                Use this link to get a special discount:
+                <a href="https://app.marriott.com/reslink?id=1773400249575&key=GRP&app=resvlink"
+                   target="_blank" rel="noopener noreferrer">
+                    https://app.marriott.com/reslink?id=1773400249575&key=GRP&app=resvlink
+                </a>
+            </p>
+
+            <h4>Nearby Hotel Options</h4>
+            <ul class="link-list">
+                <li><a href="https://www.crowneimperial.com/" target="_blank" rel="noopener noreferrer">Hotel Crowne Imperial</a></li>
+                <li><a href="https://www.grandhotelnepal.com/" target="_blank" rel="noopener noreferrer">Grand Hotel Kathmandu</a></li>
+                <li><a href="https://www.hyatt.com/hyatt-centric/en-US/ktmzk-hyatt-centric-soalteemode-kathmandu" target="_blank" rel="noopener noreferrer">Hyatt Centric Soalteemode Kathmandu</a></li>
+            </ul>
         </div>
-        
-        <!-- Author Guidelines (Coming Soon) -->
-        <div class="download-card" style="cursor: default;">
-          <div class="card-icon">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-            </svg>
-          </div>
-          <div class="card-content">
-            <h3>Author Guidelines</h3>
-            <p>Detailed guidelines for authors (PDF)</p>
-            <span class="card-badge badge-coming">Coming Soon</span>
-          </div>
+    </section>
+
+    <!-- TRAVEL & VISA -->
+    <section class="venue-section">
+        <h2>Travel &amp; Visa</h2>
+        <div class="card">
+            <h3>Travel Guidance</h3>
+            <h4>1. Visa Information & Immigration at the Airport</h4>
+            <p>
+                Participants can apply for a Tourist Visa on Arrival at Tribhuvan International Airport (TIA).
+                Nationals of some countries are requested to acquire a visa prior to their arrival from nearby
+                diplomatic missions (Embassies/Consulates) of the Government of Nepal.
+                (<a href="https://www.immigration.gov.np/en/page/tourist-visa" target="_blank" rel="noopener noreferrer">Further details</a>)
+            </p>
+            <p><strong>Please follow these steps for Tourist Visa on Arrival:</strong></p>
+            <ol style="margin-bottom: 1rem; padding-left: 1.2rem;">
+                <li><strong>Fill in the Arrival Card and Tourist Visa Form</strong>
+                    <ul>
+                        <li>Complete the Arrival Card.</li>
+                        <li>Fill in the Online Tourist Visa Form:
+                            <ul>
+                                <li>Before arrival at the official Department of Immigration website:
+                                    <a href="https://nepaliport.immigration.gov.np/on-arrival/IO01" target="_blank" rel="noopener noreferrer">nepaliport.immigration.gov.np/on-arrival/IO01</a>
+                                </li>
+                                <li>Upon arrival, use the Kiosk machines at the airport.</li>
+                            </ul>
+                        </li>
+                        <li>If you fill it in online before arrival, you will receive a Submission Receipt with a barcode.
+                            Print it and bring it with you for visa processing. This receipt is valid for 15 days.
+                            If it expires, you will need to complete the form again.</li>
+                    </ul>
+                </li>
+                <li><strong>Pay the Visa Fee</strong>
+                    <ul>
+                        <li>Make the payment at the bank counter according to your visa requirement:
+                            15 Days – USD 30, 30 Days – USD 50, 90 Days – USD 125</li>
+                        <li>Obtain the payment receipt.</li>
+                        <li><em>15 days is recommended to apply.</em></li>
+                    </ul>
+                </li>
+                <li><strong>Immigration Desk</strong>
+                    <ul>
+                        <li>Proceed to the Immigration Desk with your online form, payment receipts and your passport.</li>
+                        <li>Hand in your documents to the immigration officer for visa processing. He/she issues a visa to you upon his/her satisfaction.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h4>Gratis Visa (Visa for Free)</h4>
+            <p>Gratis Visa is issued free of cost in case of following categories of Visa applicants:</p>
+            <ul>
+                <li>Children below 10 years except US citizens</li>
+                <li>Up to 30 days for SAARC Citizen (except Afghanistan) visiting Nepal for the first time in a given visa year.
+                    Afghan citizens are eligible for Gratis Visa on Arrival only upon the recommendation of Department of Immigration.
+                    If you are an Afghan citizen, you can request the concerned institution inviting you to Nepal for necessary paperwork
+                    with Department of Immigration to get you Gratis Visa 'On Arrival'.</li>
+                <li>Non-Residential Nepalese (NRN) card holder (issued by MoFA / Nepalese diplomatic missions abroad)</li>
+                <li>Chinese Nationals for 150 days</li>
+            </ul>
         </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Presentation Time Allocation -->
-  <section class="downloads-section">
-    <div class="max-w-container">
-      <div class="section-title-with-icon">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-        </svg>
-        <span>Presentation Time Allocation</span>
-      </div>
-      
-      <div class="table-wrapper">
-        <table class="time-table">
-          <thead>
-            <tr>
-              <th>Presentation Type</th>
-              <th>Time Duration</th>
-              <th>Q&A Session</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>
-                <div>
-                  <strong>Keynote Speakers</strong>
-                  <div style="font-size: 0.7rem; color: #6b7280;">Plenary sessions</div>
-                </div>
-              </td>
-              <td><span class="time-badge time-badge-blue">30 Minutes</span></td>
-              <td style="color: #9ca3af;">To be announced</td>
-            </tr>
-            <tr>
-              <td>
-                <div>
-                  <strong>Invited Speakers</strong>
-                  <div style="font-size: 0.7rem; color: #6b7280;">Special sessions</div>
-                </div>
-              </td>
-              <td><span class="time-badge time-badge-amber">20 Minutes</span></td>
-              <td style="color: #9ca3af;">To be announced</td>
-            </tr>
-            <tr>
-              <td>
-                <div>
-                  <strong>Oral Presentation (Regular)</strong>
-                  <div style="font-size: 0.7rem; color: #6b7280;">Technical sessions</div>
-                </div>
-              </td>
-              <td><span class="time-badge time-badge-green">15 Minutes</span></td>
-              <td><span class="time-badge time-badge-gray">2 Minutes</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      
-      <div class="info-box">
-        <p><strong>Important:</strong> All presenters must submit their presentation files by <strong>30 April 2026</strong>. Please adhere to the time allocations strictly to ensure smooth session flow.</p>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Conference Agenda -->
-  <section class="downloads-section">
-    <div class="max-w-container">
-      <div class="section-title-with-icon">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-        </svg>
-        <span>Conference Agenda</span>
-      </div>
-      
-      <div class="grid-3">
-        <div class="download-card" style="cursor: default;">
-          <div class="card-icon" style="width: 56px; height: 56px;">
-            <span style="font-weight: 600; color: #4b5563;">D1</span>
-          </div>
-          <div class="card-content">
-            <h3>Day 1 Agenda</h3>
-            <p>4 May 2026</p>
-            <span class="card-badge badge-coming">Coming Soon</span>
-          </div>
-        </div>
-        
-        <div class="download-card" style="cursor: default;">
-          <div class="card-icon" style="width: 56px; height: 56px;">
-            <span style="font-weight: 600; color: #4b5563;">D2</span>
-          </div>
-          <div class="card-content">
-            <h3>Day 2 Agenda</h3>
-            <p>5 May 2026</p>
-            <span class="card-badge badge-coming">Coming Soon</span>
-          </div>
-        </div>
-        
-        <div class="download-card" style="cursor: default;">
-          <div class="card-icon" style="width: 56px; height: 56px;">
-            <span style="font-weight: 600; color: #4b5563;">D3</span>
-          </div>
-          <div class="card-content">
-            <h3>Day 3 Agenda</h3>
-            <p>6 May 2026</p>
-            <span class="card-badge badge-coming">Coming Soon</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Conference Prospectus -->
-  <section class="downloads-section">
-    <div class="max-w-container">
-      <div class="section-title-with-icon">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-        </svg>
-        <span>Conference Prospectus</span>
-      </div>
-      
-      <div class="prospectus-card">
-        <div class="prospectus-icon">
-          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-          </svg>
-        </div>
-        <div class="prospectus-content">
-          <h3>9ACEE Conference Prospectus</h3>
-          <p>Download the complete conference prospectus with detailed information about themes, venue, sponsorship opportunities, and registration details.</p>
-          <a href="index.html#" class="prospectus-link">Download PDF →</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Previous Conferences -->
-  <section class="downloads-section">
-    <div class="max-w-container">
-      <div class="section-title-with-icon">
-        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-        </svg>
-        <span>Previous ACEE Conferences</span>
-      </div>
-      
-      <div class="grid-2">
-        <div class="download-card" style="cursor: default;">
-          <div class="card-icon" style="width: 56px; height: 56px;">
-            <span style="font-weight: 600; color: #4b5563;">8A</span>
-          </div>
-          <div class="card-content">
-            <h3>8ACEE Proceedings</h3>
-            <p>8th Asian Conference - Korea</p>
-          </div>
-          <div class="card-arrow">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-            </svg>
-          </div>
-        </div>
-        
-        <div class="download-card" style="cursor: default;">
-          <div class="card-icon" style="width: 56px; height: 56px;">
-            <span style="font-weight: 600; color: #4b5563;">7A</span>
-          </div>
-          <div class="card-content">
-            <h3>7ACEE Proceedings</h3>
-            <p>7th Asian Conference - Thailand</p>
-          </div>
-          <div class="card-arrow">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-            </svg>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
+    </section>
+</div>
+
 
     </main>
 
@@ -991,7 +604,7 @@
                         <li><a href="../registration/index.html" class="opacity-90 hover:opacity-100">Registration</a></li>
                         <li><a href="../abstract-submission/index.html" class="opacity-90 hover:opacity-100">Abstract Submission</a></li>
                         <li><a href="../schedule/index.html" class="opacity-90 hover:opacity-100">Schedule</a></li>
-                        <li><a href="index.html" class="opacity-90 hover:opacity-100">Downloads</a></li>
+                        <li><a href="../downloads/index.html" class="opacity-90 hover:opacity-100">Downloads</a></li>
                         <li><a href="../photos/index.html" class="opacity-90 hover:opacity-100">Photo Gallery</a></li>
                     </ul>
                 </div>
@@ -1057,7 +670,7 @@
             </a>
             
             <!-- Downloads -->
-            <a href="index.html" class="flex flex-col items-center py-2 px-1 text-conference-blue hover:text-conference-blue transition-colors">
+            <a href="../downloads/index.html" class="flex flex-col items-center py-2 px-1 text-gray-600 hover:text-conference-blue transition-colors">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                 </svg>

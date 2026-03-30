@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -42,7 +43,7 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://9acee.nset.org.np/">
     
-    <title>Daily Program Schedule - 9ACEE</title>
+    <title>Program Schedule - 9ACEE</title>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,6 +65,38 @@
     .drop-shadow-2xl {
         filter: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
     }
+
+
+
+
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 8px;
+}
+    
+.div1 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 2;
+}
+
+.div2 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.div3 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+                
+        
+        
 </style>
     
     <!-- Schema.org Structured Data -->
@@ -124,29 +157,246 @@
     </script>
     
     
+<style>
+  /* ============================================ */
+  /* Uncodixify overrides - keep it normal */
+  /* ============================================ */
+  
+  /* Remove any gradient backgrounds from base template */
+  .gradient-bg {
+    background: #f8f9fa !important;
+    background-image: none !important;
+  }
+  
+  /* Simple page header - no hero, no gradient */
+  .page-header {
+    padding: 2rem 1.5rem;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .page-header h1 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #1f2937;
+  }
+  
+  .page-header p {
+    font-size: 1rem;
+    color: #6b7280;
+  }
+  
+  /* Simple sticky nav - no rounded-lg, no heavy shadows */
+  .schedule-nav {
+    position: sticky;
+    top: 80px;
+    z-index: 40;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .nav-group {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .nav-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    color: #374151;
+    cursor: pointer;
+    transition: background 0.15s ease;
+    border-radius: 6px;
+  }
+  
+  .nav-btn:hover {
+    background: #e5e7eb;
+  }
+  
+  .nav-btn.active {
+    background: #111827;
+    border-color: #111827;
+    color: white;
+  }
+  
+  /* Schedule section - simple layout */
+  .schedule-section {
+    padding: 2rem 1.5rem;
+    background: white;
+  }
+  
+  .schedule-container {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+  }
+  
+  .section-subtitle {
+    color: #6b7280;
+    font-size: 0.875rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  /* Simple schedule item - no rounded-xl, no shadow-md */
+  .schedule-item {
+    display: flex;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+    background: white;
+    transition: box-shadow 0.15s ease;
+  }
+  
+  .schedule-item:hover {
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Time column */
+  .time-column {
+    width: 96px;
+    flex-shrink: 0;
+    padding: 1rem 0.75rem 1rem 1rem;
+    text-align: right;
+    border-right: 1px solid #e5e7eb;
+  }
+  
+  .start-time {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #1f2937;
+  }
+  
+  .end-time {
+    font-size: 0.75rem;
+    color: #9ca3af;
+  }
+  
+  /* Content column */
+  .content-column {
+    flex: 1;
+    padding: 1rem;
+  }
+  
+  /* Simple badge - no rounded-full */
+  .event-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .badge-registration { background: #eef2ff; color: #1f2937; border: 1px solid #e5e7eb; }
+  .badge-ceremony { background: #fef9e3; color: #1f2937; border: 1px solid #e5e7eb; }
+  .badge-keynote { background: #111827; color: white; border: none; }
+  .badge-break { background: #f3f4f6; color: #4b5563; border: 1px solid #e5e7eb; }
+  .badge-technical { background: #f0fdf4; color: #1f2937; border: 1px solid #e5e7eb; }
+  .badge-lunch { background: #f3f4f6; color: #4b5563; border: 1px solid #e5e7eb; }
+  .badge-workshop { background: #fef9e3; color: #1f2937; border: 1px solid #e5e7eb; }
+  .badge-social { background: #fdf2f2; color: #1f2937; border: 1px solid #e5e7eb; }
+  .badge-panel { background: #f0fdf4; color: #1f2937; border: 1px solid #e5e7eb; }
+  .badge-closing { background: #fef9e3; color: #1f2937; border: 1px solid #e5e7eb; }
+  .badge-fieldtrip { background: #fdf2f2; color: #1f2937; border: 1px solid #e5e7eb; }
+  
+  .event-title {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #1f2937;
+    margin-bottom: 0.25rem;
+  }
+  
+  .event-detail {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.25rem;
+  }
+  
+  .event-speaker {
+    font-size: 0.75rem;
+    color: #4b5563;
+    font-weight: 500;
+    margin-top: 0.25rem;
+  }
+  
+  .event-quote {
+    font-size: 0.75rem;
+    color: #6b7280;
+    font-style: italic;
+    margin-top: 0.25rem;
+  }
+  
+  .parallel-sessions {
+    margin-top: 0.25rem;
+  }
+  
+  .parallel-sessions p {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-top: 0.125rem;
+  }
+  
+  /* Simple border indicator - no colored left borders, just clean */
+  .schedule-item {
+    border-left: 1px solid #e5e7eb;
+  }
+  
+  
+  /* Responsive */
+  @media (max-width: 640px) {
+    .time-column {
+      width: 70px;
+      padding: 0.75rem 0.5rem 0.75rem 0.75rem;
+    }
+    
+    .start-time {
+      font-size: 0.75rem;
+    }
+    
+    .end-time {
+      font-size: 0.65rem;
+    }
+    
+    .content-column {
+      padding: 0.75rem;
+    }
+    
+    .event-title {
+      font-size: 0.8rem;
+    }
+  }
+</style>
+
 </head>
 <body class="bg-gray-50 font-sans pb-20 lg:pb-0">
 
-<!-- Compact Header Bar Structure -->
-<div class="relative bg-white border-b border-slate-100 shadow-sm overflow-hidden">
-    
-    <!-- Subtle Background Pattern -->
-    <div class="absolute inset-0 z-0 opacity-[0.02]" style="background-image: radial-gradient(#1e3a8a 1px, transparent 1px); background-size: 20px 20px;"></div>
 
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-4 md:py-5">
-        <div class="flex lg:flex-row items-center justify-between gap-4 lg:gap-8">
-            
-            <!-- Left: Logo -->
-            <div class="flex-shrink-0 flex items-center">
+
+<div class="parent">
+    <div class="div1 mx-10 ">            <div class="flex-shrink-0 flex items-center">
                 <a href="../index.html" class="flex items-center gap-3 group">
-                    <div class="w-14 h-14 md:w-16 md:h-16 bg-white rounded-xl shadow-sm ring-1 ring-slate-100 p-1.5 transition-transform duration-300 group-hover:scale-105">
-                        <img src="../static/images/logo_index.png" alt="ACEE Logo" class="w-full h-full object-contain">
+                    <div class="w-full h-auto bg-white rounded-xl shadow-sm ring-1 ring-slate-100 px-8 transition-transform duration-300 group-hover:scale-105">
+                        <img src="../static/images/logo_index.png" alt="ACEE Logo" class="w-full h-full object-contain ">
                     </div>
                 </a>
             </div>
-
-            <!-- Center: Title & Theme -->
-            <div class="flex-grow text-center lg:text-left px-4">
+        </div>
+    <div class="div2">            <div class="flex-grow text-center lg:text-left px-4">
                 <div class="flex flex-col sm:flex-row sm:items-baseline sm:justify-center lg:justify-start gap-x-3 gap-y-1">
                     <h1 class="text-xl md:text-2xl font-extrabold text-slate-900 tracking-tight">
                         <span class="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">9<sup>th</sup></span> Asia Conference on Earthquake Engineering
@@ -156,14 +406,13 @@
                     "Risk to Resilience: Linking Science to the People"
                 </p>
             </div>
-
-            <!-- Right: Date & Location Pills -->
+        </div>
+    <div class="div3">
+                    <!-- Right: Date & Location Pills -->
             <div class="flex-shrink-0 flex flex-col sm:flex-row lg:flex-col xl:flex-row items-center gap-8">
                 <!-- Date Pill -->
                 <div class="flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm border border-slate-200 rounded-full shadow-xs transition-colors hover:border-blue-200 hover:bg-blue-50/50">
-                    <!-- <svg class="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                    </svg> -->
+
                     <span class="text-xs font-semibold text-slate-700">4<sup>th</sup> – 6<sup>th</sup> May 2026</span>
                 </div>
                 
@@ -176,14 +425,15 @@
                     <span class="text-xs font-semibold text-slate-700">Kathmandu, Nepal</span>
                 </div>
             </div>
-
-        </div>
     </div>
 </div>
+    
+
+<!-- Compact Header Bar Structure -->
 
 
     <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="bg-white shadow-md sticky top-0 z-50 mt-4 ">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
 
@@ -191,9 +441,9 @@
                 <!-- Desktop Navigation -->
                 <div class="hidden lg:flex items-center space-x-6">
                     <a href="../index.html" class="nav-link ">Home</a>
-                    <a href="../index.html" class="nav-link ">Organization</a>
-                    <a href="../index.html" class="nav-link ">Venue</a>
-                    <a href="../index.html" class="nav-link ">Speaker</a>
+                    <a href="../organization/index.html" class="nav-link ">Organization</a>
+                    <a href="../venue/index.html" class="nav-link ">Venue</a>
+                    <a href="../speakers/index.html" class="nav-link ">Speaker</a>
                     <a href="../abstract-submission/index.html" class="nav-link ">Abstract</a>
                     <a href="index.html" class="nav-link nav-link-active">Schedule</a>
                     <a href="../downloads/index.html" class="nav-link ">Downloads</a>
@@ -230,376 +480,359 @@
 
     <main>
         
-<!-- Page Header -->
-<section class="gradient-bg py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-        <h1 class="text-4xl md:text-5xl font-bold mb-4">Daily Program Schedule</h1>
-        <p class="text-xl opacity-90">November 20-22, 2026 | Kathmandu, Nepal</p>
-    </div>
-</section>
+<!-- Simple page header - no gradient, no hero -->
+<div class="page-header">
+  <div class="max-w-7xl mx-auto">
+    <h1>Program Schedule</h1>
+    <p>November 20-22, 2026 | Kathmandu, Nepal</p>
+  </div>
+</div>
 
-<!-- Schedule Navigation -->
-<section class="py-8 bg-white border-b sticky top-20 z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-center space-x-4">
-            <button onclick="showDay(1)" id="day1-btn" class="day-btn px-6 py-3 rounded-lg font-semibold bg-conference-blue text-white transition-all">
-                Day 1 - Nov 20
-            </button>
-            <button onclick="showDay(2)" id="day2-btn" class="day-btn px-6 py-3 rounded-lg font-semibold bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all">
-                Day 2 - Nov 21
-            </button>
-            <button onclick="showDay(3)" id="day3-btn" class="day-btn px-6 py-3 rounded-lg font-semibold bg-gray-200 text-gray-700 hover:bg-gray-300 transition-all">
-                Day 3 - Nov 22
-            </button>
-        </div>
+<!-- Schedule navigation - simple buttons -->
+<div class="schedule-nav">
+  <div class="max-w-7xl mx-auto">
+    <div class="nav-group">
+      <button onclick="showDay(1)" id="day1-btn" class="nav-btn active">Day 1 · Nov 20</button>
+      <button onclick="showDay(2)" id="day2-btn" class="nav-btn">Day 2 · Nov 21</button>
+      <button onclick="showDay(3)" id="day3-btn" class="nav-btn">Day 3 · Nov 22</button>
     </div>
-</section>
+  </div>
+</div>
 
 <!-- Day 1 Schedule -->
-<section id="day1" class="py-16 bg-gray-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold text-conference-dark mb-2">Day 1 - November 20, 2026</h2>
-            <p class="text-gray-600 mb-8">Opening Ceremony & Keynote Sessions</p>
-            
-            <div class="space-y-4">
-                <!-- Registration -->
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">08:00</span>
-                        <span class="block text-sm text-gray-500">09:00</span>
-                    </div>
-                    <div class="w-1 bg-conference-blue rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-blue-100 text-conference-blue text-xs font-semibold px-3 py-1 rounded-full mb-2">Registration</span>
-                        <h3 class="font-bold text-conference-dark">Registration & Welcome Coffee</h3>
-                        <p class="text-sm text-gray-600">Venue entrance - Collect your conference materials</p>
-                    </div>
-                </div>
-                
-                <!-- Opening Ceremony -->
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">09:00</span>
-                        <span class="block text-sm text-gray-500">10:00</span>
-                    </div>
-                    <div class="w-1 bg-conference-gold rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-amber-100 text-conference-gold text-xs font-semibold px-3 py-1 rounded-full mb-2">Ceremony</span>
-                        <h3 class="font-bold text-conference-dark">Opening Ceremony</h3>
-                        <p class="text-sm text-gray-600">Welcome address by organizers and dignitaries</p>
-                    </div>
-                </div>
-                
-                <!-- Keynote 1 -->
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start border-l-4 border-conference-blue">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">10:00</span>
-                        <span class="block text-sm text-gray-500">11:00</span>
-                    </div>
-                    <div class="w-1 bg-conference-blue rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-conference-blue text-white text-xs font-semibold px-3 py-1 rounded-full mb-2">Keynote</span>
-                        <h3 class="font-bold text-conference-dark">Keynote Lecture 1</h3>
-                        <p class="text-sm text-gray-600 mb-2">Dr. Kimiro Meguro - The University of Tokyo, Japan</p>
-                        <p class="text-sm text-gray-500 italic">"Advances in Earthquake Disaster Mitigation Technology"</p>
-                    </div>
-                </div>
-                
-                <!-- Tea Break -->
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">11:00</span>
-                        <span class="block text-sm text-gray-500">11:30</span>
-                    </div>
-                    <div class="w-1 bg-gray-300 rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-gray-100 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full mb-2">Break</span>
-                        <h3 class="font-bold text-conference-dark">Tea Break</h3>
-                        <p class="text-sm text-gray-600">Networking opportunity</p>
-                    </div>
-                </div>
-                
-                <!-- Technical Session 1 -->
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start border-l-4 border-green-500">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">11:30</span>
-                        <span class="block text-sm text-gray-500">13:00</span>
-                    </div>
-                    <div class="w-1 bg-green-500 rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-green-100 text-green-600 text-xs font-semibold px-3 py-1 rounded-full mb-2">Technical Session</span>
-                        <h3 class="font-bold text-conference-dark">Session A: Seismology & Seismic Hazard</h3>
-                        <p class="text-sm text-gray-600">5 paper presentations - Hall A</p>
-                    </div>
-                </div>
-                
-                <!-- Lunch -->
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">13:00</span>
-                        <span class="block text-sm text-gray-500">14:30</span>
-                    </div>
-                    <div class="w-1 bg-gray-300 rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-gray-100 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full mb-2">Lunch</span>
-                        <h3 class="font-bold text-conference-dark">Lunch Break</h3>
-                        <p class="text-sm text-gray-600">Conference lunch and networking</p>
-                    </div>
-                </div>
-                
-                <!-- Keynote 2 -->
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start border-l-4 border-conference-blue">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">14:30</span>
-                        <span class="block text-sm text-gray-500">15:30</span>
-                    </div>
-                    <div class="w-1 bg-conference-blue rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-conference-blue text-white text-xs font-semibold px-3 py-1 rounded-full mb-2">Keynote</span>
-                        <h3 class="font-bold text-conference-dark">Keynote Lecture 2</h3>
-                        <p class="text-sm text-gray-600 mb-2">Dr. James L. Lin - National Taiwan University</p>
-                        <p class="text-sm text-gray-500 italic">"Recent Developments in Seismic Design Codes"</p>
-                    </div>
-                </div>
-                
-                <!-- Technical Sessions -->
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start border-l-4 border-green-500">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">15:30</span>
-                        <span class="block text-sm text-gray-500">17:30</span>
-                    </div>
-                    <div class="w-1 bg-green-500 rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-green-100 text-green-600 text-xs font-semibold px-3 py-1 rounded-full mb-2">Technical Sessions</span>
-                        <h3 class="font-bold text-conference-dark">Parallel Sessions</h3>
-                        <p class="text-sm text-gray-600">Session B: Structural Engineering (Hall A)</p>
-                        <p class="text-sm text-gray-600">Session C: Geotechnical Engineering (Hall B)</p>
-                    </div>
-                </div>
-                
-                <!-- Welcome Reception -->
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start border-l-4 border-purple-500">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">18:00</span>
-                        <span class="block text-sm text-gray-500">20:00</span>
-                    </div>
-                    <div class="w-1 bg-purple-500 rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-purple-100 text-purple-600 text-xs font-semibold px-3 py-1 rounded-full mb-2">Networking</span>
-                        <h3 class="font-bold text-conference-dark">Welcome Reception</h3>
-                        <p class="text-sm text-gray-600">Evening networking event with cultural program</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section id="day1" class="schedule-section">
+  <div class="schedule-container">
+    <h2 class="section-title">Day 1 · Opening & Keynotes</h2>
+    <div class="section-subtitle">Friday, November 20, 2026</div>
+    
+    <!-- Registration -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">08:00</div>
+        <div class="end-time">09:00</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-registration">Registration</span>
+        <div class="event-title">Registration & Welcome Coffee</div>
+        <div class="event-detail">Venue entrance · Collect conference materials</div>
+      </div>
     </div>
+    
+    <!-- Opening Ceremony -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">09:00</div>
+        <div class="end-time">10:00</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-ceremony">Opening Ceremony</span>
+        <div class="event-title">Opening Ceremony</div>
+        <div class="event-detail">Welcome address by organizers and dignitaries</div>
+      </div>
+    </div>
+    
+    <!-- Keynote 1 -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">10:00</div>
+        <div class="end-time">11:00</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-keynote">Keynote</span>
+        <div class="event-title">Advances in Earthquake Disaster Mitigation Technology</div>
+        <div class="event-speaker">Dr. Kimiro Meguro · The University of Tokyo, Japan</div>
+      </div>
+    </div>
+    
+    <!-- Tea Break -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">11:00</div>
+        <div class="end-time">11:30</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-break">Break</span>
+        <div class="event-title">Tea Break</div>
+        <div class="event-detail">Networking opportunity</div>
+      </div>
+    </div>
+    
+    <!-- Technical Session 1 -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">11:30</div>
+        <div class="end-time">13:00</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-technical">Technical Session</span>
+        <div class="event-title">Session A: Seismology & Seismic Hazard</div>
+        <div class="event-detail">5 paper presentations · Hall A</div>
+      </div>
+    </div>
+    
+    <!-- Lunch -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">13:00</div>
+        <div class="end-time">14:30</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-lunch">Lunch</span>
+        <div class="event-title">Lunch Break</div>
+        <div class="event-detail">Conference lunch and networking</div>
+      </div>
+    </div>
+    
+    <!-- Keynote 2 -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">14:30</div>
+        <div class="end-time">15:30</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-keynote">Keynote</span>
+        <div class="event-title">Recent Developments in Seismic Design Codes</div>
+        <div class="event-speaker">Dr. James L. Lin · National Taiwan University</div>
+      </div>
+    </div>
+    
+    <!-- Parallel Sessions -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">15:30</div>
+        <div class="end-time">17:30</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-technical">Parallel Sessions</span>
+        <div class="event-title">Technical Parallel Sessions</div>
+        <div class="parallel-sessions">
+          <p>Session B: Structural Engineering · Hall A</p>
+          <p>Session C: Geotechnical Engineering · Hall B</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Welcome Reception -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">18:00</div>
+        <div class="end-time">20:00</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-social">Networking</span>
+        <div class="event-title">Welcome Reception</div>
+        <div class="event-detail">Evening networking event with cultural program</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Day 2 Schedule -->
-<section id="day2" class="py-16 bg-gray-50 hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold text-conference-dark mb-2">Day 2 - November 21, 2026</h2>
-            <p class="text-gray-600 mb-8">Technical Sessions & Workshops</p>
-            
-            <div class="space-y-4">
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">08:30</span>
-                        <span class="block text-sm text-gray-500">09:00</span>
-                    </div>
-                    <div class="w-1 bg-conference-blue rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-blue-100 text-conference-blue text-xs font-semibold px-3 py-1 rounded-full mb-2">Morning</span>
-                        <h3 class="font-bold text-conference-dark">Morning Tea & Registration</h3>
-                        <p class="text-sm text-gray-600">Start of Day 2</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start border-l-4 border-conference-blue">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">09:00</span>
-                        <span class="block text-sm text-gray-500">10:00</span>
-                    </div>
-                    <div class="w-1 bg-conference-blue rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-conference-blue text-white text-xs font-semibold px-3 py-1 rounded-full mb-2">Keynote</span>
-                        <h3 class="font-bold text-conference-dark">Keynote Lecture 3</h3>
-                        <p class="text-sm text-gray-600 mb-2">Dr. Anil K. Singh - IIT Roorkee, India</p>
-                        <p class="text-sm text-gray-500 italic">"Seismic Risk Assessment in South Asia"</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start border-l-4 border-green-500">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">10:00</span>
-                        <span class="block text-sm text-gray-500">13:00</span>
-                    </div>
-                    <div class="w-1 bg-green-500 rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-green-100 text-green-600 text-xs font-semibold px-3 py-1 rounded-full mb-2">Technical Sessions</span>
-                        <h3 class="font-bold text-conference-dark">Parallel Technical Sessions</h3>
-                        <p class="text-sm text-gray-600">Session D: Risk Assessment (Hall A)</p>
-                        <p class="text-sm text-gray-600">Session E: Disaster Management (Hall B)</p>
-                        <p class="text-sm text-gray-600">Session F: Building Codes (Hall C)</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">13:00</span>
-                        <span class="block text-sm text-gray-500">14:30</span>
-                    </div>
-                    <div class="w-1 bg-gray-300 rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-gray-100 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full mb-2">Lunch</span>
-                        <h3 class="font-bold text-conference-dark">Lunch Break</h3>
-                        <p class="text-sm text-gray-600">Conference lunch</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start border-l-4 border-conference-gold">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">14:30</span>
-                        <span class="block text-sm text-gray-500">17:30</span>
-                    </div>
-                    <div class="w-1 bg-conference-gold rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-amber-100 text-conference-gold text-xs font-semibold px-3 py-1 rounded-full mb-2">Workshop</span>
-                        <h3 class="font-bold text-conference-dark">Workshop Sessions</h3>
-                        <p class="text-sm text-gray-600">Hands-on workshops on latest tools and techniques</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start border-l-4 border-red-500">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">18:00</span>
-                        <span class="block text-sm text-gray-500">21:00</span>
-                    </div>
-                    <div class="w-1 bg-red-500 rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-red-100 text-red-600 text-xs font-semibold px-3 py-1 rounded-full mb-2">Social</span>
-                        <h3 class="font-bold text-conference-dark">Conference Dinner</h3>
-                        <p class="text-sm text-gray-600">Gala dinner with cultural performances</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section id="day2" class="schedule-section hidden">
+  <div class="schedule-container">
+    <h2 class="section-title">Day 2 · Technical Sessions & Workshops</h2>
+    <div class="section-subtitle">Saturday, November 21, 2026</div>
+    
+    <!-- Morning Tea -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">08:30</div>
+        <div class="end-time">09:00</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-break">Morning</span>
+        <div class="event-title">Morning Tea & Registration</div>
+        <div class="event-detail">Start of Day 2</div>
+      </div>
     </div>
+    
+    <!-- Keynote 3 -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">09:00</div>
+        <div class="end-time">10:00</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-keynote">Keynote</span>
+        <div class="event-title">Seismic Risk Assessment in South Asia</div>
+        <div class="event-speaker">Dr. Anil K. Singh · IIT Roorkee, India</div>
+      </div>
+    </div>
+    
+    <!-- Parallel Technical Sessions -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">10:00</div>
+        <div class="end-time">13:00</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-technical">Parallel Sessions</span>
+        <div class="event-title">Technical Parallel Sessions</div>
+        <div class="parallel-sessions">
+          <p>Session D: Risk Assessment · Hall A</p>
+          <p>Session E: Disaster Management · Hall B</p>
+          <p>Session F: Building Codes · Hall C</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Lunch -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">13:00</div>
+        <div class="end-time">14:30</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-lunch">Lunch</span>
+        <div class="event-title">Lunch Break</div>
+        <div class="event-detail">Conference lunch</div>
+      </div>
+    </div>
+    
+    <!-- Workshop -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">14:30</div>
+        <div class="end-time">17:30</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-workshop">Workshop</span>
+        <div class="event-title">Workshop Sessions</div>
+        <div class="event-detail">Hands-on workshops on latest tools and techniques</div>
+      </div>
+    </div>
+    
+    <!-- Conference Dinner -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">18:00</div>
+        <div class="end-time">21:00</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-social">Social Event</span>
+        <div class="event-title">Conference Dinner</div>
+        <div class="event-detail">Gala dinner with cultural performances</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Day 3 Schedule -->
-<section id="day3" class="py-16 bg-gray-50 hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="max-w-4xl mx-auto">
-            <h2 class="text-3xl font-bold text-conference-dark mb-2">Day 3 - November 22, 2026</h2>
-            <p class="text-gray-600 mb-8">Closing Sessions & Field Trip</p>
-            
-            <div class="space-y-4">
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">08:30</span>
-                        <span class="block text-sm text-gray-500">09:00</span>
-                    </div>
-                    <div class="w-1 bg-conference-blue rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-blue-100 text-conference-blue text-xs font-semibold px-3 py-1 rounded-full mb-2">Morning</span>
-                        <h3 class="font-bold text-conference-dark">Morning Tea</h3>
-                        <p class="text-sm text-gray-600">Start of Day 3</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start border-l-4 border-conference-blue">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">09:00</span>
-                        <span class="block text-sm text-gray-500">10:00</span>
-                    </div>
-                    <div class="w-1 bg-conference-blue rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-conference-blue text-white text-xs font-semibold px-3 py-1 rounded-full mb-2">Keynote</span>
-                        <h3 class="font-bold text-conference-dark">Keynote Lecture 4</h3>
-                        <p class="text-sm text-gray-600 mb-2">Dr. R. K. Pandey - Tribhuvan University, Nepal</p>
-                        <p class="text-sm text-gray-500 italic">"Post-Gorkha Earthquake Reconstruction Lessons"</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start border-l-4 border-green-500">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">10:00</span>
-                        <span class="block text-sm text-gray-500">12:00</span>
-                    </div>
-                    <div class="w-1 bg-green-500 rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-green-100 text-green-600 text-xs font-semibold px-3 py-1 rounded-full mb-2">Panel</span>
-                        <h3 class="font-bold text-conference-dark">Panel Discussion</h3>
-                        <p class="text-sm text-gray-600">Expert panel on future of earthquake engineering in Asia</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start border-l-4 border-conference-gold">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">12:00</span>
-                        <span class="block text-sm text-gray-500">13:30</span>
-                    </div>
-                    <div class="w-1 bg-conference-gold rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-amber-100 text-conference-gold text-xs font-semibold px-3 py-1 rounded-full mb-2">Closing</span>
-                        <h3 class="font-bold text-conference-dark">Closing Ceremony & Awards</h3>
-                        <p class="text-sm text-gray-600">Best paper awards, certificates distribution</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">13:30</span>
-                        <span class="block text-sm text-gray-500">14:30</span>
-                    </div>
-                    <div class="w-1 bg-gray-300 rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-gray-100 text-gray-600 text-xs font-semibold px-3 py-1 rounded-full mb-2">Lunch</span>
-                        <h3 class="font-bold text-conference-dark">Farewell Lunch</h3>
-                        <p class="text-sm text-gray-600">Conference closing lunch</p>
-                    </div>
-                </div>
-                
-                <div class="bg-white rounded-xl shadow-md p-6 flex items-start border-l-4 border-purple-500">
-                    <div class="w-24 flex-shrink-0 text-right pr-6">
-                        <span class="text-conference-blue font-bold">14:30</span>
-                        <span class="block text-sm text-gray-500">18:00</span>
-                    </div>
-                    <div class="w-1 bg-purple-500 rounded-full mr-6"></div>
-                    <div class="flex-1">
-                        <span class="inline-block bg-purple-100 text-purple-600 text-xs font-semibold px-3 py-1 rounded-full mb-2">Field Trip</span>
-                        <h3 class="font-bold text-conference-dark">Field Trip (Optional)</h3>
-                        <p class="text-sm text-gray-600">Visit to earthquake affected areas and reconstruction sites</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+<section id="day3" class="schedule-section hidden">
+  <div class="schedule-container">
+    <h2 class="section-title">Day 3 · Closing & Field Trip</h2>
+    <div class="section-subtitle">Sunday, November 22, 2026</div>
+    
+    <!-- Morning Tea -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">08:30</div>
+        <div class="end-time">09:00</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-break">Morning</span>
+        <div class="event-title">Morning Tea</div>
+        <div class="event-detail">Start of Day 3</div>
+      </div>
     </div>
+    
+    <!-- Keynote 4 -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">09:00</div>
+        <div class="end-time">10:00</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-keynote">Keynote</span>
+        <div class="event-title">Post-Gorkha Earthquake Reconstruction Lessons</div>
+        <div class="event-speaker">Dr. R. K. Pandey · Tribhuvan University, Nepal</div>
+      </div>
+    </div>
+    
+    <!-- Panel Discussion -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">10:00</div>
+        <div class="end-time">12:00</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-panel">Panel Discussion</span>
+        <div class="event-title">Expert Panel: Future of Earthquake Engineering in Asia</div>
+        <div class="event-detail">Interactive session with leading experts</div>
+      </div>
+    </div>
+    
+    <!-- Closing Ceremony -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">12:00</div>
+        <div class="end-time">13:30</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-closing">Closing Ceremony</span>
+        <div class="event-title">Closing Ceremony & Awards</div>
+        <div class="event-detail">Best paper awards · Certificate distribution</div>
+      </div>
+    </div>
+    
+    <!-- Farewell Lunch -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">13:30</div>
+        <div class="end-time">14:30</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-lunch">Lunch</span>
+        <div class="event-title">Farewell Lunch</div>
+        <div class="event-detail">Conference closing lunch</div>
+      </div>
+    </div>
+    
+    <!-- Field Trip -->
+    <div class="schedule-item">
+      <div class="time-column">
+        <div class="start-time">14:30</div>
+        <div class="end-time">18:00</div>
+      </div>
+      <div class="content-column">
+        <span class="event-badge badge-fieldtrip">Field Trip</span>
+        <div class="event-title">Field Trip (Optional)</div>
+        <div class="event-detail">Visit to earthquake affected areas and reconstruction sites</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <script>
 function showDay(day) {
-    // Hide all days
-    document.getElementById('day1').classList.add('hidden');
-    document.getElementById('day2').classList.add('hidden');
-    document.getElementById('day3').classList.add('hidden');
-    
-    // Reset all buttons
-    document.getElementById('day1-btn').classList.remove('bg-conference-blue', 'text-white');
-    document.getElementById('day1-btn').classList.add('bg-gray-200', 'text-gray-700');
-    document.getElementById('day2-btn').classList.remove('bg-conference-blue', 'text-white');
-    document.getElementById('day2-btn').classList.add('bg-gray-200', 'text-gray-700');
-    document.getElementById('day3-btn').classList.remove('bg-conference-blue', 'text-white');
-    document.getElementById('day3-btn').classList.add('bg-gray-200', 'text-gray-700');
-    
-    // Show selected day and highlight button
-    document.getElementById('day' + day).classList.remove('hidden');
-    document.getElementById('day' + day + '-btn').classList.remove('bg-gray-200', 'text-gray-700');
-    document.getElementById('day' + day + '-btn').classList.add('bg-conference-blue', 'text-white');
+  // Hide all sections
+  document.getElementById('day1').classList.add('hidden');
+  document.getElementById('day2').classList.add('hidden');
+  document.getElementById('day3').classList.add('hidden');
+  
+  // Reset all buttons
+  const buttons = document.querySelectorAll('.nav-btn');
+  buttons.forEach(btn => {
+    btn.classList.remove('active');
+  });
+  
+  // Show selected day
+  const selectedSection = document.getElementById('day' + day);
+  if (selectedSection) {
+    selectedSection.classList.remove('hidden');
+  }
+  
+  // Highlight active button
+  const activeBtn = document.getElementById('day' + day + '-btn');
+  if (activeBtn) {
+    activeBtn.classList.add('active');
+  }
 }
+
+// Ensure Day 1 is visible on page load
+document.addEventListener('DOMContentLoaded', function() {
+  showDay(1);
+});
 </script>
 
     </main>
